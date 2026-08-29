@@ -1,0 +1,3270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Roopcraft Living Pvt Ltd</title>
+
+    <meta name="description"
+          content="Learn about Roopcraft Living Pvt Ltd — premium doors, windows, flooring, curtains, awnings, facades, shower enclosures and architectural solutions with professional installation and after-sales service.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f7f5f1;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+
+        /* =====================================
+           3D CARD
+        ===================================== */
+
+        .card-3d {
+            transform-style: preserve-3d;
+            transition:
+                transform 0.5s ease,
+                box-shadow 0.5s ease;
+        }
+
+        .card-3d:hover {
+            transform:
+                perspective(1000px)
+                rotateX(4deg)
+                rotateY(-4deg)
+                translateY(-8px);
+            box-shadow:
+                0 30px 60px rgba(0,0,0,0.12);
+        }
+
+
+        /* =====================================
+           3D ICON
+        ===================================== */
+
+        .icon-3d {
+            transform-style: preserve-3d;
+            transition: all .5s ease;
+        }
+
+        .icon-box:hover .icon-3d {
+            transform:
+                perspective(500px)
+                rotateY(180deg)
+                translateZ(20px)
+                scale(1.1);
+        }
+
+
+        /* =====================================
+           FLOATING
+        ===================================== */
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+        }
+
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+
+
+        /* =====================================
+           REVEAL
+        ===================================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =====================================
+           GLOW
+        ===================================== */
+
+        .gold-glow {
+            box-shadow:
+                0 0 0 1px rgba(196,154,108,.15),
+                0 20px 60px rgba(196,154,108,.12);
+        }
+
+
+        /* =====================================
+           IMAGE ZOOM
+        ===================================== */
+
+        .image-hover img {
+            transition: transform .8s ease;
+        }
+
+        .image-hover:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* =====================================
+           NAV LINK
+        ===================================== */
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 1px;
+            background: #c49a6c;
+            transition: width .3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+
+        /* =====================================
+           PROCESS LINE
+        ===================================== */
+
+        .process-line {
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #c49a6c,
+                    transparent
+                );
+        }
+
+    </style>
+
+</head>
+
+
+
+<body class="text-[#1d1a17]">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header
+    class="fixed top-0 left-0 w-full z-50
+           bg-[#f7f5f1]/90
+           backdrop-blur-xl
+           border-b border-black/5"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-6 lg:px-8
+               h-20
+               flex items-center
+               justify-between"
+    >
+
+        <!-- LOGO -->
+
+        <a href="index.html"
+           class="group">
+
+            <div
+                class="text-xl sm:text-2xl
+                       font-semibold
+                       tracking-[.18em]
+                       group-hover:text-[#b48655]
+                       transition"
+            >
+
+                ROOPCRAFT
+
+            </div>
+
+            <div
+                class="text-[8px]
+                       tracking-[.35em]
+                       text-black/40
+                       mt-1"
+            >
+
+                LIVING PVT. LTD.
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav
+            class="hidden lg:flex
+                   items-center
+                   gap-9
+                   text-sm
+                   text-black/60"
+        >
+
+            <a href="index.html"
+               class="nav-link hover:text-black transition">
+
+                Home
+
+            </a>
+
+            <a href="about.html"
+               class="nav-link text-black">
+
+                About
+
+            </a>
+
+            <a href="products.html"
+               class="nav-link hover:text-black transition">
+
+                Products
+
+            </a>
+
+            <a href="services.html"
+               class="nav-link hover:text-black transition">
+
+                Services
+
+            </a>
+
+            <a href="gallery.html"
+               class="nav-link hover:text-black transition">
+
+                Projects
+
+            </a>
+
+            <a href="contact.html"
+               class="nav-link hover:text-black transition">
+
+                Contact
+
+            </a>
+
+        </nav>
+
+
+        <!-- CTA -->
+
+        <div class="hidden lg:flex">
+
+            <a
+                href="https://wa.me/918003150333"
+                target="_blank"
+                class="group
+                       px-5 py-3
+                       rounded-full
+                       bg-[#1c1917]
+                       text-white
+                       text-xs
+                       tracking-wide
+                       hover:bg-[#c49a6c]
+                       hover:text-black
+                       hover:-translate-y-1
+                       transition-all duration-300"
+            >
+
+                <i class="fa-brands fa-whatsapp mr-2"></i>
+
+                Let's Talk
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            id="menuBtn"
+            class="lg:hidden
+                   w-11 h-11
+                   rounded-full
+                   border border-black/10
+                   flex items-center justify-center"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        id="mobileMenu"
+        class="hidden
+               lg:hidden
+               bg-[#f7f5f1]
+               border-t border-black/5"
+    >
+
+        <div class="px-6 py-6 space-y-4">
+
+            <a href="index.html"
+               class="block text-sm">
+
+                Home
+
+            </a>
+
+            <a href="about.html"
+               class="block text-sm font-semibold">
+
+                About Us
+
+            </a>
+
+            <a href="products.html"
+               class="block text-sm">
+
+                Products
+
+            </a>
+
+            <a href="services.html"
+               class="block text-sm">
+
+                Services
+
+            </a>
+
+            <a href="gallery.html"
+               class="block text-sm">
+
+                Projects
+
+            </a>
+
+            <a href="contact.html"
+               class="block text-sm">
+
+                Contact
+
+            </a>
+
+
+            <a
+                href="https://wa.me/918003150333"
+                target="_blank"
+                class="inline-flex
+                       items-center
+                       gap-2
+                       mt-2
+                       px-5 py-3
+                       rounded-full
+                       bg-[#25D366]
+                       text-white
+                       text-sm"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="relative
+           min-h-[90vh]
+           pt-20
+           flex items-center
+           overflow-hidden
+           bg-[#181614]"
+>
+
+
+    <!-- Background -->
+
+    <div
+        class="absolute inset-0
+               opacity-30"
+        style="
+        background:
+        linear-gradient(
+            90deg,
+            #181614 0%,
+            rgba(24,22,20,.75) 50%,
+            rgba(24,22,20,.35) 100%
+        ),
+        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85')
+        center/cover;
+        "
+    >
+    </div>
+
+
+    <!-- Decorative circles -->
+
+    <div
+        class="absolute
+               -right-32
+               top-20
+               w-96 h-96
+               rounded-full
+               border
+               border-[#c49a6c]/20
+               floating"
+    >
+    </div>
+
+
+    <div
+        class="absolute
+               right-0
+               bottom-10
+               w-64 h-64
+               rounded-full
+               bg-[#c49a6c]/10
+               blur-3xl"
+    >
+    </div>
+
+
+    <div
+        class="relative
+               max-w-7xl
+               mx-auto
+               px-6 lg:px-8
+               py-24
+               w-full"
+    >
+
+        <div class="max-w-3xl">
+
+
+            <div
+                class="flex items-center gap-3 mb-7"
+            >
+
+                <span
+                    class="w-12 h-px
+                           bg-[#c49a6c]"
+                >
+                </span>
+
+                <span
+                    class="text-[#c49a6c]
+                           text-xs
+                           tracking-[.3em]
+                           uppercase"
+                >
+
+                    About Roopcraft
+
+                </span>
+
+            </div>
+
+
+            <h1
+                class="serif
+                       text-5xl
+                       sm:text-6xl
+                       lg:text-8xl
+                       text-white
+                       leading-[1.05]"
+            >
+
+                We build spaces
+                <span class="text-[#c49a6c] italic">
+                    people remember.
+                </span>
+
+            </h1>
+
+
+            <p
+                class="mt-8
+                       max-w-2xl
+                       text-white/55
+                       text-sm
+                       sm:text-base
+                       leading-8"
+            >
+
+                Roopcraft Living Pvt Ltd brings together
+                premium building products, architectural
+                detailing and professional service to
+                transform ordinary spaces into extraordinary
+                environments.
+
+            </p>
+
+
+            <div
+                class="flex flex-wrap
+                       gap-4
+                       mt-9"
+            >
+
+                <a
+                    href="#story"
+                    class="px-6 py-3.5
+                           rounded-full
+                           bg-white
+                           text-black
+                           text-sm
+                           hover:bg-[#c49a6c]
+                           hover:-translate-y-1
+                           transition"
+                >
+
+                    Discover Our Story
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/918003150333"
+                    target="_blank"
+                    class="px-6 py-3.5
+                           rounded-full
+                           border border-white/20
+                           text-white
+                           text-sm
+                           hover:bg-white
+                           hover:text-black
+                           hover:-translate-y-1
+                           transition"
+                >
+
+                    <i class="fa-brands fa-whatsapp mr-2"></i>
+
+                    Talk to Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Since -->
+
+    <div
+        class="absolute
+               bottom-8
+               right-6 lg:right-12
+               hidden sm:block"
+    >
+
+        <div
+            class="text-[10px]
+                   tracking-[.4em]
+                   text-white/30
+                   uppercase"
+        >
+
+            Since
+
+        </div>
+
+        <div
+            class="text-4xl
+                   font-light
+                   text-[#c49a6c]"
+        >
+
+            2000
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO / STORY
+========================================================= -->
+
+<section
+    id="story"
+    class="py-24 lg:py-32
+           bg-[#f7f5f1]"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-6 lg:px-8"
+    >
+
+        <div
+            class="grid lg:grid-cols-2
+                   gap-14 lg:gap-24
+                   items-center"
+        >
+
+
+            <!-- IMAGE -->
+
+            <div class="reveal">
+
+                <div
+                    class="image-hover
+                           relative
+                           rounded-[2rem]
+                           overflow-hidden
+                           h-[500px]"
+                >
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+                        alt="Premium architectural interior"
+                        class="w-full h-full object-cover"
+                    >
+
+
+                    <!-- Overlay -->
+
+                    <div
+                        class="absolute inset-0
+                               bg-gradient-to-t
+                               from-black/50
+                               to-transparent"
+                    >
+                    </div>
+
+
+                    <!-- Experience Card -->
+
+                    <div
+                        class="absolute
+                               bottom-6
+                               left-6
+                               p-5
+                               rounded-2xl
+                               bg-white/90
+                               backdrop-blur-xl
+                               shadow-2xl
+                               floating"
+                    >
+
+                        <div
+                            class="text-3xl
+                                   font-semibold"
+                        >
+
+                            25+
+
+                        </div>
+
+                        <div
+                            class="text-[10px]
+                                   tracking-widest
+                                   text-black/40
+                                   uppercase
+                                   mt-1"
+                        >
+
+                            Years of Experience
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="reveal">
+
+
+                <div
+                    class="flex items-center gap-3 mb-5"
+                >
+
+                    <span
+                        class="w-10 h-px
+                               bg-[#b48655]"
+                    >
+                    </span>
+
+                    <span
+                        class="text-[#a87849]
+                               text-xs
+                               uppercase
+                               tracking-[.25em]"
+                    >
+
+                        Who We Are
+
+                    </span>
+
+                </div>
+
+
+                <h2
+                    class="serif
+                           text-4xl
+                           sm:text-5xl
+                           leading-tight"
+                >
+
+                    More than products.
+                    <br>
+
+                    <span class="text-[#b48655] italic">
+                        We create possibilities.
+                    </span>
+
+                </h2>
+
+
+                <p
+                    class="mt-7
+                           text-black/55
+                           text-sm
+                           leading-8"
+                >
+
+                    Roopcraft Living Pvt Ltd is a premium
+                    building and architectural solutions
+                    company based in Alwar, Rajasthan.
+
+                    We bring together carefully selected
+                    products, modern design possibilities
+                    and professional execution to help
+                    homeowners, architects, designers and
+                    businesses create better spaces.
+
+                </p>
+
+
+                <p
+                    class="mt-5
+                           text-black/55
+                           text-sm
+                           leading-8"
+                >
+
+                    From the first consultation and site
+                    measurement to customization,
+                    installation and after-sales support,
+                    our team stays involved throughout
+                    the journey.
+
+                </p>
+
+
+                <!-- Signature -->
+
+                <div
+                    class="flex items-center gap-4
+                           mt-8"
+                >
+
+                    <div
+                        class="w-12 h-12
+                               rounded-full
+                               bg-[#1b1917]
+                               text-[#c49a6c]
+                               flex items-center
+                               justify-center"
+                    >
+
+                        <i class="fa-solid fa-building"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p
+                            class="text-sm
+                                   font-semibold"
+                        >
+
+                            Roopcraft Living
+
+                        </p>
+
+                        <p
+                            class="text-xs
+                                   text-black/40
+                                   mt-1"
+                        >
+
+                            Premium Architectural Solutions
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STATS
+========================================================= -->
+
+<section
+    class="bg-[#1a1816]
+           text-white
+           py-16"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-6 lg:px-8"
+    >
+
+        <div
+            class="grid grid-cols-2
+                   lg:grid-cols-4
+                   gap-8"
+        >
+
+
+            <div class="text-center reveal">
+
+                <div
+                    class="text-4xl
+                           sm:text-5xl
+                           font-light
+                           text-[#c49a6c]"
+                >
+
+                    25+
+
+                </div>
+
+                <p
+                    class="text-xs
+                           tracking-widest
+                           uppercase
+                           text-white/35
+                           mt-3"
+                >
+
+                    Years Experience
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center reveal">
+
+                <div
+                    class="text-4xl
+                           sm:text-5xl
+                           font-light
+                           text-[#c49a6c]"
+                >
+
+                    8+
+
+                </div>
+
+                <p
+                    class="text-xs
+                           tracking-widest
+                           uppercase
+                           text-white/35
+                           mt-3"
+                >
+
+                    Product Categories
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center reveal">
+
+                <div
+                    class="text-4xl
+                           sm:text-5xl
+                           font-light
+                           text-[#c49a6c]"
+                >
+
+                    100%
+
+                </div>
+
+                <p
+                    class="text-xs
+                           tracking-widest
+                           uppercase
+                           text-white/35
+                           mt-3"
+                >
+
+                    Service Support
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center reveal">
+
+                <div
+                    class="text-4xl
+                           sm:text-5xl
+                           font-light
+                           text-[#c49a6c]"
+                >
+
+                    End-to-End
+
+                </div>
+
+                <p
+                    class="text-xs
+                           tracking-widest
+                           uppercase
+                           text-white/35
+                           mt-3"
+                >
+
+                    Solutions
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT WE DO
+========================================================= -->
+
+<section
+    class="py-24 lg:py-32
+           bg-white"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-6 lg:px-8"
+    >
+
+
+        <div
+            class="max-w-2xl
+                   mb-14
+                   reveal"
+        >
+
+            <div
+                class="flex items-center gap-3 mb-5"
+            >
+
+                <span
+                    class="w-10 h-px
+                           bg-[#b48655]"
+                >
+                </span>
+
+                <span
+                    class="text-[#a87849]
+                           text-xs
+                           tracking-[.25em]
+                           uppercase"
+                >
+
+                    Our Expertise
+
+                </span>
+
+            </div>
+
+
+            <h2
+                class="serif
+                       text-4xl
+                       sm:text-5xl"
+            >
+
+                Everything your space
+                <span class="italic text-[#b48655]">
+                    needs.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div
+            class="grid sm:grid-cols-2
+                   lg:grid-cols-4
+                   gap-5"
+        >
+
+
+            <!-- CARD -->
+
+            <div
+                class="card-3d
+                       icon-box
+                       p-7
+                       rounded-3xl
+                       bg-[#f7f5f1]
+                       border border-black/5
+                       reveal"
+            >
+
+                <div
+                    class="w-14 h-14
+                           rounded-2xl
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           icon-3d"
+                >
+
+                    <i class="fa-solid fa-door-open text-xl"></i>
+
+                </div>
+
+
+                <h3
+                    class="font-semibold
+                           mt-7"
+                >
+
+                    Doors
+
+                </h3>
+
+
+                <p
+                    class="text-sm
+                           text-black/45
+                           leading-7
+                           mt-3"
+                >
+
+                    Steel, glass and fiber doors
+                    designed for security,
+                    elegance and durability.
+
+                </p>
+
+
+                <div
+                    class="mt-6
+                           text-xs
+                           text-[#a87849]"
+                >
+
+                    Explore Doors →
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WINDOWS -->
+
+            <div
+                class="card-3d
+                       icon-box
+                       p-7
+                       rounded-3xl
+                       bg-[#f7f5f1]
+                       border border-black/5
+                       reveal"
+            >
+
+                <div
+                    class="w-14 h-14
+                           rounded-2xl
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           icon-3d"
+                >
+
+                    <i class="fa-regular fa-window-maximize text-xl"></i>
+
+                </div>
+
+
+                <h3
+                    class="font-semibold mt-7"
+                >
+
+                    Windows
+
+                </h3>
+
+
+                <p
+                    class="text-sm
+                           text-black/45
+                           leading-7
+                           mt-3"
+                >
+
+                    Premium steel, UPVC and
+                    aluminium window systems
+                    for modern spaces.
+
+                </p>
+
+
+                <div
+                    class="mt-6
+                           text-xs
+                           text-[#a87849]"
+                >
+
+                    Explore Windows →
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FLOORING -->
+
+            <div
+                class="card-3d
+                       icon-box
+                       p-7
+                       rounded-3xl
+                       bg-[#f7f5f1]
+                       border border-black/5
+                       reveal"
+            >
+
+                <div
+                    class="w-14 h-14
+                           rounded-2xl
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           icon-3d"
+                >
+
+                    <i class="fa-solid fa-layer-group text-xl"></i>
+
+                </div>
+
+
+                <h3
+                    class="font-semibold mt-7"
+                >
+
+                    Flooring
+
+                </h3>
+
+
+                <p
+                    class="text-sm
+                           text-black/45
+                           leading-7
+                           mt-3"
+                >
+
+                    Wooden, Chevron, Premium,
+                    Classic and Vintage flooring
+                    solutions.
+
+                </p>
+
+
+                <div
+                    class="mt-6
+                           text-xs
+                           text-[#a87849]"
+                >
+
+                    Explore Flooring →
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FACADE -->
+
+            <div
+                class="card-3d
+                       icon-box
+                       p-7
+                       rounded-3xl
+                       bg-[#f7f5f1]
+                       border border-black/5
+                       reveal"
+            >
+
+                <div
+                    class="w-14 h-14
+                           rounded-2xl
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           icon-3d"
+                >
+
+                    <i class="fa-solid fa-building text-xl"></i>
+
+                </div>
+
+
+                <h3
+                    class="font-semibold mt-7"
+                >
+
+                    Boutique Facade
+
+                </h3>
+
+
+                <p
+                    class="text-sm
+                           text-black/45
+                           leading-7
+                           mt-3"
+                >
+
+                    Glass, metal, PUF and
+                    aluminium composite facade
+                    solutions.
+
+                </p>
+
+
+                <div
+                    class="mt-6
+                           text-xs
+                           text-[#a87849]"
+                >
+
+                    Explore Facades →
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY ROOPCRAFT
+========================================================= -->
+
+<section
+    class="py-24 lg:py-32
+           bg-[#ebe7df]"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-6 lg:px-8"
+    >
+
+        <div
+            class="grid lg:grid-cols-2
+                   gap-14
+                   items-center"
+        >
+
+
+            <!-- LEFT -->
+
+            <div class="reveal">
+
+                <div
+                    class="flex items-center gap-3 mb-5"
+                >
+
+                    <span
+                        class="w-10 h-px
+                               bg-[#b48655]"
+                    >
+                    </span>
+
+                    <span
+                        class="text-[#a87849]
+                               text-xs
+                               tracking-[.25em]
+                               uppercase"
+                    >
+
+                        Why Roopcraft
+
+                    </span>
+
+                </div>
+
+
+                <h2
+                    class="serif
+                           text-4xl
+                           sm:text-5xl
+                           leading-tight"
+                >
+
+                    One partner.
+                    <br>
+
+                    <span class="italic text-[#b48655]">
+                        Every solution.
+                    </span>
+
+                </h2>
+
+
+                <p
+                    class="text-sm
+                           leading-8
+                           text-black/50
+                           mt-7
+                           max-w-xl"
+                >
+
+                    We believe buying a premium product
+                    should not mean managing multiple
+                    vendors for measurement, customization,
+                    installation and service.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <div
+                class="grid sm:grid-cols-2
+                       gap-4"
+            >
+
+
+                <!-- QUALITY -->
+
+                <div
+                    class="card-3d
+                           bg-white
+                           p-6
+                           rounded-2xl
+                           reveal"
+                >
+
+                    <div
+                        class="w-12 h-12
+                               rounded-xl
+                               bg-[#1d1a17]
+                               text-[#c49a6c]
+                               flex items-center
+                               justify-center"
+                    >
+
+                        <i class="fa-solid fa-gem"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="font-semibold mt-5"
+                    >
+
+                        Premium Quality
+
+                    </h3>
+
+
+                    <p
+                        class="text-xs
+                               text-black/45
+                               leading-6
+                               mt-2"
+                    >
+
+                        Carefully selected products
+                        from trusted brands.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- CUSTOM -->
+
+                <div
+                    class="card-3d
+                           bg-white
+                           p-6
+                           rounded-2xl
+                           reveal"
+                >
+
+                    <div
+                        class="w-12 h-12
+                               rounded-xl
+                               bg-[#1d1a17]
+                               text-[#c49a6c]
+                               flex items-center
+                               justify-center"
+                    >
+
+                        <i class="fa-solid fa-pen-ruler"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="font-semibold mt-5"
+                    >
+
+                        Custom Solutions
+
+                    </h3>
+
+
+                    <p
+                        class="text-xs
+                               text-black/45
+                               leading-6
+                               mt-2"
+                    >
+
+                        Solutions adapted to your
+                        space and requirements.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- INSTALLATION -->
+
+                <div
+                    class="card-3d
+                           bg-white
+                           p-6
+                           rounded-2xl
+                           reveal"
+                >
+
+                    <div
+                        class="w-12 h-12
+                               rounded-xl
+                               bg-[#1d1a17]
+                               text-[#c49a6c]
+                               flex items-center
+                               justify-center"
+                    >
+
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="font-semibold mt-5"
+                    >
+
+                        Expert Installation
+
+                    </h3>
+
+
+                    <p
+                        class="text-xs
+                               text-black/45
+                               leading-6
+                               mt-2"
+                    >
+
+                        Professional installation
+                        for reliable results.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- SERVICE -->
+
+                <div
+                    class="card-3d
+                           bg-white
+                           p-6
+                           rounded-2xl
+                           reveal"
+                >
+
+                    <div
+                        class="w-12 h-12
+                               rounded-xl
+                               bg-[#1d1a17]
+                               text-[#c49a6c]
+                               flex items-center
+                               justify-center"
+                    >
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="font-semibold mt-5"
+                    >
+
+                        After-Sales Support
+
+                    </h3>
+
+
+                    <p
+                        class="text-xs
+                               text-black/45
+                               leading-6
+                               mt-2"
+                    >
+
+                        Continued support even
+                        after project completion.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROCESS
+========================================================= -->
+
+<section
+    class="py-24 lg:py-32
+           bg-white"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-6 lg:px-8"
+    >
+
+        <div
+            class="text-center
+                   max-w-2xl
+                   mx-auto
+                   reveal"
+        >
+
+            <div
+                class="flex justify-center
+                       items-center
+                       gap-3 mb-5"
+            >
+
+                <span
+                    class="w-10 h-px
+                           bg-[#b48655]"
+                >
+                </span>
+
+                <span
+                    class="text-[#a87849]
+                           text-xs
+                           tracking-[.25em]
+                           uppercase"
+                >
+
+                    Our Process
+
+                </span>
+
+                <span
+                    class="w-10 h-px
+                           bg-[#b48655]"
+                >
+                </span>
+
+            </div>
+
+
+            <h2
+                class="serif
+                       text-4xl
+                       sm:text-5xl"
+            >
+
+                From idea to
+                <span class="italic text-[#b48655]">
+                    installation.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div
+            class="grid md:grid-cols-4
+                   gap-8
+                   mt-16"
+        >
+
+
+            <!-- 01 -->
+
+            <div
+                class="text-center
+                       reveal"
+            >
+
+                <div
+                    class="mx-auto
+                           w-16 h-16
+                           rounded-full
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           text-xl
+                           font-semibold
+                           card-3d"
+                >
+
+                    01
+
+                </div>
+
+
+                <h3
+                    class="font-semibold mt-6"
+                >
+
+                    Consultation
+
+                </h3>
+
+
+                <p
+                    class="text-xs
+                           text-black/45
+                           leading-6
+                           mt-3"
+                >
+
+                    Understand your vision,
+                    needs and budget.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- 02 -->
+
+            <div
+                class="text-center
+                       reveal"
+            >
+
+                <div
+                    class="mx-auto
+                           w-16 h-16
+                           rounded-full
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           text-xl
+                           font-semibold
+                           card-3d"
+                >
+
+                    02
+
+                </div>
+
+
+                <h3
+                    class="font-semibold mt-6"
+                >
+
+                    Measurement
+
+                </h3>
+
+
+                <p
+                    class="text-xs
+                           text-black/45
+                           leading-6
+                           mt-3"
+                >
+
+                    Accurate site measurements
+                    for precise execution.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- 03 -->
+
+            <div
+                class="text-center
+                       reveal"
+            >
+
+                <div
+                    class="mx-auto
+                           w-16 h-16
+                           rounded-full
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           text-xl
+                           font-semibold
+                           card-3d"
+                >
+
+                    03
+
+                </div>
+
+
+                <h3
+                    class="font-semibold mt-6"
+                >
+
+                    Customize & Build
+
+                </h3>
+
+
+                <p
+                    class="text-xs
+                           text-black/45
+                           leading-6
+                           mt-3"
+                >
+
+                    Product selection,
+                    customization and preparation.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- 04 -->
+
+            <div
+                class="text-center
+                       reveal"
+            >
+
+                <div
+                    class="mx-auto
+                           w-16 h-16
+                           rounded-full
+                           bg-[#1d1a17]
+                           text-[#c49a6c]
+                           flex items-center
+                           justify-center
+                           text-xl
+                           font-semibold
+                           card-3d"
+                >
+
+                    04
+
+                </div>
+
+
+                <h3
+                    class="font-semibold mt-6"
+                >
+
+                    Install & Support
+
+                </h3>
+
+
+                <p
+                    class="text-xs
+                           text-black/45
+                           leading-6
+                           mt-3"
+                >
+
+                    Professional installation
+                    and after-sales support.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BRANDS
+========================================================= -->
+
+<section
+    class="py-20
+           bg-[#f3f0ea]
+           border-y border-black/5"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-6 lg:px-8"
+    >
+
+        <div
+            class="text-center reveal"
+        >
+
+            <p
+                class="text-[10px]
+                       tracking-[.3em]
+                       uppercase
+                       text-black/35"
+            >
+
+                Trusted Product Partners
+
+            </p>
+
+
+            <h2
+                class="serif
+                       text-3xl
+                       sm:text-4xl
+                       mt-4"
+            >
+
+                Quality begins with
+                <span class="italic text-[#b48655]">
+                    the right brands.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div
+            class="grid grid-cols-2
+                   sm:grid-cols-3
+                   lg:grid-cols-6
+                   gap-4
+                   mt-12"
+        >
+
+            <div
+                class="card-3d
+                       h-24
+                       bg-white
+                       rounded-2xl
+                       flex items-center
+                       justify-center
+                       font-semibold
+                       text-black/50"
+            >
+
+                AIS Asahi
+
+            </div>
+
+
+            <div
+                class="card-3d
+                       h-24
+                       bg-white
+                       rounded-2xl
+                       flex items-center
+                       justify-center
+                       font-semibold
+                       text-black/50"
+            >
+
+                JSW
+
+            </div>
+
+
+            <div
+                class="card-3d
+                       h-24
+                       bg-white
+                       rounded-2xl
+                       flex items-center
+                       justify-center
+                       font-semibold
+                       text-black/50"
+            >
+
+                Jindal
+
+            </div>
+
+
+            <div
+                class="card-3d
+                       h-24
+                       bg-white
+                       rounded-2xl
+                       flex items-center
+                       justify-center
+                       font-semibold
+                       text-black/50"
+            >
+
+                TATA
+
+            </div>
+
+
+            <div
+                class="card-3d
+                       h-24
+                       bg-white
+                       rounded-2xl
+                       flex items-center
+                       justify-center
+                       font-semibold
+                       text-black/50"
+            >
+
+                Vista
+
+            </div>
+
+
+            <div
+                class="card-3d
+                       h-24
+                       bg-white
+                       rounded-2xl
+                       flex items-center
+                       justify-center
+                       font-semibold
+                       text-black/50"
+            >
+
+                Apollo
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section
+    class="relative
+           overflow-hidden
+           bg-[#171513]
+           py-24"
+>
+
+    <div
+        class="absolute
+               -right-40
+               -top-40
+               w-96 h-96
+               rounded-full
+               border
+               border-[#c49a6c]/20
+               floating"
+    >
+    </div>
+
+
+    <div
+        class="relative
+               max-w-5xl
+               mx-auto
+               px-6
+               text-center
+               reveal"
+    >
+
+        <p
+            class="text-[#c49a6c]
+                   text-xs
+                   tracking-[.3em]
+                   uppercase"
+        >
+
+            Start Your Project
+
+        </p>
+
+
+        <h2
+            class="serif
+                   text-4xl
+                   sm:text-5xl
+                   lg:text-6xl
+                   text-white
+                   mt-5"
+        >
+
+            Your space deserves
+            <span class="text-[#c49a6c] italic">
+                better.
+            </span>
+
+        </h2>
+
+
+        <p
+            class="text-white/40
+                   max-w-xl
+                   mx-auto
+                   text-sm
+                   leading-7
+                   mt-6"
+        >
+
+            Tell us about your project and
+            discover the right products,
+            designs and solutions for your space.
+
+        </p>
+
+
+        <div
+            class="flex flex-wrap
+                   justify-center
+                   gap-4
+                   mt-9"
+        >
+
+            <a
+                href="https://wa.me/918003150333"
+                target="_blank"
+                class="px-7 py-4
+                       rounded-full
+                       bg-[#c49a6c]
+                       text-black
+                       text-sm
+                       font-medium
+                       hover:-translate-y-1
+                       hover:shadow-2xl
+                       transition"
+            >
+
+                <i class="fa-brands fa-whatsapp mr-2"></i>
+
+                WhatsApp Us
+
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="px-7 py-4
+                       rounded-full
+                       border border-white/20
+                       text-white
+                       text-sm
+                       hover:bg-white
+                       hover:text-black
+                       hover:-translate-y-1
+                       transition"
+            >
+
+                Get a Quote
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="relative overflow-hidden bg-[#11100f] text-white">
+
+    <!-- Decorative 3D Background -->
+    <div class="absolute -top-32 -right-32 w-96 h-96
+                bg-[#b88a5a]/10 rounded-full blur-3xl">
+    </div>
+
+    <div class="absolute bottom-0 -left-32 w-96 h-96
+                bg-[#8b6a48]/10 rounded-full blur-3xl">
+    </div>
+
+
+    <!-- ================================
+         TOP CTA SECTION
+    ================================= -->
+
+    <div class="relative border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+
+                <!-- LEFT -->
+
+                <div>
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <span class="w-10 h-[1px] bg-[#c49a6c]"></span>
+
+                        <span class="text-[#c49a6c]
+                                     text-xs
+                                     tracking-[.3em]
+                                     uppercase">
+                            Premium Building Solutions
+                        </span>
+
+                    </div>
+
+
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl
+                               font-light
+                               leading-tight
+                               tracking-tight">
+
+                        Let's build
+                        <span class="italic text-[#c49a6c]">
+                            something
+                        </span>
+                        extraordinary.
+
+                    </h2>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="lg:text-right">
+
+                    <p class="text-white/50
+                              text-sm
+                              leading-7
+                              max-w-lg
+                              lg:ml-auto
+                              mb-7">
+
+                        From premium doors and windows to flooring,
+                        facades and architectural solutions —
+                        Roopcraft delivers products, installation
+                        and after-sales service under one roof.
+
+                    </p>
+
+
+                    <div class="flex flex-wrap lg:justify-end gap-4">
+
+                        <!-- WhatsApp -->
+
+                        <a
+                            href="https://wa.me/918003150333"
+                            target="_blank"
+                            class="group inline-flex items-center gap-3
+                                   px-6 py-3.5
+                                   rounded-full
+                                   bg-[#25D366]
+                                   text-white
+                                   text-sm
+                                   font-medium
+                                   shadow-lg shadow-green-500/20
+                                   hover:-translate-y-1
+                                   hover:shadow-green-500/40
+                                   transition-all duration-300"
+                        >
+
+                            <i class="fa-brands fa-whatsapp text-lg
+                                      group-hover:scale-125
+                                      transition">
+                            </i>
+
+                            WhatsApp Us
+
+                            <i class="fa-solid fa-arrow-right
+                                      text-xs
+                                      group-hover:translate-x-1
+                                      transition">
+                            </i>
+
+                        </a>
+
+
+                        <!-- Quote -->
+
+                        <a
+                            href="#contact"
+                            class="group inline-flex items-center gap-3
+                                   px-6 py-3.5
+                                   rounded-full
+                                   border border-[#c49a6c]/50
+                                   text-[#c49a6c]
+                                   text-sm
+                                   hover:bg-[#c49a6c]
+                                   hover:text-black
+                                   hover:-translate-y-1
+                                   transition-all duration-300"
+                        >
+
+                            Get a Quote
+
+                            <i class="fa-solid fa-arrow-right
+                                      text-xs
+                                      group-hover:translate-x-1
+                                      transition">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         MAIN FOOTER
+    ================================= -->
+
+    <div class="relative max-w-7xl mx-auto
+                px-6 lg:px-8
+                py-16 lg:py-20">
+
+
+        <div class="grid grid-cols-1
+                    sm:grid-cols-2
+                    lg:grid-cols-12
+                    gap-12 lg:gap-10">
+
+
+            <!-- ==========================
+                 BRAND
+            =========================== -->
+
+            <div class="lg:col-span-4">
+
+                <!-- Logo -->
+
+                <div class="group inline-block mb-7">
+
+                    <h3 class="text-3xl
+                               font-semibold
+                               tracking-[.18em]
+                               transition
+                               group-hover:text-[#c49a6c]">
+
+                        ROOPCRAFT
+
+                    </h3>
+
+                    <div class="flex items-center gap-3 mt-2">
+
+                        <span class="h-[1px]
+                                     w-12
+                                     bg-[#c49a6c]">
+                        </span>
+
+                        <span class="text-[10px]
+                                     tracking-[.35em]
+                                     text-white/40">
+
+                            LIVING PVT. LTD.
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="text-sm
+                          leading-7
+                          text-white/45
+                          max-w-sm">
+
+                    Premium doors, windows, flooring, curtains,
+                    awnings, facades, shower enclosures and
+                    architectural solutions crafted for
+                    exceptional spaces.
+
+                </p>
+
+
+                <!-- SERVICE BADGES -->
+
+                <div class="grid grid-cols-3
+                            gap-3
+                            mt-8
+                            max-w-sm">
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-ruler-combined
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            MEASURE
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-screwdriver-wrench
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            INSTALL
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-headset
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            SUPPORT
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL -->
+
+                <div class="flex gap-3 mt-8">
+
+                    <a
+                        href="https://wa.me/918003150333"
+                        target="_blank"
+                        aria-label="WhatsApp"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#25D366]
+                               hover:border-[#25D366]
+                               hover:-translate-y-1
+                               hover:rotate-6
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                    <a
+                        href="tel:+918003150333"
+                        aria-label="Call"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#c49a6c]
+                               hover:text-black
+                               hover:border-[#c49a6c]
+                               hover:-translate-y-1
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        aria-label="Email"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#c49a6c]
+                               hover:text-black
+                               hover:border-[#c49a6c]
+                               hover:-translate-y-1
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 PRODUCTS
+            =========================== -->
+
+            <div class="lg:col-span-2">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Products
+
+                </h4>
+
+
+                <ul class="space-y-3 text-sm">
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Doors
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Windows
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Curtains & Blinds
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Flooring
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Awnings
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Boutique Facade
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Shower Enclosure
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Fab Solutions
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 SERVICES
+            =========================== -->
+
+            <div class="lg:col-span-2">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Our Services
+
+                </h4>
+
+
+                <ul class="space-y-4 text-sm">
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-compass
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Consultation
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-ruler
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Site Measurement
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-pen-ruler
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Customization
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-gears
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Installation
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-truck-fast
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Project Delivery
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-headset
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        After-Sales Service
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 CONTACT
+            =========================== -->
+
+            <div class="lg:col-span-4">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Visit Our Office
+
+                </h4>
+
+
+                <!-- ADDRESS CARD -->
+
+                <div class="group
+                            relative
+                            p-5
+                            rounded-2xl
+                            border border-white/10
+                            bg-white/[.03]
+                            overflow-hidden
+                            hover:border-[#c49a6c]/40
+                            hover:bg-white/[.05]
+                            transition-all duration-500">
+
+
+                    <!-- Glow -->
+
+                    <div class="absolute
+                                -right-10
+                                -top-10
+                                w-24 h-24
+                                rounded-full
+                                bg-[#c49a6c]/10
+                                blur-2xl
+                                group-hover:bg-[#c49a6c]/20
+                                transition">
+                    </div>
+
+
+                    <div class="relative flex gap-4">
+
+                        <div class="w-11 h-11
+                                    shrink-0
+                                    rounded-xl
+                                    bg-[#c49a6c]/10
+                                    text-[#c49a6c]
+                                    flex items-center justify-center
+                                    group-hover:scale-110
+                                    group-hover:rotate-3
+                                    transition">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-sm
+                                      font-medium
+                                      mb-2">
+
+                                Roopcraft Living Pvt Ltd
+
+                            </p>
+
+
+                            <p class="text-xs
+                                      leading-6
+                                      text-white/40">
+
+                                First Floor, No. 1,
+                                Flat / Shop No. 19,<br>
+
+                                Nemichand Market,<br>
+
+                                Alwar, Rajasthan – 301001
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+918003150333"
+                    class="group flex items-center gap-4 mt-5
+                           p-4
+                           rounded-xl
+                           border border-white/10
+                           hover:border-[#c49a6c]/40
+                           hover:bg-[#c49a6c]/5
+                           transition"
+                >
+
+                    <div class="w-10 h-10
+                                rounded-full
+                                bg-[#c49a6c]/10
+                                text-[#c49a6c]
+                                flex items-center justify-center
+                                group-hover:scale-110
+                                transition">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="text-[10px]
+                                  uppercase
+                                  tracking-widest
+                                  text-white/30">
+
+                            Call Us
+
+                        </p>
+
+                        <p class="text-sm mt-1">
+
+                            +91 8003150333
+
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right ml-auto
+                              text-xs
+                              text-white/30
+                              group-hover:text-[#c49a6c]
+                              group-hover:translate-x-1
+                              transition">
+                    </i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         BOTTOM BAR
+    ================================= -->
+
+    <div class="border-t border-white/10">
+
+        <div class="max-w-7xl mx-auto
+                    px-6 lg:px-8
+                    py-6
+                    flex flex-col
+                    md:flex-row
+                    items-center
+                    justify-between
+                    gap-4">
+
+
+            <p class="text-[11px]
+                      text-white/30
+                      text-center
+                      md:text-left">
+
+                © 2026
+                <span class="text-white/50">
+                    Roopcraft Living Pvt Ltd
+                </span>.
+                All Rights Reserved.
+
+            </p>
+
+
+            <div class="flex items-center gap-5">
+
+                <a
+                    href="#about"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    About Us
+
+                </a>
+
+
+                <span class="w-1 h-1
+                             rounded-full
+                             bg-white/20">
+                </span>
+
+
+                <a
+                    href="#products"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    Products
+
+                </a>
+
+
+                <span class="w-1 h-1
+                             rounded-full
+                             bg-white/20">
+                </span>
+
+
+                <a
+                    href="#contact"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    Contact
+
+                </a>
+
+            </div>
+
+
+            <p class="text-[10px]
+                      uppercase
+                      tracking-[.2em]
+                      text-white/20">
+
+                Premium Architectural Solutions
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+    href="https://wa.me/918003150333"
+    target="_blank"
+    class="fixed
+           right-5
+           bottom-5
+           z-50
+           w-14 h-14
+           rounded-full
+           bg-[#25D366]
+           text-white
+           flex items-center
+           justify-center
+           text-2xl
+           shadow-2xl
+           hover:scale-110
+           hover:-translate-y-1
+           transition"
+>
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    menuBtn.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("hidden");
+
+        const icon =
+            menuBtn.querySelector("i");
+
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-xmark");
+
+    });
+
+
+
+    /* ==========================================
+       SCROLL REVEAL
+    ========================================== */
+
+    const reveals =
+        document.querySelectorAll(".reveal");
+
+
+    const observer =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    reveals.forEach((element) => {
+
+        observer.observe(element);
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

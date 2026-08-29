@@ -1,0 +1,3955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Products | Roopcraft Living Pvt Ltd
+    </title>
+
+    <meta
+        name="description"
+        content="Explore premium doors, windows, curtains, flooring, awnings, facades, shower enclosures and fabrication solutions from Roopcraft Living Pvt Ltd."
+    >
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    fontFamily: {
+
+                        sans: ['DM Sans', 'sans-serif'],
+
+                        serif: ['Playfair Display', 'serif']
+
+                    },
+
+                    colors: {
+
+                        gold: '#c49a6c',
+
+                        dark: '#11100f',
+
+                        cream: '#f7f4ef'
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+    <style>
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #f7f4ef;
+        }
+
+
+        /* =========================
+           3D CARD
+        ========================= */
+
+        .product-card {
+            transform-style: preserve-3d;
+            transition:
+                transform .5s ease,
+                box-shadow .5s ease;
+        }
+
+
+        .product-card:hover {
+
+            transform:
+                perspective(1000px)
+                rotateX(2deg)
+                rotateY(-2deg)
+                translateY(-10px);
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,.14);
+
+        }
+
+
+        .product-image {
+
+            transition:
+                transform .7s cubic-bezier(.2,.8,.2,1);
+
+        }
+
+
+        .product-card:hover .product-image {
+
+            transform:
+                scale(1.08);
+
+        }
+
+
+        /* =========================
+           IMAGE OVERLAY
+        ========================= */
+
+        .image-overlay {
+
+            opacity: 0;
+
+            transition:
+                opacity .4s ease;
+
+        }
+
+
+        .product-card:hover .image-overlay {
+
+            opacity: 1;
+
+        }
+
+
+        /* =========================
+           3D ICON
+        ========================= */
+
+        .icon-3d {
+
+            transition:
+                transform .5s ease,
+                box-shadow .5s ease;
+
+            transform-style: preserve-3d;
+
+        }
+
+
+        .product-card:hover .icon-3d {
+
+            transform:
+                rotateY(180deg)
+                translateZ(20px)
+                scale(1.08);
+
+            box-shadow:
+                0 15px 30px rgba(196,154,108,.25);
+
+        }
+
+
+        /* =========================
+           CATEGORY BUTTON
+        ========================= */
+
+        .category-btn {
+
+            transition:
+                all .3s ease;
+
+        }
+
+
+        .category-btn:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =========================
+           MODAL
+        ========================= */
+
+        .modal {
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity .3s ease,
+                visibility .3s ease;
+
+        }
+
+
+        .modal.active {
+
+            opacity: 1;
+            visibility: visible;
+
+        }
+
+
+        .modal-box {
+
+            transform:
+                translateY(30px)
+                scale(.96);
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .modal.active .modal-box {
+
+            transform:
+                translateY(0)
+                scale(1);
+
+        }
+
+
+        /* =========================
+           ADMIN PANEL
+        ========================= */
+
+        #adminPanel {
+
+            transform:
+                translateX(100%);
+
+            transition:
+                transform .4s ease;
+
+        }
+
+
+        #adminPanel.active {
+
+            transform:
+                translateX(0);
+
+        }
+
+
+        /* =========================
+           SCROLLBAR
+        ========================= */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+
+        ::-webkit-scrollbar-track {
+            background: #eee;
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+
+            background: #c49a6c;
+
+            border-radius: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body class="text-[#211f1c]">
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header
+    class="fixed top-0 left-0 right-0 z-50
+           bg-white/90 backdrop-blur-xl
+           border-b border-black/5"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-5 lg:px-8
+               h-20
+               flex items-center
+               justify-between"
+    >
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="group"
+        >
+
+            <div
+                class="text-xl md:text-2xl
+                       font-semibold
+                       tracking-[.16em]
+                       group-hover:text-gold
+                       transition"
+            >
+
+                ROOPCRAFT
+
+            </div>
+
+            <div
+                class="text-[9px]
+                       tracking-[.3em]
+                       text-black/40
+                       mt-1"
+            >
+
+                LIVING PVT. LTD.
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav class="hidden md:flex items-center gap-8">
+
+            <a
+                href="index.html"
+                class="text-sm text-black/60
+                       hover:text-gold transition"
+            >
+                Home
+            </a>
+
+            <a
+                href="about.html"
+                class="text-sm text-black/60
+                       hover:text-gold transition"
+            >
+                About
+            </a>
+
+            <a
+                href="products.html"
+                class="text-sm text-gold font-medium"
+            >
+                Products
+            </a>
+
+            <a
+                href="services.html"
+                class="text-sm text-black/60
+                       hover:text-gold transition"
+            >
+                Services
+            </a>
+
+            <a
+                href="gallery.html"
+                class="text-sm text-black/60
+                       hover:text-gold transition"
+            >
+                Projects
+            </a>
+
+            <a
+                href="contact.html"
+                class="text-sm text-black/60
+                       hover:text-gold transition"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- CTA -->
+
+        <a
+            href="https://wa.me/918003150333"
+            target="_blank"
+            class="hidden sm:flex
+                   items-center gap-2
+                   px-5 py-3
+                   rounded-full
+                   bg-[#171513]
+                   text-white
+                   text-sm
+                   hover:bg-gold
+                   hover:text-black
+                   hover:-translate-y-1
+                   transition-all"
+        >
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Enquire
+
+        </a>
+
+
+        <!-- MOBILE -->
+
+        <button
+            id="menuBtn"
+            class="md:hidden
+                   w-11 h-11
+                   rounded-full
+                   bg-black/5
+                   flex items-center
+                   justify-center"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        id="mobileMenu"
+        class="hidden md:hidden
+               bg-white
+               border-t border-black/5"
+    >
+
+        <div class="px-6 py-6 space-y-4">
+
+            <a href="index.html" class="block">
+                Home
+            </a>
+
+            <a href="about.html" class="block">
+                About
+            </a>
+
+            <a href="products.html"
+               class="block text-gold">
+                Products
+            </a>
+
+            <a href="services.html" class="block">
+                Services
+            </a>
+
+            <a href="gallery.html" class="block">
+                Projects
+            </a>
+
+            <a href="contact.html" class="block">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="relative min-h-[600px]
+           flex items-center
+           overflow-hidden
+           bg-[#171513]"
+>
+
+    <!-- Background -->
+
+    <div
+        class="absolute inset-0
+               bg-[radial-gradient(circle_at_80%_20%,rgba(196,154,108,.22),transparent_35%),radial-gradient(circle_at_10%_80%,rgba(255,255,255,.05),transparent_30%)]"
+    ></div>
+
+
+    <!-- Decorative circles -->
+
+    <div
+        class="absolute
+               -right-32
+               top-20
+               w-96 h-96
+               rounded-full
+               border border-gold/20"
+    ></div>
+
+    <div
+        class="absolute
+               -right-20
+               top-32
+               w-72 h-72
+               rounded-full
+               border border-gold/10"
+    ></div>
+
+
+    <div
+        class="relative max-w-7xl
+               mx-auto w-full
+               px-6 lg:px-8
+               pt-32 pb-20"
+    >
+
+        <div class="max-w-3xl">
+
+
+            <div
+                class="flex items-center gap-3
+                       mb-7"
+            >
+
+                <span
+                    class="w-12 h-[1px]
+                           bg-gold"
+                ></span>
+
+                <span
+                    class="text-gold
+                           text-xs
+                           tracking-[.3em]
+                           uppercase"
+                >
+
+                    Explore Our Collection
+
+                </span>
+
+            </div>
+
+
+            <h1
+                class="text-5xl sm:text-6xl
+                       lg:text-8xl
+                       text-white
+                       font-light
+                       leading-[.95]"
+            >
+
+                Designed for
+                <span
+                    class="font-serif italic
+                           text-gold"
+                >
+                    spaces
+                </span>
+
+            </h1>
+
+
+            <p
+                class="mt-8
+                       max-w-2xl
+                       text-white/50
+                       leading-8
+                       text-sm sm:text-base"
+            >
+
+                Discover premium architectural and interior
+                solutions crafted to transform homes,
+                offices and commercial spaces.
+
+            </p>
+
+
+            <!-- SERVICE HIGHLIGHT -->
+
+            <div
+                class="mt-10
+                       flex flex-wrap gap-3"
+            >
+
+                <div
+                    class="px-5 py-3
+                           rounded-full
+                           bg-white/5
+                           border border-white/10
+                           text-white/60
+                           text-xs"
+                >
+
+                    <i class="fa-solid fa-certificate text-gold mr-2"></i>
+
+                    Premium Products
+
+                </div>
+
+
+                <div
+                    class="px-5 py-3
+                           rounded-full
+                           bg-white/5
+                           border border-white/10
+                           text-white/60
+                           text-xs"
+                >
+
+                    <i class="fa-solid fa-screwdriver-wrench text-gold mr-2"></i>
+
+                    Professional Installation
+
+                </div>
+
+
+                <div
+                    class="px-5 py-3
+                           rounded-full
+                           bg-white/5
+                           border border-white/10
+                           text-white/60
+                           text-xs"
+                >
+
+                    <i class="fa-solid fa-headset text-gold mr-2"></i>
+
+                    After-Sales Service
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORY FILTER
+===================================================== -->
+
+<section
+    class="sticky top-20 z-30
+           bg-[#f7f4ef]/95
+           backdrop-blur-xl
+           border-b border-black/5"
+>
+
+    <div
+        class="max-w-7xl mx-auto
+               px-5 lg:px-8
+               py-5"
+    >
+
+        <div
+            id="categoryButtons"
+            class="flex gap-3
+                   overflow-x-auto
+                   pb-1"
+        >
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<main
+    id="products"
+    class="max-w-7xl mx-auto
+           px-5 lg:px-8
+           py-20"
+>
+
+
+    <!-- SECTION HEADING -->
+
+    <div
+        class="flex flex-col
+               md:flex-row
+               md:items-end
+               justify-between
+               gap-6
+               mb-12"
+    >
+
+        <div>
+
+            <p
+                class="text-gold
+                       text-xs
+                       tracking-[.3em]
+                       uppercase
+                       mb-4"
+            >
+
+                Our Collection
+
+            </p>
+
+
+            <h2
+                class="text-4xl sm:text-5xl
+                       font-light"
+            >
+
+                Premium Products
+
+            </h2>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div
+            class="relative
+                   w-full md:w-80"
+        >
+
+            <i
+                class="fa-solid fa-search
+                       absolute left-4 top-1/2
+                       -translate-y-1/2
+                       text-black/30"
+            ></i>
+
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search products..."
+                class="w-full
+                       pl-11 pr-5 py-4
+                       rounded-full
+                       bg-white
+                       border border-black/5
+                       outline-none
+                       focus:border-gold
+                       transition"
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- PRODUCT GRID -->
+
+    <div
+        id="productGrid"
+        class="grid
+               sm:grid-cols-2
+               lg:grid-cols-3
+               xl:grid-cols-4
+               gap-6"
+    >
+
+        <!-- Products injected by JS -->
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     PRODUCT DETAILS MODAL
+===================================================== -->
+
+<div
+    id="productModal"
+    class="modal fixed inset-0 z-[100]
+           bg-black/70
+           backdrop-blur-sm
+           flex items-center
+           justify-center
+           p-5"
+>
+
+    <div
+        class="modal-box
+               bg-white
+               rounded-3xl
+               max-w-5xl
+               w-full
+               max-h-[90vh]
+               overflow-y-auto
+               relative"
+    >
+
+        <button
+            onclick="closeProductModal()"
+            class="absolute top-5 right-5
+                   z-10
+                   w-11 h-11
+                   rounded-full
+                   bg-black/5
+                   hover:bg-black
+                   hover:text-white
+                   transition"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div
+            id="modalContent"
+            class="grid md:grid-cols-2"
+        >
+
+            <!-- JS -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN PANEL OVERLAY
+===================================================== -->
+
+<div
+    id="adminOverlay"
+    class="hidden fixed inset-0 z-[110]
+           bg-black/50"
+></div>
+
+
+
+<!-- =====================================================
+     ADMIN PANEL
+===================================================== -->
+
+<aside
+    id="adminPanel"
+    class="fixed
+           top-0 right-0
+           z-[120]
+           w-full sm:w-[500px]
+           h-screen
+           bg-white
+           shadow-2xl
+           overflow-y-auto"
+>
+
+
+    <!-- ADMIN HEADER -->
+
+    <div
+        class="sticky top-0 z-10
+               bg-white
+               border-b
+               border-black/10
+               px-6 py-5
+               flex items-center
+               justify-between"
+    >
+
+        <div>
+
+            <p
+                class="text-[10px]
+                       tracking-[.25em]
+                       uppercase
+                       text-gold"
+            >
+
+                Catalogue Manager
+
+            </p>
+
+            <h3
+                class="text-xl
+                       font-semibold
+                       mt-1"
+            >
+
+                Manage Products
+
+            </h3>
+
+        </div>
+
+
+        <button
+            onclick="closeAdmin()"
+            class="w-10 h-10
+                   rounded-full
+                   bg-black/5
+                   hover:bg-black
+                   hover:text-white
+                   transition"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ADMIN CONTENT -->
+
+    <div class="p-6">
+
+
+        <!-- ADD PRODUCT -->
+
+        <button
+            onclick="openAddProduct()"
+            class="w-full
+                   py-4
+                   rounded-xl
+                   bg-[#171513]
+                   text-white
+                   hover:bg-gold
+                   hover:text-black
+                   hover:-translate-y-1
+                   transition-all
+                   mb-8"
+        >
+
+            <i class="fa-solid fa-plus mr-2"></i>
+
+            Add New Product
+
+        </button>
+
+
+        <!-- ADMIN PRODUCT LIST -->
+
+        <div
+            id="adminProductList"
+            class="space-y-3"
+        >
+
+            <!-- JS -->
+
+        </div>
+
+
+        <!-- RESET -->
+
+        <button
+            onclick="resetProducts()"
+            class="w-full
+                   mt-8
+                   py-3
+                   rounded-xl
+                   border border-red-200
+                   text-red-500
+                   hover:bg-red-50
+                   transition"
+        >
+
+            <i class="fa-solid fa-rotate-left mr-2"></i>
+
+            Reset Demo Catalogue
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     EDIT PRODUCT MODAL
+===================================================== -->
+
+<div
+    id="editorModal"
+    class="modal fixed inset-0 z-[150]
+           bg-black/70
+           backdrop-blur-sm
+           flex items-center
+           justify-center
+           p-5"
+>
+
+    <div
+        class="modal-box
+               bg-white
+               rounded-3xl
+               max-w-2xl
+               w-full
+               max-h-[90vh]
+               overflow-y-auto"
+    >
+
+        <div
+            class="p-6
+                   border-b
+                   border-black/10
+                   flex items-center
+                   justify-between"
+        >
+
+            <div>
+
+                <p
+                    class="text-xs
+                           text-gold
+                           uppercase
+                           tracking-widest"
+                >
+
+                    Catalogue Editor
+
+                </p>
+
+                <h3
+                    id="editorTitle"
+                    class="text-2xl
+                           font-semibold
+                           mt-1"
+                >
+
+                    Add Product
+
+                </h3>
+
+            </div>
+
+
+            <button
+                onclick="closeEditor()"
+                class="w-10 h-10
+                       rounded-full
+                       bg-black/5
+                       hover:bg-black
+                       hover:text-white"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form
+            id="productForm"
+            class="p-6 space-y-5"
+        >
+
+
+            <input
+                type="hidden"
+                id="editId"
+            >
+
+
+            <!-- PRODUCT NAME -->
+
+            <div>
+
+                <label
+                    class="text-sm
+                           font-medium
+                           block mb-2"
+                >
+
+                    Product Name
+
+                </label>
+
+                <input
+                    id="productName"
+                    required
+                    type="text"
+                    placeholder="Example: Premium Wooden Door"
+                    class="w-full
+                           px-4 py-3
+                           rounded-xl
+                           bg-[#f7f4ef]
+                           border border-black/5
+                           outline-none
+                           focus:border-gold"
+                >
+
+            </div>
+
+
+
+            <!-- CATEGORY -->
+
+            <div>
+
+                <label
+                    class="text-sm
+                           font-medium
+                           block mb-2"
+                >
+
+                    Category
+
+                </label>
+
+                <select
+                    id="productCategory"
+                    required
+                    class="w-full
+                           px-4 py-3
+                           rounded-xl
+                           bg-[#f7f4ef]
+                           border border-black/5
+                           outline-none
+                           focus:border-gold"
+                >
+
+                    <option>Doors</option>
+
+                    <option>Windows</option>
+
+                    <option>Curtains</option>
+
+                    <option>Flooring</option>
+
+                    <option>Awnings</option>
+
+                    <option>Facade</option>
+
+                    <option>Shower Enclosure</option>
+
+                    <option>Fab Solutions</option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- SUB TYPE -->
+
+            <div>
+
+                <label
+                    class="text-sm
+                           font-medium
+                           block mb-2"
+                >
+
+                    Sub-Type
+
+                </label>
+
+                <input
+                    id="productType"
+                    type="text"
+                    placeholder="Example: Steel Doors / Wooden Flooring"
+                    class="w-full
+                           px-4 py-3
+                           rounded-xl
+                           bg-[#f7f4ef]
+                           border border-black/5
+                           outline-none
+                           focus:border-gold"
+                >
+
+            </div>
+
+
+
+            <!-- BRAND -->
+
+            <div>
+
+                <label
+                    class="text-sm
+                           font-medium
+                           block mb-2"
+                >
+
+                    Brand
+
+                </label>
+
+                <input
+                    id="productBrand"
+                    type="text"
+                    placeholder="Example: JSW Avante"
+                    class="w-full
+                           px-4 py-3
+                           rounded-xl
+                           bg-[#f7f4ef]
+                           border border-black/5
+                           outline-none
+                           focus:border-gold"
+                >
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div>
+
+                <label
+                    class="text-sm
+                           font-medium
+                           block mb-2"
+                >
+
+                    Description
+
+                </label>
+
+                <textarea
+                    id="productDescription"
+                    rows="4"
+                    placeholder="Write product description..."
+                    class="w-full
+                           px-4 py-3
+                           rounded-xl
+                           bg-[#f7f4ef]
+                           border border-black/5
+                           outline-none
+                           focus:border-gold
+                           resize-none"
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- FEATURES -->
+
+            <div>
+
+                <label
+                    class="text-sm
+                           font-medium
+                           block mb-2"
+                >
+
+                    Features
+
+                </label>
+
+                <textarea
+                    id="productFeatures"
+                    rows="4"
+                    placeholder="Enter features separated by comma..."
+                    class="w-full
+                           px-4 py-3
+                           rounded-xl
+                           bg-[#f7f4ef]
+                           border border-black/5
+                           outline-none
+                           focus:border-gold
+                           resize-none"
+                ></textarea>
+
+                <p
+                    class="text-xs
+                           text-black/40
+                           mt-2"
+                >
+
+                    Example:
+                    Premium Finish, Durable, Custom Size, Easy Maintenance
+
+                </p>
+
+            </div>
+
+
+
+            <!-- IMAGE -->
+
+            <div>
+
+                <label
+                    class="text-sm
+                           font-medium
+                           block mb-2"
+                >
+
+                    Product Image
+
+                </label>
+
+
+                <label
+                    class="group
+                           relative
+                           block
+                           border-2
+                           border-dashed
+                           border-black/10
+                           rounded-2xl
+                           p-8
+                           text-center
+                           cursor-pointer
+                           hover:border-gold
+                           hover:bg-gold/5
+                           transition"
+                >
+
+                    <input
+                        id="productImage"
+                        type="file"
+                        accept="image/*"
+                        class="hidden"
+                        onchange="previewImage(event)"
+                    >
+
+
+                    <div id="uploadContent">
+
+                        <i
+                            class="fa-solid fa-cloud-arrow-up
+                                   text-4xl
+                                   text-gold
+                                   mb-3"
+                        ></i>
+
+                        <p class="font-medium">
+
+                            Upload Product Photo
+
+                        </p>
+
+                        <p
+                            class="text-xs
+                                   text-black/40
+                                   mt-1"
+                        >
+
+                            JPG, PNG or WebP
+
+                        </p>
+
+                    </div>
+
+
+                    <img
+                        id="imagePreview"
+                        class="hidden
+                               w-full
+                               max-h-56
+                               object-cover
+                               rounded-xl
+                               mt-4"
+                    >
+
+                </label>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div
+                class="flex gap-3
+                       pt-3"
+            >
+
+                <button
+                    type="button"
+                    onclick="closeEditor()"
+                    class="flex-1
+                           py-3.5
+                           rounded-xl
+                           border border-black/10
+                           hover:bg-black/5"
+                >
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="flex-1
+                           py-3.5
+                           rounded-xl
+                           bg-[#171513]
+                           text-white
+                           hover:bg-gold
+                           hover:text-black
+                           transition"
+                >
+
+                    <i class="fa-solid fa-check mr-2"></i>
+
+                    Save Product
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN FLOAT BUTTON
+===================================================== -->
+
+<button
+    onclick="openAdmin()"
+    title="Catalogue Manager"
+    class="fixed
+           bottom-6 right-6
+           z-[90]
+           w-14 h-14
+           rounded-full
+           bg-[#171513]
+           text-white
+           shadow-2xl
+           flex items-center
+           justify-center
+           hover:bg-gold
+           hover:text-black
+           hover:scale-110
+           hover:rotate-12
+           transition-all duration-300"
+>
+
+    <i class="fa-solid fa-sliders"></i>
+
+</button>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="relative overflow-hidden bg-[#11100f] text-white">
+
+    <!-- Decorative 3D Background -->
+    <div class="absolute -top-32 -right-32 w-96 h-96
+                bg-[#b88a5a]/10 rounded-full blur-3xl">
+    </div>
+
+    <div class="absolute bottom-0 -left-32 w-96 h-96
+                bg-[#8b6a48]/10 rounded-full blur-3xl">
+    </div>
+
+
+    <!-- ================================
+         TOP CTA SECTION
+    ================================= -->
+
+    <div class="relative border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+
+                <!-- LEFT -->
+
+                <div>
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <span class="w-10 h-[1px] bg-[#c49a6c]"></span>
+
+                        <span class="text-[#c49a6c]
+                                     text-xs
+                                     tracking-[.3em]
+                                     uppercase">
+                            Premium Building Solutions
+                        </span>
+
+                    </div>
+
+
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl
+                               font-light
+                               leading-tight
+                               tracking-tight">
+
+                        Let's build
+                        <span class="italic text-[#c49a6c]">
+                            something
+                        </span>
+                        extraordinary.
+
+                    </h2>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="lg:text-right">
+
+                    <p class="text-white/50
+                              text-sm
+                              leading-7
+                              max-w-lg
+                              lg:ml-auto
+                              mb-7">
+
+                        From premium doors and windows to flooring,
+                        facades and architectural solutions —
+                        Roopcraft delivers products, installation
+                        and after-sales service under one roof.
+
+                    </p>
+
+
+                    <div class="flex flex-wrap lg:justify-end gap-4">
+
+                        <!-- WhatsApp -->
+
+                        <a
+                            href="https://wa.me/918003150333"
+                            target="_blank"
+                            class="group inline-flex items-center gap-3
+                                   px-6 py-3.5
+                                   rounded-full
+                                   bg-[#25D366]
+                                   text-white
+                                   text-sm
+                                   font-medium
+                                   shadow-lg shadow-green-500/20
+                                   hover:-translate-y-1
+                                   hover:shadow-green-500/40
+                                   transition-all duration-300"
+                        >
+
+                            <i class="fa-brands fa-whatsapp text-lg
+                                      group-hover:scale-125
+                                      transition">
+                            </i>
+
+                            WhatsApp Us
+
+                            <i class="fa-solid fa-arrow-right
+                                      text-xs
+                                      group-hover:translate-x-1
+                                      transition">
+                            </i>
+
+                        </a>
+
+
+                        <!-- Quote -->
+
+                        <a
+                            href="#contact"
+                            class="group inline-flex items-center gap-3
+                                   px-6 py-3.5
+                                   rounded-full
+                                   border border-[#c49a6c]/50
+                                   text-[#c49a6c]
+                                   text-sm
+                                   hover:bg-[#c49a6c]
+                                   hover:text-black
+                                   hover:-translate-y-1
+                                   transition-all duration-300"
+                        >
+
+                            Get a Quote
+
+                            <i class="fa-solid fa-arrow-right
+                                      text-xs
+                                      group-hover:translate-x-1
+                                      transition">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         MAIN FOOTER
+    ================================= -->
+
+    <div class="relative max-w-7xl mx-auto
+                px-6 lg:px-8
+                py-16 lg:py-20">
+
+
+        <div class="grid grid-cols-1
+                    sm:grid-cols-2
+                    lg:grid-cols-12
+                    gap-12 lg:gap-10">
+
+
+            <!-- ==========================
+                 BRAND
+            =========================== -->
+
+            <div class="lg:col-span-4">
+
+                <!-- Logo -->
+
+                <div class="group inline-block mb-7">
+
+                    <h3 class="text-3xl
+                               font-semibold
+                               tracking-[.18em]
+                               transition
+                               group-hover:text-[#c49a6c]">
+
+                        ROOPCRAFT
+
+                    </h3>
+
+                    <div class="flex items-center gap-3 mt-2">
+
+                        <span class="h-[1px]
+                                     w-12
+                                     bg-[#c49a6c]">
+                        </span>
+
+                        <span class="text-[10px]
+                                     tracking-[.35em]
+                                     text-white/40">
+
+                            LIVING PVT. LTD.
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="text-sm
+                          leading-7
+                          text-white/45
+                          max-w-sm">
+
+                    Premium doors, windows, flooring, curtains,
+                    awnings, facades, shower enclosures and
+                    architectural solutions crafted for
+                    exceptional spaces.
+
+                </p>
+
+
+                <!-- SERVICE BADGES -->
+
+                <div class="grid grid-cols-3
+                            gap-3
+                            mt-8
+                            max-w-sm">
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-ruler-combined
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            MEASURE
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-screwdriver-wrench
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            INSTALL
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-headset
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            SUPPORT
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL -->
+
+                <div class="flex gap-3 mt-8">
+
+                    <a
+                        href="https://wa.me/918003150333"
+                        target="_blank"
+                        aria-label="WhatsApp"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#25D366]
+                               hover:border-[#25D366]
+                               hover:-translate-y-1
+                               hover:rotate-6
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                    <a
+                        href="tel:+918003150333"
+                        aria-label="Call"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#c49a6c]
+                               hover:text-black
+                               hover:border-[#c49a6c]
+                               hover:-translate-y-1
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        aria-label="Email"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#c49a6c]
+                               hover:text-black
+                               hover:border-[#c49a6c]
+                               hover:-translate-y-1
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 PRODUCTS
+            =========================== -->
+
+            <div class="lg:col-span-2">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Products
+
+                </h4>
+
+
+                <ul class="space-y-3 text-sm">
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Doors
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Windows
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Curtains & Blinds
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Flooring
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Awnings
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Boutique Facade
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Shower Enclosure
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Fab Solutions
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 SERVICES
+            =========================== -->
+
+            <div class="lg:col-span-2">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Our Services
+
+                </h4>
+
+
+                <ul class="space-y-4 text-sm">
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-compass
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Consultation
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-ruler
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Site Measurement
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-pen-ruler
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Customization
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-gears
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Installation
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-truck-fast
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Project Delivery
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-headset
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        After-Sales Service
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 CONTACT
+            =========================== -->
+
+            <div class="lg:col-span-4">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Visit Our Office
+
+                </h4>
+
+
+                <!-- ADDRESS CARD -->
+
+                <div class="group
+                            relative
+                            p-5
+                            rounded-2xl
+                            border border-white/10
+                            bg-white/[.03]
+                            overflow-hidden
+                            hover:border-[#c49a6c]/40
+                            hover:bg-white/[.05]
+                            transition-all duration-500">
+
+
+                    <!-- Glow -->
+
+                    <div class="absolute
+                                -right-10
+                                -top-10
+                                w-24 h-24
+                                rounded-full
+                                bg-[#c49a6c]/10
+                                blur-2xl
+                                group-hover:bg-[#c49a6c]/20
+                                transition">
+                    </div>
+
+
+                    <div class="relative flex gap-4">
+
+                        <div class="w-11 h-11
+                                    shrink-0
+                                    rounded-xl
+                                    bg-[#c49a6c]/10
+                                    text-[#c49a6c]
+                                    flex items-center justify-center
+                                    group-hover:scale-110
+                                    group-hover:rotate-3
+                                    transition">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-sm
+                                      font-medium
+                                      mb-2">
+
+                                Roopcraft Living Pvt Ltd
+
+                            </p>
+
+
+                            <p class="text-xs
+                                      leading-6
+                                      text-white/40">
+
+                                First Floor, No. 1,
+                                Flat / Shop No. 19,<br>
+
+                                Nemichand Market,<br>
+
+                                Alwar, Rajasthan – 301001
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+918003150333"
+                    class="group flex items-center gap-4 mt-5
+                           p-4
+                           rounded-xl
+                           border border-white/10
+                           hover:border-[#c49a6c]/40
+                           hover:bg-[#c49a6c]/5
+                           transition"
+                >
+
+                    <div class="w-10 h-10
+                                rounded-full
+                                bg-[#c49a6c]/10
+                                text-[#c49a6c]
+                                flex items-center justify-center
+                                group-hover:scale-110
+                                transition">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="text-[10px]
+                                  uppercase
+                                  tracking-widest
+                                  text-white/30">
+
+                            Call Us
+
+                        </p>
+
+                        <p class="text-sm mt-1">
+
+                            +91 8003150333
+
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right ml-auto
+                              text-xs
+                              text-white/30
+                              group-hover:text-[#c49a6c]
+                              group-hover:translate-x-1
+                              transition">
+                    </i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         BOTTOM BAR
+    ================================= -->
+
+    <div class="border-t border-white/10">
+
+        <div class="max-w-7xl mx-auto
+                    px-6 lg:px-8
+                    py-6
+                    flex flex-col
+                    md:flex-row
+                    items-center
+                    justify-between
+                    gap-4">
+
+
+            <p class="text-[11px]
+                      text-white/30
+                      text-center
+                      md:text-left">
+
+                © 2026
+                <span class="text-white/50">
+                    Roopcraft Living Pvt Ltd
+                </span>.
+                All Rights Reserved.
+
+            </p>
+
+
+            <div class="flex items-center gap-5">
+
+                <a
+                    href="#about"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    About Us
+
+                </a>
+
+
+                <span class="w-1 h-1
+                             rounded-full
+                             bg-white/20">
+                </span>
+
+
+                <a
+                    href="#products"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    Products
+
+                </a>
+
+
+                <span class="w-1 h-1
+                             rounded-full
+                             bg-white/20">
+                </span>
+
+
+                <a
+                    href="#contact"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    Contact
+
+                </a>
+
+            </div>
+
+
+            <p class="text-[10px]
+                      uppercase
+                      tracking-[.2em]
+                      text-white/20">
+
+                Premium Architectural Solutions
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   DEFAULT PRODUCT DATA
+===================================================== */
+
+const defaultProducts = [
+
+    {
+        id: 1,
+        name: "Premium Steel Door",
+        category: "Doors",
+        type: "Steel Doors",
+        brand: "JSW Avante / Jindal",
+        description:
+            "Strong and elegant steel doors designed for modern residential and commercial spaces.",
+        features:
+            "Plain Finish, Wood Finish, Double Door, Security Door, Fire Door",
+        image:
+            "https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 2,
+        name: "Modern Glass Door",
+        category: "Doors",
+        type: "Glass Doors",
+        brand: "AIS Asahi",
+        description:
+            "Elegant glass door systems combining natural light, modern aesthetics and functionality.",
+        features:
+            "UPVC, Aluminium, Custom Sizes, Modern Finish",
+        image:
+            "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 3,
+        name: "Fiber Door",
+        category: "Doors",
+        type: "Fiber Doors",
+        brand: "Imported",
+        description:
+            "Premium imported fiber doors offering durability with attractive modern designs.",
+        features:
+            "Water Resistant, Durable, Lightweight, Custom Design",
+        image:
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 4,
+        name: "Steel Window",
+        category: "Windows",
+        type: "Steel Windows",
+        brand: "JSW Avante / Arcelor",
+        description:
+            "Strong steel window systems available in multiple configurations.",
+        features:
+            "Fixed, 2 Track, 3 Track, Casement, Slider",
+        image:
+            "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 5,
+        name: "Premium UPVC Window",
+        category: "Windows",
+        type: "UPVC / Aluminium",
+        brand: "AIS Asahi",
+        description:
+            "High-performance UPVC and aluminium windows designed for comfort and style.",
+        features:
+            "2 Track, 3 Track, Casement, Fixed, Slider, Tilt/Turn",
+        image:
+            "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 6,
+        name: "Roller Blinds",
+        category: "Curtains",
+        type: "Roller Blinds",
+        brand: "Premium Collection",
+        description:
+            "Elegant roller blinds designed to control light while enhancing interiors.",
+        features:
+            "Light Control, Custom Fabric, Easy Operation, Modern Finish",
+        image:
+            "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 7,
+        name: "Roman Blinds",
+        category: "Curtains",
+        type: "Roman Blinds",
+        brand: "Premium Collection",
+        description:
+            "Sophisticated Roman blinds for luxurious residential and commercial interiors.",
+        features:
+            "Premium Fabric, Custom Size, Elegant Finish",
+        image:
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 8,
+        name: "Wooden Flooring",
+        category: "Flooring",
+        type: "Wooden Flooring",
+        brand: "Vista",
+        description:
+            "Premium wooden flooring that brings warmth and timeless character to interiors.",
+        features:
+            "Premium Finish, Durable, Easy Maintenance, Multiple Textures",
+        image:
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 9,
+        name: "Chevron Flooring",
+        category: "Flooring",
+        type: "Chevron",
+        brand: "Vista",
+        description:
+            "Distinctive Chevron flooring designed for sophisticated contemporary spaces.",
+        features:
+            "Luxury Finish, Unique Pattern, Durable Surface",
+        image:
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 10,
+        name: "Modern Pergola",
+        category: "Awnings",
+        type: "Pergola",
+        brand: "Roopcraft Collection",
+        description:
+            "Architectural pergola systems designed for stylish outdoor living.",
+        features:
+            "Weather Protection, Custom Size, Premium Finish",
+        image:
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 11,
+        name: "Boutique Glass Facade",
+        category: "Facade",
+        type: "Glass Facade",
+        brand: "Premium Systems",
+        description:
+            "Contemporary glass facade systems creating striking architectural elevations.",
+        features:
+            "Modern Design, Structural Glass, Custom Configuration",
+        image:
+            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 12,
+        name: "Aluminium Composite Facade",
+        category: "Facade",
+        type: "ACP Facade",
+        brand: "Premium Systems",
+        description:
+            "Durable aluminium composite panel facade solutions for contemporary buildings.",
+        features:
+            "Lightweight, Durable, Weather Resistant, Custom Colors",
+        image:
+            "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 13,
+        name: "Glass Shower Enclosure",
+        category: "Shower Enclosure",
+        type: "Custom Glass Partition",
+        brand: "Roopcraft",
+        description:
+            "Fully customizable glass shower enclosures designed for premium bathrooms.",
+        features:
+            "Custom Partition, Toughened Glass, Premium Hardware",
+        image:
+            "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 14,
+        name: "Insulated PUF Panel",
+        category: "Fab Solutions",
+        type: "Insulated PUF Panel",
+        brand: "TATA / Wondupist Pronto",
+        description:
+            "High-performance insulated PUF panels for industrial and commercial applications.",
+        features:
+            "Thermal Insulation, Lightweight, Durable, Custom Sizes",
+        image:
+            "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 15,
+        name: "Rockwool Insulation",
+        category: "Fab Solutions",
+        type: "Rockwool",
+        brand: "Premium Systems",
+        description:
+            "Reliable thermal and acoustic insulation solution for building applications.",
+        features:
+            "Thermal Insulation, Acoustic Control, Fire Resistant",
+        image:
+            "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
+    },
+
+
+    {
+        id: 16,
+        name: "Roofing Sheet",
+        category: "Fab Solutions",
+        type: "Roofing Sheet",
+        brand: "TATA / Apollo / Jindal",
+        description:
+            "Premium roofing sheet solutions for industrial and commercial structures.",
+        features:
+            "150 GSM, Durable, Weather Resistant, Multiple Profiles",
+        image:
+            "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
+    }
+
+];
+
+
+
+/* =====================================================
+   LOAD PRODUCTS
+===================================================== */
+
+let products =
+    JSON.parse(localStorage.getItem("roopcraftProducts"))
+    || defaultProducts;
+
+
+
+/* =====================================================
+   SAVE PRODUCTS
+===================================================== */
+
+function saveProducts() {
+
+    localStorage.setItem(
+        "roopcraftProducts",
+        JSON.stringify(products)
+    );
+
+}
+
+
+
+/* =====================================================
+   CATEGORY ICONS
+===================================================== */
+
+const categoryIcons = {
+
+    "All":
+        "fa-layer-group",
+
+    "Doors":
+        "fa-door-open",
+
+    "Windows":
+        "fa-window-maximize",
+
+    "Curtains":
+        "fa-bars",
+
+    "Flooring":
+        "fa-border-all",
+
+    "Awnings":
+        "fa-umbrella",
+
+    "Facade":
+        "fa-building",
+
+    "Shower Enclosure":
+        "fa-shower",
+
+    "Fab Solutions":
+        "fa-industry"
+
+};
+
+
+
+/* =====================================================
+   RENDER CATEGORY BUTTONS
+===================================================== */
+
+function renderCategories() {
+
+    const container =
+        document.getElementById("categoryButtons");
+
+    const categories =
+        ["All", ...new Set(products.map(p => p.category))];
+
+
+    container.innerHTML =
+        categories.map((category, index) => `
+
+            <button
+                onclick="filterCategory('${category}')"
+                data-category="${category}"
+                class="
+                    category-btn
+                    shrink-0
+                    flex items-center gap-2
+                    px-5 py-3
+                    rounded-full
+                    text-sm
+                    border
+                    ${index === 0
+                        ? 'bg-[#171513] text-white border-[#171513]'
+                        : 'bg-white text-black/60 border-black/5'
+                    }
+                "
+            >
+
+                <i class="fa-solid ${categoryIcons[category] || 'fa-box'}"></i>
+
+                ${category}
+
+            </button>
+
+        `).join("");
+
+}
+
+
+
+/* =====================================================
+   CURRENT FILTER
+===================================================== */
+
+let currentCategory = "All";
+
+
+
+/* =====================================================
+   RENDER PRODUCTS
+===================================================== */
+
+function renderProducts() {
+
+    const grid =
+        document.getElementById("productGrid");
+
+    const search =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+
+    let filtered =
+        products.filter(product => {
+
+            const categoryMatch =
+                currentCategory === "All"
+                || product.category === currentCategory;
+
+
+            const searchMatch =
+                product.name.toLowerCase().includes(search)
+                ||
+                product.type.toLowerCase().includes(search)
+                ||
+                product.brand.toLowerCase().includes(search);
+
+
+            return categoryMatch && searchMatch;
+
+        });
+
+
+    if (!filtered.length) {
+
+        grid.innerHTML = `
+
+            <div
+                class="col-span-full
+                       py-20
+                       text-center"
+            >
+
+                <i
+                    class="fa-solid fa-box-open
+                           text-5xl
+                           text-black/20
+                           mb-5"
+                ></i>
+
+                <h3
+                    class="text-xl
+                           font-medium"
+                >
+
+                    No products found
+
+                </h3>
+
+                <p
+                    class="text-sm
+                           text-black/40
+                           mt-2"
+                >
+
+                    Try another search or category.
+
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    grid.innerHTML =
+        filtered.map(product => `
+
+        <article
+            class="product-card
+                   group
+                   bg-white
+                   rounded-3xl
+                   overflow-hidden
+                   border border-black/5
+                   cursor-pointer"
+            onclick="openProduct(${product.id})"
+        >
+
+
+            <!-- IMAGE -->
+
+            <div
+                class="relative
+                       h-72
+                       overflow-hidden"
+            >
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    class="product-image
+                           w-full h-full
+                           object-cover"
+                >
+
+
+                <!-- OVERLAY -->
+
+                <div
+                    class="image-overlay
+                           absolute inset-0
+                           bg-black/35
+                           flex items-center
+                           justify-center"
+                >
+
+                    <span
+                        class="w-14 h-14
+                               rounded-full
+                               bg-white
+                               flex items-center
+                               justify-center
+                               text-black
+                               shadow-xl
+                               hover:bg-gold
+                               transition"
+                    >
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </span>
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div
+                    class="absolute
+                           top-4 left-4
+                           px-3 py-1.5
+                           rounded-full
+                           bg-white/90
+                           backdrop-blur
+                           text-[10px]
+                           uppercase
+                           tracking-wider"
+                >
+
+                    ${product.category}
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="p-6">
+
+
+                <div
+                    class="flex items-start
+                           justify-between
+                           gap-4"
+                >
+
+                    <div>
+
+                        <p
+                            class="text-[10px]
+                                   uppercase
+                                   tracking-widest
+                                   text-gold"
+                        >
+
+                            ${product.type}
+
+                        </p>
+
+
+                        <h3
+                            class="text-xl
+                                   font-medium
+                                   mt-2
+                                   group-hover:text-gold
+                                   transition"
+                        >
+
+                            ${product.name}
+
+                        </h3>
+
+                    </div>
+
+
+                    <!-- 3D ICON -->
+
+                    <div
+                        class="icon-3d
+                               shrink-0
+                               w-11 h-11
+                               rounded-xl
+                               bg-[#f7f4ef]
+                               flex items-center
+                               justify-center
+                               text-gold"
+                    >
+
+                        <i
+                            class="fa-solid
+                                   ${categoryIcons[product.category] || 'fa-box'}"
+                        ></i>
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    class="text-sm
+                           leading-6
+                           text-black/45
+                           mt-4
+                           line-clamp-2"
+                >
+
+                    ${product.description}
+
+                </p>
+
+
+                <div
+                    class="flex
+                           items-center
+                           justify-between
+                           mt-6
+                           pt-5
+                           border-t
+                           border-black/5"
+                >
+
+                    <span
+                        class="text-xs
+                               text-black/40"
+                    >
+
+                        ${product.brand}
+
+                    </span>
+
+
+                    <span
+                        class="text-gold
+                               text-sm
+                               group-hover:translate-x-1
+                               transition"
+                    >
+
+                        Explore
+                        <i
+                            class="fa-solid
+                                   fa-arrow-right
+                                   ml-1"
+                        ></i>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    `).join("");
+
+}
+
+
+
+/* =====================================================
+   FILTER CATEGORY
+===================================================== */
+
+function filterCategory(category) {
+
+    currentCategory = category;
+
+
+    document
+        .querySelectorAll(".category-btn")
+        .forEach(button => {
+
+            if (
+                button.dataset.category === category
+            ) {
+
+                button.classList.remove(
+                    "bg-white",
+                    "text-black/60",
+                    "border-black/5"
+                );
+
+                button.classList.add(
+                    "bg-[#171513]",
+                    "text-white",
+                    "border-[#171513]"
+                );
+
+            }
+
+            else {
+
+                button.classList.remove(
+                    "bg-[#171513]",
+                    "text-white",
+                    "border-[#171513]"
+                );
+
+                button.classList.add(
+                    "bg-white",
+                    "text-black/60",
+                    "border-black/5"
+                );
+
+            }
+
+        });
+
+
+    renderProducts();
+
+}
+
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+document
+    .getElementById("searchInput")
+    .addEventListener(
+        "input",
+        renderProducts
+    );
+
+
+
+/* =====================================================
+   PRODUCT DETAILS
+===================================================== */
+
+function openProduct(id) {
+
+    const product =
+        products.find(p => p.id === id);
+
+    if (!product) return;
+
+
+    const features =
+        product.features
+        .split(",")
+        .map(feature => `
+
+            <li
+                class="flex gap-3
+                       items-start"
+            >
+
+                <i
+                    class="fa-solid
+                           fa-check
+                           text-gold
+                           mt-1"
+                ></i>
+
+                <span>${feature.trim()}</span>
+
+            </li>
+
+        `)
+        .join("");
+
+
+    document.getElementById("modalContent").innerHTML = `
+
+        <div
+            class="h-[350px]
+                   md:h-full
+                   min-h-[350px]"
+        >
+
+            <img
+                src="${product.image}"
+                alt="${product.name}"
+                class="w-full h-full
+                       object-cover"
+            >
+
+        </div>
+
+
+        <div class="p-8 lg:p-12">
+
+
+            <p
+                class="text-xs
+                       text-gold
+                       uppercase
+                       tracking-[.25em]"
+            >
+
+                ${product.category}
+
+            </p>
+
+
+            <h2
+                class="text-4xl
+                       font-light
+                       mt-4"
+            >
+
+                ${product.name}
+
+            </h2>
+
+
+            <p
+                class="text-sm
+                       text-gold
+                       mt-3"
+            >
+
+                ${product.brand}
+
+            </p>
+
+
+            <p
+                class="text-black/50
+                       leading-7
+                       mt-7"
+            >
+
+                ${product.description}
+
+            </p>
+
+
+            <h4
+                class="font-semibold
+                       mt-8
+                       mb-4"
+            >
+
+                Product Features
+
+            </h4>
+
+
+            <ul
+                class="space-y-3
+                       text-sm
+                       text-black/55"
+            >
+
+                ${features}
+
+            </ul>
+
+
+            <div
+                class="mt-10
+                       flex flex-wrap
+                       gap-3"
+            >
+
+                <a
+                    href="https://wa.me/918003150333?text=Hello%20Roopcraft,%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}"
+                    target="_blank"
+                    class="px-6 py-3.5
+                           rounded-full
+                           bg-[#25D366]
+                           text-white
+                           text-sm
+                           hover:-translate-y-1
+                           transition"
+                >
+
+                    <i class="fa-brands fa-whatsapp mr-2"></i>
+
+                    Enquire on WhatsApp
+
+                </a>
+
+
+                <a
+                    href="tel:+918003150333"
+                    class="px-6 py-3.5
+                           rounded-full
+                           bg-[#171513]
+                           text-white
+                           text-sm
+                           hover:bg-gold
+                           hover:text-black
+                           transition"
+                >
+
+                    <i class="fa-solid fa-phone mr-2"></i>
+
+                    Call Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    document
+        .getElementById("productModal")
+        .classList.add("active");
+
+}
+
+
+
+function closeProductModal() {
+
+    document
+        .getElementById("productModal")
+        .classList.remove("active");
+
+}
+
+
+
+/* =====================================================
+   ADMIN PANEL
+===================================================== */
+
+function openAdmin() {
+
+    document
+        .getElementById("adminPanel")
+        .classList.add("active");
+
+
+    document
+        .getElementById("adminOverlay")
+        .classList.remove("hidden");
+
+
+    renderAdminProducts();
+
+}
+
+
+
+function closeAdmin() {
+
+    document
+        .getElementById("adminPanel")
+        .classList.remove("active");
+
+
+    document
+        .getElementById("adminOverlay")
+        .classList.add("hidden");
+
+}
+
+
+
+document
+    .getElementById("adminOverlay")
+    .addEventListener(
+        "click",
+        closeAdmin
+    );
+
+
+
+/* =====================================================
+   ADMIN PRODUCT LIST
+===================================================== */
+
+function renderAdminProducts() {
+
+    const list =
+        document.getElementById("adminProductList");
+
+
+    list.innerHTML =
+        products.map(product => `
+
+            <div
+                class="group
+                       flex gap-3
+                       p-3
+                       rounded-2xl
+                       border border-black/5
+                       hover:border-gold/40
+                       hover:bg-gold/5
+                       transition"
+            >
+
+                <img
+                    src="${product.image}"
+                    class="w-16 h-16
+                           rounded-xl
+                           object-cover"
+                >
+
+
+                <div
+                    class="flex-1
+                           min-w-0"
+                >
+
+                    <p
+                        class="font-medium
+                               text-sm
+                               truncate"
+                    >
+
+                        ${product.name}
+
+                    </p>
+
+
+                    <p
+                        class="text-xs
+                               text-black/40
+                               mt-1"
+                    >
+
+                        ${product.category}
+
+                    </p>
+
+
+                    <p
+                        class="text-[10px]
+                               text-gold
+                               mt-1"
+                    >
+
+                        ${product.brand || "No brand"}
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="flex
+                           items-center
+                           gap-1"
+                >
+
+                    <button
+                        onclick="editProduct(${product.id})"
+                        class="w-9 h-9
+                               rounded-lg
+                               hover:bg-black
+                               hover:text-white
+                               transition"
+                    >
+
+                        <i class="fa-solid fa-pen text-xs"></i>
+
+                    </button>
+
+
+                    <button
+                        onclick="deleteProduct(${product.id})"
+                        class="w-9 h-9
+                               rounded-lg
+                               text-red-400
+                               hover:bg-red-500
+                               hover:text-white
+                               transition"
+                    >
+
+                        <i class="fa-solid fa-trash text-xs"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `).join("");
+
+}
+
+
+
+/* =====================================================
+   ADD PRODUCT
+===================================================== */
+
+function openAddProduct() {
+
+    document
+        .getElementById("productForm")
+        .reset();
+
+
+    document
+        .getElementById("editId")
+        .value = "";
+
+
+    document
+        .getElementById("editorTitle")
+        .textContent = "Add Product";
+
+
+    document
+        .getElementById("imagePreview")
+        .classList.add("hidden");
+
+
+    document
+        .getElementById("uploadContent")
+        .classList.remove("hidden");
+
+
+    document
+        .getElementById("editorModal")
+        .classList.add("active");
+
+}
+
+
+
+/* =====================================================
+   EDIT PRODUCT
+===================================================== */
+
+function editProduct(id) {
+
+    const product =
+        products.find(p => p.id === id);
+
+    if (!product) return;
+
+
+    document.getElementById("editId").value =
+        product.id;
+
+    document.getElementById("productName").value =
+        product.name;
+
+    document.getElementById("productCategory").value =
+        product.category;
+
+    document.getElementById("productType").value =
+        product.type;
+
+    document.getElementById("productBrand").value =
+        product.brand;
+
+    document.getElementById("productDescription").value =
+        product.description;
+
+    document.getElementById("productFeatures").value =
+        product.features;
+
+
+    const preview =
+        document.getElementById("imagePreview");
+
+
+    preview.src =
+        product.image;
+
+    preview.classList.remove("hidden");
+
+
+    document
+        .getElementById("uploadContent")
+        .classList.add("hidden");
+
+
+    document
+        .getElementById("editorTitle")
+        .textContent = "Edit Product";
+
+
+    document
+        .getElementById("editorModal")
+        .classList.add("active");
+
+}
+
+
+
+/* =====================================================
+   IMAGE PREVIEW
+===================================================== */
+
+function previewImage(event) {
+
+    const file =
+        event.target.files[0];
+
+    if (!file) return;
+
+
+    const reader =
+        new FileReader();
+
+
+    reader.onload = function(e) {
+
+        const preview =
+            document.getElementById("imagePreview");
+
+
+        preview.src =
+            e.target.result;
+
+
+        preview.classList.remove("hidden");
+
+
+        document
+            .getElementById("uploadContent")
+            .classList.add("hidden");
+
+    };
+
+
+    reader.readAsDataURL(file);
+
+}
+
+
+
+/* =====================================================
+   SAVE PRODUCT
+===================================================== */
+
+document
+    .getElementById("productForm")
+    .addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const id =
+                document
+                .getElementById("editId")
+                .value;
+
+
+            const existing =
+                products.find(
+                    p => p.id == id
+                );
+
+
+            const preview =
+                document.getElementById("imagePreview");
+
+
+            const productData = {
+
+                id:
+                    id
+                    ? Number(id)
+                    : Date.now(),
+
+                name:
+                    document
+                    .getElementById("productName")
+                    .value,
+
+                category:
+                    document
+                    .getElementById("productCategory")
+                    .value,
+
+                type:
+                    document
+                    .getElementById("productType")
+                    .value,
+
+                brand:
+                    document
+                    .getElementById("productBrand")
+                    .value,
+
+                description:
+                    document
+                    .getElementById("productDescription")
+                    .value,
+
+                features:
+                    document
+                    .getElementById("productFeatures")
+                    .value,
+
+                image:
+                    preview.src || ""
+
+            };
+
+
+            if (existing) {
+
+                const index =
+                    products.findIndex(
+                        p => p.id == id
+                    );
+
+
+                /*
+                    If client doesn't upload
+                    a new photo, retain old photo.
+                */
+
+                if (
+                    !document
+                    .getElementById("productImage")
+                    .files[0]
+                ) {
+
+                    productData.image =
+                        existing.image;
+
+                }
+
+
+                products[index] =
+                    productData;
+
+            }
+
+            else {
+
+                products.push(
+                    productData
+                );
+
+            }
+
+
+            saveProducts();
+
+
+            renderCategories();
+
+            renderProducts();
+
+            renderAdminProducts();
+
+
+            closeEditor();
+
+        }
+    );
+
+
+
+/* =====================================================
+   DELETE PRODUCT
+===================================================== */
+
+function deleteProduct(id) {
+
+    const product =
+        products.find(
+            p => p.id === id
+        );
+
+
+    if (!product) return;
+
+
+    const confirmDelete =
+        confirm(
+            `Delete "${product.name}"?`
+        );
+
+
+    if (!confirmDelete) return;
+
+
+    products =
+        products.filter(
+            p => p.id !== id
+        );
+
+
+    saveProducts();
+
+
+    renderCategories();
+
+    renderProducts();
+
+    renderAdminProducts();
+
+}
+
+
+
+/* =====================================================
+   RESET PRODUCTS
+===================================================== */
+
+function resetProducts() {
+
+    const confirmReset =
+        confirm(
+            "Reset catalogue to demo products?"
+        );
+
+
+    if (!confirmReset) return;
+
+
+    products =
+        JSON.parse(
+            JSON.stringify(defaultProducts)
+        );
+
+
+    saveProducts();
+
+
+    renderCategories();
+
+    renderProducts();
+
+    renderAdminProducts();
+
+}
+
+
+
+/* =====================================================
+   CLOSE EDITOR
+===================================================== */
+
+function closeEditor() {
+
+    document
+        .getElementById("editorModal")
+        .classList.remove("active");
+
+}
+
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+document
+    .getElementById("menuBtn")
+    .addEventListener(
+        "click",
+        function() {
+
+            document
+                .getElementById("mobileMenu")
+                .classList.toggle("hidden");
+
+        }
+    );
+
+
+
+/* =====================================================
+   MODAL CLICK OUTSIDE
+===================================================== */
+
+document
+    .getElementById("productModal")
+    .addEventListener(
+        "click",
+        function(e) {
+
+            if (
+                e.target === this
+            ) {
+
+                closeProductModal();
+
+            }
+
+        }
+    );
+
+
+document
+    .getElementById("editorModal")
+    .addEventListener(
+        "click",
+        function(e) {
+
+            if (
+                e.target === this
+            ) {
+
+                closeEditor();
+
+            }
+
+        }
+    );
+
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(e) {
+
+        if (e.key === "Escape") {
+
+            closeProductModal();
+
+            closeEditor();
+
+            closeAdmin();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+renderCategories();
+
+renderProducts();
+
+</script>
+
+
+</body>
+
+</html>
