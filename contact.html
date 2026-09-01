@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Roopcraft Living Pvt Ltd for premium doors, windows, curtains, flooring, awnings, boutique facades, shower enclosures and complete installation services in Alwar, Rajasthan.">
+  <meta name="theme-color" content="#201a15">
+  <title>Contact Us | Roopcraft Living Pvt Ltd</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            roop: {
+              50:"#faf8f4",100:"#f2ede4",200:"#e5d7c4",300:"#d2b994",
+              400:"#b99463",500:"#9c7747",600:"#805d35",700:"#624528",
+              800:"#3f2d1d",900:"#251a11"
+            }
+          },
+          fontFamily: {
+            sans:["DM Sans","sans-serif"],
+            serif:["Playfair Display","serif"]
+          },
+          boxShadow: {
+            luxury:"0 25px 70px rgba(0,0,0,.12)",
+            gold:"0 20px 50px rgba(156,119,71,.20)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"DM Sans",sans-serif;
+      background:#faf8f4;
+      color:#211b16;
+      overflow-x:hidden;
+    }
+    .serif{font-family:"Playfair Display",serif}
+
+    .architectural-bg{
+      background:
+        radial-gradient(circle at 85% 10%,rgba(185,148,98,.13),transparent 28%),
+        linear-gradient(135deg,rgba(255,255,255,.98),rgba(246,240,231,.94));
+    }
+
+    .nav-scrolled{
+      box-shadow:0 12px 35px rgba(0,0,0,.08);
+      background:rgba(255,255,255,.98)!important;
+    }
+
+    .card-3d{
+      transform-style:preserve-3d;
+      transition:transform .45s ease,box-shadow .45s ease,border-color .45s ease;
+    }
+    .card-3d:hover{
+      transform:perspective(1000px) translateY(-9px) rotateX(2deg) rotateY(-2deg);
+      box-shadow:0 30px 70px rgba(0,0,0,.13);
+      border-color:rgba(156,119,71,.25);
+    }
+    .icon-3d{
+      transition:transform .4s ease,box-shadow .4s ease;
+    }
+    .card-3d:hover .icon-3d{
+      transform:translateZ(24px) rotateY(10deg) rotateX(8deg) scale(1.07);
+      box-shadow:0 18px 35px rgba(156,119,71,.25);
+    }
+
+    .premium-btn{
+      position:relative;
+      overflow:hidden;
+      transition:transform .3s ease,box-shadow .3s ease,background .3s ease;
+    }
+    .premium-btn:before{
+      content:"";
+      position:absolute;
+      inset:0 auto 0 -120%;
+      width:65%;
+      background:rgba(255,255,255,.2);
+      transform:skewX(-25deg);
+      transition:left .65s ease;
+    }
+    .premium-btn:hover:before{left:145%}
+    .premium-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 35px rgba(0,0,0,.16);
+    }
+
+    .hero-orb{
+      width:clamp(260px,55vw,470px);
+      height:clamp(260px,55vw,470px);
+      animation:float 6s ease-in-out infinite;
+    }
+    @keyframes float{
+      0%,100%{transform:translateY(0) rotate(0)}
+      50%{transform:translateY(-12px) rotate(2deg)}
+    }
+
+    .premium-input{
+      width:100%;
+      transition:.25s ease;
+    }
+    .premium-input:focus{
+      outline:none;
+      border-color:#9c7747;
+      box-shadow:0 0 0 4px rgba(156,119,71,.1);
+      transform:translateY(-1px);
+    }
+
+    .modal{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      transition:.3s ease;
+    }
+    .modal.active{
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+    }
+    .modal-box{
+      transform:translateY(25px) scale(.96);
+      transition:.35s ease;
+    }
+    .modal.active .modal-box{transform:translateY(0) scale(1)}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(25px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+    .reveal.show{opacity:1;transform:translateY(0)}
+
+    .floating-contact{
+      transition:.3s ease;
+    }
+    .floating-contact:hover{
+      transform:translateY(-5px) scale(1.08);
+    }
+
+    #mobileMenu{
+      max-height:0;
+      opacity:0;
+      overflow:hidden;
+      transition:max-height .35s ease,opacity .25s ease;
+    }
+    #mobileMenu.open{
+      max-height:700px;
+      opacity:1;
+    }
+
+    .map-wrap{
+      min-height:340px;
+      overflow:hidden;
+      border-radius:28px;
+      box-shadow:0 25px 70px rgba(0,0,0,.13);
+    }
+    .map-wrap iframe{
+      display:block;
+      width:100%;
+      height:100%;
+      min-height:340px;
+      border:0;
+    }
+
+    @media (max-width:640px){
+      .hero-title{font-size:clamp(2.55rem,13vw,4rem);line-height:1.05}
+      .floating-actions{right:14px;bottom:14px}
+      .floating-actions a,.floating-actions button{width:52px;height:52px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *,*:before,*:after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-[100] bg-white/95 border-b border-black/5 transition-all duration-300">
+  <nav class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 py-2.5 sm:py-3 flex items-center justify-between gap-4">
+
+    <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 min-w-0 group">
+      <div class="w-11 h-11 sm:w-14 sm:h-14 shrink-0 flex items-center justify-center">
+        <img src="images/logo1.png" alt="Roopcraft Living logo"
+             class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
+      </div>
+      <div class="min-w-0">
+        <div class="font-bold tracking-[.12em] sm:tracking-[.18em] text-base sm:text-xl leading-none group-hover:text-roop-600 transition">
+          ROOPCRAFT
+        </div>
+        <div class="flex items-center gap-1.5 mt-1.5 sm:mt-2">
+          <span class="w-5 sm:w-6 h-px bg-roop-500"></span>
+          <span class="text-[7px] sm:text-[8px] tracking-[.18em] sm:tracking-[.25em] text-gray-500">
+            LIVING PVT. LTD.
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-7 xl:gap-9 text-sm font-semibold">
+      <a href="index.html" class="hover:text-roop-600 transition">Home</a>
+      <a href="about.html" class="hover:text-roop-600 transition">About</a>
+      <a href="products.html" class="hover:text-roop-600 transition">Products</a>
+      <a href="services.html" class="hover:text-roop-600 transition">Services</a>
+      <a href="projects.html" class="hover:text-roop-600 transition">Projects</a>
+      <a href="contact.html" class="text-roop-600">Contact</a>
+      <a href="tel:+918003150333"
+         class="premium-btn ml-1 bg-[#201a15] text-white px-6 py-3 rounded-full">
+        <i class="fa-solid fa-phone mr-2"></i>Let's Talk
+      </a>
+    </div>
+
+    <button id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"
+            class="lg:hidden shrink-0 w-11 h-11 rounded-xl border border-gray-200 flex items-center justify-center text-lg hover:bg-[#201a15] hover:text-white transition">
+      <i id="menuIcon" class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
+
+  <div id="mobileMenu" class="lg:hidden bg-white border-t border-gray-100">
+    <div class="px-4 sm:px-6 py-4 sm:py-5">
+      <div class="grid gap-1">
+        <a href="index.html" class="mobile-link px-4 py-3 rounded-xl hover:bg-roop-50 transition">Home</a>
+        <a href="about.html" class="mobile-link px-4 py-3 rounded-xl hover:bg-roop-50 transition">About</a>
+        <a href="products.html" class="mobile-link px-4 py-3 rounded-xl hover:bg-roop-50 transition">Products</a>
+        <a href="services.html" class="mobile-link px-4 py-3 rounded-xl hover:bg-roop-50 transition">Services</a>
+        <a href="projects.html" class="mobile-link px-4 py-3 rounded-xl hover:bg-roop-50 transition">Projects</a>
+        <a href="contact.html" class="mobile-link px-4 py-3 rounded-xl bg-roop-50 text-roop-700 font-semibold">Contact</a>
+      </div>
+      <a href="tel:+918003150333"
+         class="mobile-link premium-btn mt-3 flex items-center justify-center bg-[#201a15] text-white py-3.5 rounded-xl font-semibold">
+        <i class="fa-solid fa-phone mr-2"></i> Call +91 80031 50333
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="pt-[74px] sm:pt-[82px]">
+
+<!-- ================= HERO ================= -->
+<section class="architectural-bg relative overflow-hidden">
+  <div class="absolute -right-28 -top-28 w-80 h-80 rounded-full bg-roop-300/20 blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-32 bottom-0 w-72 h-72 rounded-full bg-roop-200/25 blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-14 sm:py-20 lg:py-24">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 bg-white border border-roop-200 rounded-full px-3.5 sm:px-4 py-2 shadow-sm mb-5">
+          <span class="w-2 h-2 bg-roop-500 rounded-full animate-pulse"></span>
+          <span class="text-[10px] sm:text-xs font-bold tracking-[.15em] text-roop-700">
+            LET'S BUILD SOMETHING BEAUTIFUL
+          </span>
+        </div>
+
+        <h1 class="serif hero-title text-5xl sm:text-6xl lg:text-7xl font-semibold">
+          Let's Create
+          <span class="text-roop-600">Your Space.</span>
+        </h1>
+
+        <p class="mt-5 sm:mt-6 text-gray-600 text-sm sm:text-base lg:text-lg leading-7 sm:leading-8 max-w-xl">
+          From premium doors and windows to flooring, curtains, awnings, facades,
+          shower enclosures and custom building solutions — Roopcraft Living provides
+          products, installation and after-sales service.
+        </p>
+
+        <div class="mt-7 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <button onclick="openModal()" type="button"
+                  class="premium-btn inline-flex items-center justify-center bg-[#201a15] text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full font-semibold">
+            <i class="fa-solid fa-file-signature mr-2"></i>Send Enquiry
+          </button>
+          <a href="tel:+918003150333"
+             class="premium-btn inline-flex items-center justify-center bg-white border border-roop-200 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full font-semibold">
+            <i class="fa-solid fa-phone text-roop-600 mr-2"></i>Call Now
+          </a>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center reveal">
+        <div class="hero-orb relative">
+          <div class="absolute inset-0 rounded-[34%] rotate-6 bg-[#201a15] shadow-2xl"></div>
+          <div class="absolute inset-5 sm:inset-7 rounded-[30%] -rotate-6 bg-gradient-to-br from-roop-300 to-roop-800 shadow-gold flex items-center justify-center">
+            <div class="text-center text-white px-5">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-3xl bg-white/10 border border-white/20 flex items-center justify-center shadow-xl">
+                <i class="fa-solid fa-building text-4xl sm:text-5xl"></i>
+              </div>
+              <div class="serif text-3xl sm:text-4xl font-semibold mt-5">ROOPCRAFT</div>
+              <div class="text-[10px] sm:text-xs tracking-[.35em] mt-2">LIVING</div>
+              <div class="w-16 h-px bg-white/50 mx-auto my-4"></div>
+              <p class="text-xs sm:text-sm text-white/85">Design • Build • Deliver</p>
+            </div>
+          </div>
+
+          <div class="absolute -top-3 -right-3 sm:-top-5 sm:-right-5 w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl flex items-center justify-center text-roop-700">
+            <i class="fa-solid fa-key text-xl sm:text-2xl"></i>
+          </div>
+          <div class="absolute -bottom-3 -left-3 sm:-bottom-5 sm:-left-5 w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white shadow-xl flex items-center justify-center text-roop-700">
+            <i class="fa-solid fa-hammer text-xl sm:text-2xl"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT CARDS ================= -->
+<section class="py-14 sm:py-18 lg:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12 reveal">
+      <span class="text-roop-600 text-xs sm:text-sm font-bold tracking-[.22em]">CONTACT ROOPCRAFT</span>
+      <h2 class="serif text-3xl sm:text-4xl lg:text-5xl mt-3 font-semibold">We're Here To Help</h2>
+      <p class="mt-4 text-sm sm:text-base text-gray-500 leading-7">
+        Talk to our team about products, measurements, customization, installation or after-sales service.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+
+      <a href="tel:+918003150333" class="card-3d bg-roop-50 border border-black/5 rounded-3xl p-6 sm:p-7">
+        <div class="icon-3d w-14 h-14 rounded-2xl bg-[#201a15] text-white flex items-center justify-center text-xl shadow-lg">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <h3 class="font-bold text-lg mt-5">Call Us</h3>
+        <p class="text-gray-500 text-sm mt-2">Speak directly with our team.</p>
+        <div class="mt-4 text-roop-700 font-semibold">+91 80031 50333</div>
+      </a>
+
+      <a href="https://wa.me/918003150333" target="_blank" rel="noopener" class="card-3d bg-roop-50 border border-black/5 rounded-3xl p-6 sm:p-7">
+        <div class="icon-3d w-14 h-14 rounded-2xl bg-[#201a15] text-white flex items-center justify-center text-xl shadow-lg">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <h3 class="font-bold text-lg mt-5">WhatsApp</h3>
+        <p class="text-gray-500 text-sm mt-2">Quick enquiries and project discussion.</p>
+        <div class="mt-4 text-roop-700 font-semibold">Chat With Us</div>
+      </a>
+
+      <a href="mailto:roopcraftliving@gmail.com" class="card-3d bg-roop-50 border border-black/5 rounded-3xl p-6 sm:p-7 min-w-0">
+        <div class="icon-3d w-14 h-14 rounded-2xl bg-[#201a15] text-white flex items-center justify-center text-xl shadow-lg">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <h3 class="font-bold text-lg mt-5">Email Us</h3>
+        <p class="text-gray-500 text-sm mt-2">Send your requirements anytime.</p>
+        <div class="mt-4 text-roop-700 font-semibold text-sm break-all">roopcraftliving@gmail.com</div>
+      </a>
+
+      <a href="#location" class="card-3d bg-roop-50 border border-black/5 rounded-3xl p-6 sm:p-7">
+        <div class="icon-3d w-14 h-14 rounded-2xl bg-[#201a15] text-white flex items-center justify-center text-xl shadow-lg">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h3 class="font-bold text-lg mt-5">Visit Us</h3>
+        <p class="text-gray-500 text-sm mt-2">Come discuss your project with us.</p>
+        <div class="mt-4 text-roop-700 font-semibold text-sm">Alwar, Rajasthan</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRY ================= -->
+<section class="py-14 sm:py-20 architectural-bg">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+
+      <div class="lg:col-span-2 reveal">
+        <span class="text-roop-600 text-xs sm:text-sm font-bold tracking-[.22em]">PROJECT ENQUIRY</span>
+        <h2 class="serif text-3xl sm:text-4xl lg:text-5xl font-semibold mt-3">
+          Tell Us About <span class="text-roop-600">Your Project.</span>
+        </h2>
+        <p class="mt-5 text-gray-600 leading-7">
+          Whether you're building a new home, renovating an existing property or
+          working on a commercial project, our team can help you choose the right products.
+        </p>
+
+        <div class="mt-8 space-y-5">
+          <div class="flex gap-4">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-white shadow-md flex items-center justify-center text-roop-600">
+              <i class="fa-solid fa-ruler-combined"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Project Consultation</h4>
+              <p class="text-sm text-gray-500 mt-1">Discuss requirements, measurements and finishes.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-white shadow-md flex items-center justify-center text-roop-600">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Professional Installation</h4>
+              <p class="text-sm text-gray-500 mt-1">Installation support for products supplied by us.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-white shadow-md flex items-center justify-center text-roop-600">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">After-Sales Service</h4>
+              <p class="text-sm text-gray-500 mt-1">Continued support after installation and delivery.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <button onclick="openModal()" type="button" class="premium-btn bg-[#201a15] text-white px-5 py-3 rounded-full font-semibold">
+            <i class="fa-solid fa-file-signature mr-2"></i>Quick Enquiry
+          </button>
+          <a href="mailto:roopcraftliving@gmail.com" class="premium-btn bg-white border border-roop-200 px-5 py-3 rounded-full font-semibold">
+            <i class="fa-solid fa-envelope mr-2 text-roop-600"></i>Email Us
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3 reveal">
+        <div class="bg-white rounded-[26px] sm:rounded-[30px] p-5 sm:p-8 shadow-luxury border border-black/5">
+          <div class="flex items-center gap-4 mb-7">
+            <div class="w-13 h-13 sm:w-14 sm:h-14 shrink-0 rounded-2xl bg-[#201a15] text-white flex items-center justify-center text-xl">
+              <i class="fa-solid fa-file-signature"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-lg sm:text-xl">Send Your Enquiry</h3>
+              <p class="text-xs sm:text-sm text-gray-500">We'll open WhatsApp with your enquiry details.</p>
+            </div>
+          </div>
+
+          <form id="mainEnquiryForm" class="space-y-4.5 sm:space-y-5">
+            <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
+              <div>
+                <label class="block text-sm font-semibold mb-2">Your Name</label>
+                <div class="relative">
+                  <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                  <input id="mainName" type="text" required autocomplete="name" placeholder="Enter your name"
+                         class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-2">Phone Number</label>
+                <div class="relative">
+                  <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                  <input id="mainPhone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="Enter phone number"
+                         class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2">Email Address</label>
+              <div class="relative">
+                <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input id="mainEmail" type="email" autocomplete="email" placeholder="your@email.com"
+                       class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2">Product / Service</label>
+              <div class="relative">
+                <i class="fa-solid fa-layer-group absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                <select id="mainProduct" required class="premium-input appearance-none pl-11 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+                  <option value="">Select product</option>
+                  <option>Steel Doors</option>
+                  <option>Glass Doors</option>
+                  <option>Fiber Doors</option>
+                  <option>Steel Windows</option>
+                  <option>UPVC / Aluminium Windows</option>
+                  <option>Curtains & Blinds</option>
+                  <option>Wooden / Chevron Flooring</option>
+                  <option>Awnings</option>
+                  <option>Boutique Facade</option>
+                  <option>Shower Enclosure</option>
+                  <option>Fab Solutions</option>
+                  <option>Other</option>
+                </select>
+                <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-2">Project Details</label>
+              <div class="relative">
+                <i class="fa-solid fa-message absolute left-4 top-4 text-gray-400"></i>
+                <textarea id="mainMessage" rows="4" placeholder="Tell us about your requirement..."
+                          class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 resize-none"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="premium-btn w-full bg-[#201a15] text-white py-4 rounded-xl font-semibold">
+              <i class="fa-brands fa-whatsapp mr-2"></i>Send Enquiry on WhatsApp
+            </button>
+
+            <p class="text-center text-xs text-gray-400">
+              <i class="fa-solid fa-shield-halved mr-1"></i>
+              Your information is used only to respond to your enquiry.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE PROMISE ================= -->
+<section class="py-14 sm:py-20 bg-[#201a15] text-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="card-3d rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-7">
+        <i class="fa-solid fa-cube text-3xl text-roop-300"></i>
+        <h3 class="font-bold text-lg sm:text-xl mt-5">Premium Products</h3>
+        <p class="text-white/60 text-sm leading-6 mt-3">Carefully selected products for residential and commercial spaces.</p>
+      </div>
+      <div class="card-3d rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-7">
+        <i class="fa-solid fa-ruler-combined text-3xl text-roop-300"></i>
+        <h3 class="font-bold text-lg sm:text-xl mt-5">Custom Solutions</h3>
+        <p class="text-white/60 text-sm leading-6 mt-3">Solutions designed around your space, measurements and requirements.</p>
+      </div>
+      <div class="card-3d rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-7">
+        <i class="fa-solid fa-screwdriver-wrench text-3xl text-roop-300"></i>
+        <h3 class="font-bold text-lg sm:text-xl mt-5">Professional Installation</h3>
+        <p class="text-white/60 text-sm leading-6 mt-3">Expert installation for products supplied by Roopcraft.</p>
+      </div>
+      <div class="card-3d rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-7">
+        <i class="fa-solid fa-headset text-3xl text-roop-300"></i>
+        <h3 class="font-bold text-lg sm:text-xl mt-5">After-Sales Support</h3>
+        <p class="text-white/60 text-sm leading-6 mt-3">Continued support even after installation and delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCATION ================= -->
+<section id="location" class="py-14 sm:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+
+      <div class="reveal">
+        <span class="text-roop-600 text-xs sm:text-sm font-bold tracking-[.22em]">FIND US</span>
+        <h2 class="serif text-3xl sm:text-4xl lg:text-5xl font-semibold mt-3">Visit Our Location</h2>
+
+        <div class="mt-8 space-y-5">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-roop-50 text-roop-700 flex items-center justify-center">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="min-w-0">
+              <h4 class="font-bold">Address</h4>
+              <p class="text-gray-500 leading-7 mt-1">
+                Building First Floor, No. 1<br>
+                Flat No. / Shop No. 19<br>
+                Nemichand Market<br>
+                Alwar, Rajasthan - 301001
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-roop-50 text-roop-700 flex items-center justify-center">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Phone</h4>
+              <a href="tel:+918003150333" class="text-gray-500 hover:text-roop-600 transition">
+                +91 80031 50333
+              </a>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-12 h-12 shrink-0 rounded-xl bg-roop-50 text-roop-700 flex items-center justify-center">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="min-w-0">
+              <h4 class="font-bold">Email</h4>
+              <a href="mailto:roopcraftliving@gmail.com" class="text-gray-500 hover:text-roop-600 transition break-all">
+                roopcraftliving@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col xs:flex-row flex-wrap gap-3">
+          <a href="https://wa.me/918003150333" target="_blank" rel="noopener"
+             class="premium-btn inline-flex items-center justify-center bg-[#201a15] text-white px-6 py-3 rounded-full font-semibold">
+            <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp Us
+          </a>
+          <a href="mailto:roopcraftliving@gmail.com"
+             class="premium-btn inline-flex items-center justify-center border border-roop-300 px-6 py-3 rounded-full font-semibold">
+            <i class="fa-solid fa-envelope mr-2 text-roop-600"></i>Email Us
+          </a>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal">
+        <iframe
+          title="Roopcraft Living location in Nemichand Market, Alwar"
+          src="https://www.google.com/maps?q=Nemichand%20Market,%20Alwar,%20Rajasthan%20301001&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="py-14 sm:py-20 bg-roop-100">
+  <div class="max-w-5xl mx-auto px-5 sm:px-6 text-center reveal">
+    <div class="w-18 h-18 sm:w-20 sm:h-20 mx-auto rounded-3xl bg-[#201a15] text-white flex items-center justify-center text-3xl shadow-xl">
+      <i class="fa-solid fa-house-chimney"></i>
+    </div>
+    <h2 class="serif text-3xl sm:text-4xl lg:text-5xl font-semibold mt-6 sm:mt-7">
+      Your Dream Space <span class="text-roop-600">Starts Here.</span>
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mt-4 sm:mt-5 leading-7 text-sm sm:text-base">
+      Tell us what you're looking for. We'll help you choose the right product,
+      arrange installation and continue supporting you after delivery.
+    </p>
+    <div class="mt-7 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+      <button onclick="openModal()" type="button" class="premium-btn bg-[#201a15] text-white px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold">
+        <i class="fa-solid fa-file-signature mr-2"></i>Get a Quote
+      </button>
+      <a href="tel:+918003150333" class="premium-btn bg-white border border-roop-200 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold">
+        <i class="fa-solid fa-phone mr-2 text-roop-600"></i>Call +91 80031 50333
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#16120f] text-white pt-14 sm:pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9 lg:gap-10">
+
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-white overflow-hidden shrink-0">
+            <img src="images/logo.jfif" alt="Roopcraft Living" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <div class="font-bold tracking-[.12em]">ROOPCRAFT</div>
+            <div class="text-[9px] tracking-[.25em] text-roop-300">LIVING PRIVATE LIMITED</div>
+          </div>
+        </div>
+        <p class="text-white/55 text-sm leading-7 mt-5">
+          Premium doors, windows, flooring, curtains, awnings, facades,
+          shower enclosures and complete building solutions.
+        </p>
+        <div class="flex gap-3 mt-6">
+          <a href="https://wa.me/918003150333" target="_blank" rel="noopener" aria-label="WhatsApp"
+             class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-roop-600 transition">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:roopcraftliving@gmail.com" aria-label="Email"
+             class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-roop-600 transition">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="tel:+918003150333" aria-label="Call"
+             class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-roop-600 transition">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-5">Products</h3>
+        <ul class="space-y-3 text-sm text-white/55">
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Doors</a></li>
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Windows</a></li>
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Curtains & Blinds</a></li>
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Flooring</a></li>
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Awnings</a></li>
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Boutique Facade</a></li>
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Shower Enclosure</a></li>
+          <li><a href="products.html" class="hover:text-white transition"><i class="fa-solid fa-chevron-right text-[9px] mr-2"></i>Fab Solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-5">Services</h3>
+        <ul class="space-y-3 text-sm text-white/55">
+          <li><i class="fa-solid fa-check text-roop-300 mr-2"></i>Product Consultation</li>
+          <li><i class="fa-solid fa-check text-roop-300 mr-2"></i>Site Measurement</li>
+          <li><i class="fa-solid fa-check text-roop-300 mr-2"></i>Custom Solutions</li>
+          <li><i class="fa-solid fa-check text-roop-300 mr-2"></i>Installation</li>
+          <li><i class="fa-solid fa-check text-roop-300 mr-2"></i>Maintenance</li>
+          <li><i class="fa-solid fa-check text-roop-300 mr-2"></i>After-Sales Service</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-5">Contact</h3>
+        <div class="space-y-4 text-sm text-white/55">
+          <a href="tel:+918003150333" class="flex gap-3 hover:text-white transition">
+            <i class="fa-solid fa-phone text-roop-300 mt-1"></i>
+            <span>+91 80031 50333</span>
+          </a>
+          <a href="mailto:roopcraftliving@gmail.com" class="flex gap-3 hover:text-white transition">
+            <i class="fa-solid fa-envelope text-roop-300 mt-1"></i>
+            <span class="break-all">roopcraftliving@gmail.com</span>
+          </a>
+          <div class="flex gap-3">
+            <i class="fa-solid fa-location-dot text-roop-300 mt-1"></i>
+            <span>Nemichand Market,<br>Alwar, Rajasthan - 301001</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-10 sm:mt-12 pt-6 sm:pt-7 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40">
+      <p>© 2026 Roopcraft Living Pvt Ltd. All Rights Reserved.</p>
+      <p>Designed with <i class="fa-solid fa-heart text-roop-300"></i> for modern spaces.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING ACTIONS ================= -->
+<div class="floating-actions fixed right-4 sm:right-5 bottom-4 sm:bottom-5 z-40 flex flex-col gap-2.5 sm:gap-3">
+  <button onclick="openModal()" type="button" aria-label="Send enquiry" title="Send Enquiry"
+          class="floating-contact w-14 h-14 rounded-full bg-[#201a15] text-white shadow-2xl flex items-center justify-center">
+    <i class="fa-solid fa-file-signature text-lg"></i>
+  </button>
+  <a href="https://wa.me/918003150333" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"
+     class="floating-contact w-14 h-14 rounded-full bg-[#201a15] text-white shadow-2xl flex items-center justify-center">
+    <i class="fa-brands fa-whatsapp text-xl"></i>
+  </a>
+</div>
+
+<!-- ================= ENQUIRY MODAL ================= -->
+<div id="enquiryModal" class="modal fixed inset-0 z-[200] bg-black/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5"
+     role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box bg-white rounded-2xl sm:rounded-[28px] w-full max-w-lg max-h-[94vh] overflow-y-auto shadow-2xl">
+
+    <div class="bg-[#201a15] text-white p-5 sm:p-6 flex items-center justify-between sticky top-0 z-10">
+      <div class="min-w-0">
+        <div class="text-[10px] tracking-[.25em] text-roop-300">ROOPCRAFT LIVING</div>
+        <h3 id="modalTitle" class="serif text-2xl sm:text-3xl font-semibold mt-1">Quick Enquiry</h3>
+      </div>
+      <button onclick="closeModal()" type="button" aria-label="Close enquiry"
+              class="shrink-0 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="p-5 sm:p-7">
+      <p class="text-sm text-gray-500 mb-5">
+        Fill in your details and we'll open WhatsApp with your enquiry.
+      </p>
+
+      <form id="modalForm" class="space-y-4">
+        <div class="relative">
+          <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          <input id="modalName" type="text" required placeholder="Your Name"
+                 class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+        </div>
+
+        <div class="relative">
+          <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          <input id="modalPhone" type="tel" required placeholder="Phone Number"
+                 class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+        </div>
+
+        <div class="relative">
+          <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          <input id="modalEmail" type="email" placeholder="Email Address"
+                 class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+        </div>
+
+        <div class="relative">
+          <i class="fa-solid fa-layer-group absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+          <select id="modalProduct" required class="premium-input appearance-none pl-11 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+            <option value="">Select Product</option>
+            <option>Doors</option>
+            <option>Windows</option>
+            <option>Curtains & Blinds</option>
+            <option>Flooring</option>
+            <option>Awnings</option>
+            <option>Boutique Facade</option>
+            <option>Shower Enclosure</option>
+            <option>Fab Solutions</option>
+            <option>Other</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-xs text-gray-400 pointer-events-none"></i>
+        </div>
+
+        <div class="relative">
+          <i class="fa-solid fa-message absolute left-4 top-4 text-gray-400"></i>
+          <textarea id="modalMessage" rows="4" placeholder="Tell us about your requirement..."
+                    class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="premium-btn w-full bg-[#201a15] text-white py-4 rounded-xl font-semibold">
+          <i class="fa-brands fa-whatsapp mr-2"></i>Send on WhatsApp
+        </button>
+
+        <a href="mailto:roopcraftliving@gmail.com"
+           class="flex items-center justify-center border border-gray-200 py-3.5 rounded-xl font-semibold hover:border-roop-400 hover:text-roop-600 transition">
+          <i class="fa-solid fa-envelope mr-2"></i>Email Instead
+        </a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = document.getElementById("menuIcon");
+  const navbar = document.getElementById("navbar");
+  const modal = document.getElementById("enquiryModal");
+
+  function toggleMenu(forceClose = false) {
+    const shouldOpen = !forceClose && !mobileMenu.classList.contains("open");
+    mobileMenu.classList.toggle("open", shouldOpen);
+    menuIcon.className = shouldOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+    menuBtn.setAttribute("aria-expanded", String(shouldOpen));
+    menuBtn.setAttribute("aria-label", shouldOpen ? "Close menu" : "Open menu");
+  }
+
+  menuBtn.addEventListener("click", () => toggleMenu());
+
+  document.querySelectorAll(".mobile-link").forEach(link => {
+    link.addEventListener("click", () => toggleMenu(true));
+  });
+
+  function updateNavbar() {
+    navbar.classList.toggle("nav-scrolled", window.scrollY > 20);
+  }
+  updateNavbar();
+  window.addEventListener("scroll", updateNavbar, {passive:true});
+
+  function openModal() {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => document.getElementById("modalName").focus(), 150);
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  modal.addEventListener("click", e => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && modal.classList.contains("active")) closeModal();
+  });
+
+  function buildWhatsAppMessage(data) {
+    return `Hello Roopcraft Living Pvt Ltd,
+
+Name: ${data.name}
+Phone: ${data.phone}
+Email: ${data.email || "Not provided"}
+Product / Service: ${data.product}
+
+Requirement:
+${data.message || "Please contact me regarding this requirement."}
+
+I would like to know more about your products, pricing, installation and after-sales service.`;
+  }
+
+  function sendToWhatsApp(data) {
+    const url = "https://wa.me/918003150333?text=" +
+      encodeURIComponent(buildWhatsAppMessage(data));
+    window.open(url, "_blank", "noopener");
+  }
+
+  document.getElementById("modalForm").addEventListener("submit", e => {
+    e.preventDefault();
+    sendToWhatsApp({
+      name: document.getElementById("modalName").value.trim(),
+      phone: document.getElementById("modalPhone").value.trim(),
+      email: document.getElementById("modalEmail").value.trim(),
+      product: document.getElementById("modalProduct").value,
+      message: document.getElementById("modalMessage").value.trim()
+    });
+  });
+
+  document.getElementById("mainEnquiryForm").addEventListener("submit", e => {
+    e.preventDefault();
+    sendToWhatsApp({
+      name: document.getElementById("mainName").value.trim(),
+      phone: document.getElementById("mainPhone").value.trim(),
+      email: document.getElementById("mainEmail").value.trim(),
+      product: document.getElementById("mainProduct").value,
+      message: document.getElementById("mainMessage").value.trim()
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.1});
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  // Keep the page stable when returning from a small-screen keyboard/modal interaction.
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024 && mobileMenu.classList.contains("open")) {
+      toggleMenu(true);
+    }
+  });
+</script>
+
+</body>
+</html>

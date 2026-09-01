@@ -1,0 +1,3575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Roopcraft Living Pvt Ltd.</title>
+
+    <meta name="description"
+        content="Explore premium doors, windows, flooring, curtains, awnings, facades, shower enclosures and architectural projects by Roopcraft Living Pvt Ltd.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+        <!-- FONT AWESOME -->
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        roop: {
+                            dark: '#111111',
+                            gold: '#b8945f',
+                            cream: '#f7f4ee',
+                            muted: '#77736d'
+                        }
+                    },
+
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    },
+
+                    boxShadow: {
+                        luxury:
+                            '0 25px 70px rgba(0,0,0,.15)'
+                    },
+
+                    animation: {
+                        float:
+                            'float 5s ease-in-out infinite',
+
+                        'fade-up':
+                            'fadeUp .8s ease forwards',
+
+                        'pulse-soft':
+                            'pulseSoft 2s infinite'
+                    },
+
+                    keyframes: {
+
+                        float: {
+                            '0%,100%': {
+                                transform: 'translateY(0)'
+                            },
+
+                            '50%': {
+                                transform: 'translateY(-12px)'
+                            }
+                        },
+
+                        fadeUp: {
+                            from: {
+                                opacity: '0',
+                                transform: 'translateY(30px)'
+                            },
+
+                            to: {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        },
+
+                        pulseSoft: {
+                            '0%,100%': {
+                                transform: 'scale(1)'
+                            },
+
+                            '50%': {
+                                transform: 'scale(1.04)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f7f4ee;
+            color: #171717;
+        }
+
+        /* =========================================
+           PREMIUM 3D CARD
+        ========================================= */
+
+        .project-card {
+            perspective: 1200px;
+        }
+
+        .project-inner {
+            transform-style: preserve-3d;
+            transition:
+                transform .6s cubic-bezier(.2, .8, .2, 1),
+                box-shadow .6s ease;
+        }
+
+        .project-card:hover .project-inner {
+            transform:
+                rotateX(3deg) rotateY(-4deg) translateY(-10px);
+
+            box-shadow:
+                0 35px 70px rgba(0, 0, 0, .18);
+        }
+
+        .project-image {
+            transition:
+                transform .8s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.08);
+        }
+
+        /* =========================================
+           IMAGE OVERLAY
+        ========================================= */
+
+        .image-overlay {
+            background:
+                linear-gradient(to top,
+                    rgba(0, 0, 0, .82),
+                    rgba(0, 0, 0, .1),
+                    transparent);
+        }
+
+        /* =========================================
+           GLASS EFFECT
+        ========================================= */
+
+        .glass {
+            background: rgba(255, 255, 255, .72);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, .55);
+        }
+
+        /* =========================================
+           CUSTOM SCROLLBAR
+        ========================================= */
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1eee8;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #b8945f;
+            border-radius: 20px;
+        }
+
+        /* =========================================
+           FILTER BUTTON
+        ========================================= */
+
+        .filter-btn.active {
+            background: #111;
+            color: white;
+            border-color: #111;
+        }
+
+        /* =========================================
+           MODAL
+        ========================================= */
+
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: .35s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            transform: translateY(30px) scale(.96);
+            transition: .35s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        /* =========================================
+           3D ICON
+        ========================================= */
+
+        .icon-3d {
+            transform-style: preserve-3d;
+            transition: .4s ease;
+        }
+
+        .icon-box:hover .icon-3d {
+            transform:
+                rotateY(180deg) translateZ(10px);
+        }
+
+        /* =========================================
+           MOBILE MENU
+        ========================================= */
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+
+        /* =========================================
+           PROJECT REVEAL
+        ========================================= */
+
+        .project-item.hidden-project {
+            display: none;
+        }
+
+        /* =========================================
+           HERO SHAPE
+        ========================================= */
+
+        .hero-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(184, 148, 95, .18);
+            border-radius: 50%;
+            filter: blur(90px);
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <header id="navbar" class="fixed top-0 left-0 w-full z-[100]
+           bg-white/95 border-b border-black/5
+           transition-all duration-500">
+
+        <nav class="max-w-[1600px] mx-auto
+           px-5 md:px-8 lg:px-12
+           py-3 flex items-center
+           justify-between">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="flex items-center gap-3 group">
+
+                <div class="w-14 h-14 md:w-16 md:h-16
+               flex items-center justify-center">
+
+                    <img src="images/logo1.png" alt="Roopcraft Living" class="w-full h-full object-contain
+                   group-hover:scale-110
+                   transition duration-500">
+
+                </div>
+
+
+                <div>
+
+                    <h1 class="font-semibold
+                   tracking-[.18em]
+                   text-lg md:text-xl
+                   leading-none
+                   group-hover:text-[#A47551]
+                   transition">
+
+                        ROOPCRAFT
+
+                    </h1>
+
+
+                    <div class="flex items-center gap-2 mt-2">
+
+                        <span class="w-6 h-px bg-[#A47551]"></span>
+
+                        <span class="text-[8px]
+                       tracking-[.25em]
+                       text-gray-500">
+
+                            LIVING PVT. LTD.
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- DESKTOP NAV -->
+
+            <div class="hidden lg:flex
+           items-center gap-8
+           text-sm font-medium">
+
+                <a href="index.html" class="hover:text-[#A47551] transition">
+
+                    Home
+
+                </a>
+
+                <a href="about.html" class="hover:text-[#A47551] transition">
+
+                    About
+
+                </a>
+
+                <a href="products.html" class="hover:text-[#A47551] transition">
+
+                    Products
+
+                </a>
+
+                <a href="services.html" class="hover:text-[#A47551] transition">
+
+                    Services
+
+                </a>
+                <a href="projects.html" class="hover:text-[#A47551] transition">
+
+                    Projects
+
+                </a>
+
+
+
+                <a href="contact.html" class="hover:text-[#A47551] transition">
+
+                    Contact
+
+                </a>
+
+
+                <a href="tel:+918003150333" class="ml-2
+               bg-[#A47551]
+               text-white
+               px-6 py-3
+               rounded-full
+               hover:bg-[#6F472F]
+               transition
+               shadow-lg">
+
+                    Let's Talk
+
+                </a>
+
+            </div>
+
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button id="menuBtn" class="lg:hidden
+           w-11 h-11
+           rounded-xl
+           border border-gray-200
+           flex items-center justify-center
+           text-xl
+           hover:bg-[#A47551]
+           hover:text-white
+           transition">
+
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+
+
+        <!-- MOBILE MENU -->
+
+        <div id="mobileMenu" class="lg:hidden
+           max-h-0 opacity-0
+           overflow-hidden
+           bg-white
+           border-t border-gray-100">
+
+            <div class="px-6 py-6 space-y-1">
+
+                <a href="index.html" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8F4EE]">
+
+                    Home
+
+                </a>
+
+                <a href="#about" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8F4EE]">
+
+                    About
+
+                </a>
+
+                <a href="#products" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8F4EE]">
+
+                    Products
+
+                </a>
+
+                <a href="#services" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8F4EE]">
+
+                    Services
+
+                </a>
+
+                <a href="#gallery" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8F4EE]">
+
+                    Gallery
+
+                </a>
+
+                <a href="#brands" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8F4EE]">
+
+                    Brands
+
+                </a>
+
+                <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl hover:bg-[#F8F4EE]">
+
+                    Contact
+
+                </a>
+
+
+                <a href="tel:+918003150333" class="block text-center
+                   mt-4
+                   bg-[#A47551]
+                   text-white
+                   py-3.5
+                   rounded-xl
+                   font-semibold">
+
+                    Let's Talk
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <section class="relative pt-32 pb-20
+                overflow-hidden bg-[#111] text-white">
+
+        <div class="hero-glow top-20 left-10"></div>
+
+        <div class="hero-glow bottom-0 right-0"></div>
+
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-8
+                relative z-10">
+
+            <div class="max-w-4xl">
+
+                <div class="inline-flex items-center gap-3
+                        border border-white/20
+                        rounded-full px-5 py-2
+                        text-xs uppercase tracking-[.25em]
+                        text-gray-300 mb-8">
+
+                    <span class="w-2 h-2 bg-roop-gold
+                             rounded-full animate-pulse">
+                    </span>
+
+                    Our Work
+
+                </div>
+
+
+                <h1 class="font-display text-5xl md:text-7xl
+                       lg:text-8xl leading-[.95]">
+
+                    Spaces we've
+                    <span class="text-roop-gold italic">
+                        transformed.
+                    </span>
+
+                </h1>
+
+
+                <p class="mt-8 text-gray-300
+                      text-lg md:text-xl
+                      leading-relaxed max-w-2xl">
+
+                    Explore our collection of premium residential,
+                    commercial and architectural projects featuring
+                    doors, windows, flooring, curtains, facades,
+                    awnings and custom solutions.
+
+                </p>
+
+
+                <div class="mt-10 flex flex-wrap gap-4">
+
+                    <a href="#projects" class="bg-white text-black
+                          px-7 py-4 rounded-full
+                          font-semibold
+                          hover:bg-roop-gold
+                          hover:text-white
+                          transition">
+
+                        Explore Projects ↓
+
+                    </a>
+
+                    <button onclick="openEnquiry()" class="border border-white/30
+                           px-7 py-4 rounded-full
+                           hover:bg-white
+                           hover:text-black
+                           transition">
+
+                        Start Your Project
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     STATS
+===================================================== -->
+
+    <section class="bg-white">
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+            <div class="grid grid-cols-2 md:grid-cols-4
+                    border-x border-black/5">
+
+                <div class="p-8 md:p-12
+                        border-b md:border-b-0
+                        border-r border-black/5">
+
+                    <div class="text-4xl md:text-5xl
+                            font-bold">
+
+                        25+
+
+                    </div>
+
+                    <p class="mt-2 text-gray-500">
+                        Product Solutions
+                    </p>
+
+                </div>
+
+
+                <div class="p-8 md:p-12
+                        border-b md:border-b-0
+                        md:border-r border-black/5">
+
+                    <div class="text-4xl md:text-5xl
+                            font-bold">
+
+                        100+
+
+                    </div>
+
+                    <p class="mt-2 text-gray-500">
+                        Projects Delivered
+                    </p>
+
+                </div>
+
+
+                <div class="p-8 md:p-12
+                        border-r border-black/5">
+
+                    <div class="text-4xl md:text-5xl
+                            font-bold">
+
+                        20+
+
+                    </div>
+
+                    <p class="mt-2 text-gray-500">
+                        Years of Experience
+                    </p>
+
+                </div>
+
+
+                <div class="p-8 md:p-12">
+
+                    <div class="text-4xl md:text-5xl
+                            font-bold">
+
+                        100%
+
+                    </div>
+
+                    <p class="mt-2 text-gray-500">
+                        Service Support
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     PROJECT SECTION
+===================================================== -->
+
+    <section id="projects" class="py-24 md:py-32">
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+
+            <!-- SECTION HEADING -->
+
+            <div class="flex flex-col lg:flex-row
+                    lg:items-end
+                    justify-between gap-8 mb-14">
+
+                <div>
+
+                    <p class="uppercase tracking-[.3em]
+                          text-xs text-roop-gold
+                          font-semibold mb-4">
+
+                        Selected Projects
+
+                    </p>
+
+                    <h2 class="font-display text-4xl md:text-6xl">
+
+                        Designed.
+                        <span class="italic">
+                            Built.
+                        </span>
+                        Delivered.
+
+                    </h2>
+
+                </div>
+
+
+                <p class="text-gray-500 max-w-lg
+                      leading-relaxed">
+
+                    From a single premium entrance door to
+                    complete architectural facade solutions,
+                    every project is designed around the
+                    client's space, style and requirements.
+
+                </p>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="flex gap-3 overflow-x-auto
+                    pb-5 mb-12 scrollbar-hide">
+
+                <button class="filter-btn active whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="all">
+
+                    All Projects
+
+                </button>
+
+                <button class="filter-btn whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="doors">
+
+                    Doors
+
+                </button>
+
+                <button class="filter-btn whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="windows">
+
+                    Windows
+
+                </button>
+
+                <button class="filter-btn whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="flooring">
+
+                    Flooring
+
+                </button>
+
+                <button class="filter-btn whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="curtains">
+
+                    Curtains
+
+                </button>
+
+                <button class="filter-btn whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="facade">
+
+                    Facade
+
+                </button>
+
+                <button class="filter-btn whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="awnings">
+
+                    Awnings
+
+                </button>
+
+                <button class="filter-btn whitespace-nowrap
+                       border border-black/10
+                       rounded-full px-6 py-3
+                       text-sm transition" data-filter="shower">
+
+                    Shower
+
+                </button>
+
+            </div>
+
+
+            <!-- PROJECT GRID -->
+
+            <div id="projectGrid" class="grid md:grid-cols-2
+                    lg:grid-cols-3
+                    gap-7">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-item project-card" data-category="doors">
+
+                    <div class="project-inner
+                            bg-white rounded-3xl
+                            overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"
+                                alt="Premium modern door project" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass
+                                         px-4 py-2
+                                         rounded-full
+                                         text-xs font-semibold">
+
+                                    STEEL DOORS
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="absolute bottom-6
+                                    left-6 right-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Residential
+                                </p>
+
+                                <h3 class="text-2xl
+                                       font-display mt-1">
+
+                                    Luxury Entrance
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between
+                                    items-start gap-5">
+
+                                <div>
+
+                                    <p class="text-xs
+                                          uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Doors
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Premium Wood Finish
+                                        Steel Door
+
+                                    </h4>
+
+                                </div>
+
+
+                                <button onclick="openProject(0)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold
+                                       transition">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span class="bg-gray-100
+                                         rounded-full px-3 py-1
+                                         text-xs">
+
+                                    Wood Finish
+
+                                </span>
+
+                                <span class="bg-gray-100
+                                         rounded-full px-3 py-1
+                                         text-xs">
+
+                                    Custom
+
+                                </span>
+
+                                <span class="bg-gray-100
+                                         rounded-full px-3 py-1
+                                         text-xs">
+
+                                    Installation
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-item project-card" data-category="windows">
+
+                    <div class="project-inner
+                            bg-white rounded-3xl
+                            overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+                                alt="Modern aluminium window project" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass
+                                         px-4 py-2 rounded-full
+                                         text-xs font-semibold">
+
+                                    WINDOWS
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="absolute bottom-6
+                                    left-6 right-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Luxury Residence
+                                </p>
+
+                                <h3 class="text-2xl font-display mt-1">
+
+                                    Panoramic Living
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between
+                                    items-start">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Windows
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Aluminium
+                                        Lift & Slide
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(1)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold
+                                       transition">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span class="bg-gray-100
+                                         rounded-full px-3 py-1
+                                         text-xs">
+
+                                    Aluminium
+
+                                </span>
+
+                                <span class="bg-gray-100
+                                         rounded-full px-3 py-1
+                                         text-xs">
+
+                                    Lift & Slide
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+
+                <article class="project-item project-card" data-category="flooring">
+
+                    <div class="project-inner
+                            bg-white rounded-3xl
+                            overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+                                alt="Luxury wooden flooring project" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass px-4 py-2
+                                         rounded-full
+                                         text-xs font-semibold">
+
+                                    FLOORING
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="absolute bottom-6
+                                    left-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Interior
+                                </p>
+
+                                <h3 class="text-2xl font-display">
+
+                                    Warm Minimalism
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Flooring
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Premium Wooden
+                                        Flooring
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(2)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold
+                                       transition">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                            <div class="flex gap-2 mt-5">
+
+                                <span class="bg-gray-100
+                                         rounded-full px-3 py-1
+                                         text-xs">
+
+                                    Wooden
+
+                                </span>
+
+                                <span class="bg-gray-100
+                                         rounded-full px-3 py-1
+                                         text-xs">
+
+                                    Premium
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+
+                <article class="project-item project-card" data-category="curtains">
+
+                    <div class="project-inner bg-white
+                            rounded-3xl overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85"
+                                alt="Luxury curtains and blinds" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass px-4 py-2
+                                         rounded-full text-xs">
+
+                                    CURTAINS
+
+                                </span>
+
+                            </div>
+
+                            <div class="absolute bottom-6
+                                    left-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Apartment
+                                </p>
+
+                                <h3 class="text-2xl font-display">
+
+                                    Soft Light
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Curtains
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Sheer & Dimout
+                                        Blinds
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(3)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 5 -->
+
+                <article class="project-item project-card" data-category="facade">
+
+                    <div class="project-inner bg-white
+                            rounded-3xl overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
+                                alt="Modern architectural facade" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass px-4 py-2
+                                         rounded-full text-xs">
+
+                                    FACADE
+
+                                </span>
+
+                            </div>
+
+                            <div class="absolute bottom-6
+                                    left-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Commercial
+                                </p>
+
+                                <h3 class="text-2xl font-display">
+
+                                    Urban Facade
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Boutique Facade
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Aluminium
+                                        Composite Panel
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(4)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 6 -->
+
+                <article class="project-item project-card" data-category="awnings">
+
+                    <div class="project-inner bg-white
+                            rounded-3xl overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+                                alt="Luxury outdoor pergola and awning" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass px-4 py-2
+                                         rounded-full text-xs">
+
+                                    AWNINGS
+
+                                </span>
+
+                            </div>
+
+                            <div class="absolute bottom-6
+                                    left-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Outdoor
+                                </p>
+
+                                <h3 class="text-2xl font-display">
+
+                                    Open-Air Living
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Awnings
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Custom Pergola
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(5)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 7 -->
+
+                <article class="project-item project-card" data-category="shower">
+
+                    <div class="project-inner bg-white
+                            rounded-3xl overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=85"
+                                alt="Luxury glass shower enclosure" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass px-4 py-2
+                                         rounded-full text-xs">
+
+                                    SHOWER
+
+                                </span>
+
+                            </div>
+
+                            <div class="absolute bottom-6
+                                    left-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Bathroom
+                                </p>
+
+                                <h3 class="text-2xl font-display">
+
+                                    Glass Elegance
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Shower Enclosure
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Custom Glass
+                                        Partition
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(6)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 8 -->
+
+                <article class="project-item project-card" data-category="windows">
+
+                    <div class="project-inner bg-white
+                            rounded-3xl overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+                                alt="Large modern windows" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass px-4 py-2
+                                         rounded-full text-xs">
+
+                                    UPVC
+
+                                </span>
+
+                            </div>
+
+                            <div class="absolute bottom-6
+                                    left-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Residence
+                                </p>
+
+                                <h3 class="text-2xl font-display">
+
+                                    Natural Frames
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Windows
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        UPVC Casement
+                                        Windows
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(7)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 9 -->
+
+                <article class="project-item project-card" data-category="doors">
+
+                    <div class="project-inner bg-white
+                            rounded-3xl overflow-hidden
+                            shadow-lg">
+
+                        <div class="relative h-[420px]
+                                overflow-hidden">
+
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85"
+                                alt="Modern interior door" class="project-image w-full h-full
+                                   object-cover">
+
+                            <div class="image-overlay
+                                    absolute inset-0">
+                            </div>
+
+                            <div class="absolute top-5 left-5">
+
+                                <span class="glass px-4 py-2
+                                         rounded-full text-xs">
+
+                                    DOORS
+
+                                </span>
+
+                            </div>
+
+                            <div class="absolute bottom-6
+                                    left-6 text-white">
+
+                                <p class="text-sm text-gray-300">
+                                    Interior
+                                </p>
+
+                                <h3 class="text-2xl font-display">
+
+                                    Modern Entry
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6">
+
+                            <div class="flex justify-between">
+
+                                <div>
+
+                                    <p class="text-xs uppercase
+                                          tracking-widest
+                                          text-roop-gold">
+
+                                        Doors
+
+                                    </p>
+
+                                    <h4 class="font-semibold
+                                           text-lg mt-2">
+
+                                        Premium Door
+                                        Installation
+
+                                    </h4>
+
+                                </div>
+
+                                <button onclick="openProject(8)" class="w-11 h-11 rounded-full
+                                       bg-black text-white
+                                       hover:bg-roop-gold">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     SERVICE PROMISE
+===================================================== -->
+
+    <section class="py-24 bg-white">
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-16
+                    items-center">
+
+
+                <div>
+
+                    <p class="uppercase tracking-[.3em]
+                          text-xs text-roop-gold
+                          font-semibold mb-5">
+
+                        More Than Products
+
+                    </p>
+
+                    <h2 class="font-display
+                           text-4xl md:text-6xl">
+
+                        We don't just
+                        <span class="italic">
+                            sell.
+                        </span>
+
+                        <br>
+
+                        We deliver.
+
+                    </h2>
+
+                    <p class="mt-7 text-gray-600
+                          leading-relaxed text-lg">
+
+                        Every Roopcraft project is supported
+                        by professional consultation,
+                        measurement, installation and
+                        after-sales service.
+
+                    </p>
+
+
+                    <button onclick="openEnquiry()" class="mt-8 bg-black text-white
+                           px-7 py-4 rounded-full
+                           hover:bg-roop-gold
+                           transition">
+
+                        Discuss Your Project →
+
+                    </button>
+
+                </div>
+
+
+                <!-- 3D SERVICE CARDS -->
+
+                <div class="grid grid-cols-2 gap-5">
+
+                    <div class="icon-box bg-[#f7f4ee]
+                            rounded-3xl p-7
+                            hover:-translate-y-3
+                            transition duration-500">
+
+                        <div class="icon-3d text-5xl mb-7">
+                            📐
+                        </div>
+
+                        <h3 class="font-semibold text-lg">
+                            Design
+                        </h3>
+
+                        <p class="text-sm text-gray-500 mt-2">
+                            Space-focused solutions
+                        </p>
+
+                    </div>
+
+
+                    <div class="icon-box bg-black text-white
+                            rounded-3xl p-7
+                            hover:-translate-y-3
+                            transition duration-500
+                            mt-8">
+
+                        <div class="icon-3d text-5xl mb-7">
+                            🏗️
+                        </div>
+
+                        <h3 class="font-semibold text-lg">
+                            Build
+                        </h3>
+
+                        <p class="text-sm text-gray-400 mt-2">
+                            Professional execution
+                        </p>
+
+                    </div>
+
+
+                    <div class="icon-box bg-black text-white
+                            rounded-3xl p-7
+                            hover:-translate-y-3
+                            transition duration-500">
+
+                        <div class="icon-3d text-5xl mb-7">
+                            🛠️
+                        </div>
+
+                        <h3 class="font-semibold text-lg">
+                            Install
+                        </h3>
+
+                        <p class="text-sm text-gray-400 mt-2">
+                            Expert installation
+                        </p>
+
+                    </div>
+
+
+                    <div class="icon-box bg-[#f7f4ee]
+                            rounded-3xl p-7
+                            hover:-translate-y-3
+                            transition duration-500
+                            mt-8">
+
+                        <div class="icon-3d text-5xl mb-7">
+                            🤝
+                        </div>
+
+                        <h3 class="font-semibold text-lg">
+                            Service
+                        </h3>
+
+                        <p class="text-sm text-gray-500 mt-2">
+                            After-sales support
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     CTA
+===================================================== -->
+
+    <section class="py-24 bg-[#111] text-white">
+
+        <div class="max-w-5xl mx-auto px-5
+                text-center">
+
+            <p class="uppercase tracking-[.3em]
+                  text-xs text-roop-gold mb-6">
+
+                Your Space. Our Expertise.
+
+            </p>
+
+            <h2 class="font-display text-4xl md:text-6xl">
+
+                Have a project
+                <span class="italic text-roop-gold">
+                    in mind?
+                </span>
+
+            </h2>
+
+            <p class="mt-6 text-gray-400
+                  max-w-2xl mx-auto">
+
+                Tell us what you're building.
+                Our team will help you choose the
+                right product, finish and solution.
+
+            </p>
+
+
+            <div class="mt-9 flex flex-wrap
+                    justify-center gap-4">
+
+                <button onclick="openEnquiry()" class="bg-white text-black
+                       px-8 py-4 rounded-full
+                       font-semibold
+                       hover:bg-roop-gold
+                       hover:text-white
+                       transition">
+
+                    Request a Quote
+
+                </button>
+
+
+                <a href="tel:+918003150333" class="border border-white/20
+                      px-8 py-4 rounded-full
+                      hover:bg-white
+                      hover:text-black
+                      transition">
+
+                    Call 8003150333
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="relative overflow-hidden bg-[#11100f] text-white">
+
+    <!-- Decorative 3D Background -->
+    <div class="absolute -top-32 -right-32 w-96 h-96
+                bg-[#b88a5a]/10 rounded-full blur-3xl">
+    </div>
+
+    <div class="absolute bottom-0 -left-32 w-96 h-96
+                bg-[#8b6a48]/10 rounded-full blur-3xl">
+    </div>
+
+
+    <!-- ================================
+         TOP CTA SECTION
+    ================================= -->
+
+    <div class="relative border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+
+                <!-- LEFT -->
+
+                <div>
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <span class="w-10 h-[1px] bg-[#c49a6c]"></span>
+
+                        <span class="text-[#c49a6c]
+                                     text-xs
+                                     tracking-[.3em]
+                                     uppercase">
+                            Premium Building Solutions
+                        </span>
+
+                    </div>
+
+
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl
+                               font-light
+                               leading-tight
+                               tracking-tight">
+
+                        Let's build
+                        <span class="italic text-[#c49a6c]">
+                            something
+                        </span>
+                        extraordinary.
+
+                    </h2>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="lg:text-right">
+
+                    <p class="text-white/50
+                              text-sm
+                              leading-7
+                              max-w-lg
+                              lg:ml-auto
+                              mb-7">
+
+                        From premium doors and windows to flooring,
+                        facades and architectural solutions —
+                        Roopcraft delivers products, installation
+                        and after-sales service under one roof.
+
+                    </p>
+
+
+                    <div class="flex flex-wrap lg:justify-end gap-4">
+
+                        <!-- WhatsApp -->
+
+                        <a
+                            href="https://wa.me/918003150333"
+                            target="_blank"
+                            class="group inline-flex items-center gap-3
+                                   px-6 py-3.5
+                                   rounded-full
+                                   bg-[#25D366]
+                                   text-white
+                                   text-sm
+                                   font-medium
+                                   shadow-lg shadow-green-500/20
+                                   hover:-translate-y-1
+                                   hover:shadow-green-500/40
+                                   transition-all duration-300"
+                        >
+
+                            <i class="fa-brands fa-whatsapp text-lg
+                                      group-hover:scale-125
+                                      transition">
+                            </i>
+
+                            WhatsApp Us
+
+                            <i class="fa-solid fa-arrow-right
+                                      text-xs
+                                      group-hover:translate-x-1
+                                      transition">
+                            </i>
+
+                        </a>
+
+
+                        <!-- Quote -->
+
+                        <a
+                            href="contact.html"
+                            class="group inline-flex items-center gap-3
+                                   px-6 py-3.5
+                                   rounded-full
+                                   border border-[#c49a6c]/50
+                                   text-[#c49a6c]
+                                   text-sm
+                                   hover:bg-[#c49a6c]
+                                   hover:text-black
+                                   hover:-translate-y-1
+                                   transition-all duration-300"
+                        >
+
+                            Get a Quote
+
+                            <i class="fa-solid fa-arrow-right
+                                      text-xs
+                                      group-hover:translate-x-1
+                                      transition">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         MAIN FOOTER
+    ================================= -->
+
+    <div class="relative max-w-7xl mx-auto
+                px-6 lg:px-8
+                py-16 lg:py-20">
+
+
+        <div class="grid grid-cols-1
+                    sm:grid-cols-2
+                    lg:grid-cols-12
+                    gap-12 lg:gap-10">
+
+
+            <!-- ==========================
+                 BRAND
+            =========================== -->
+
+            <div class="lg:col-span-4">
+
+                <!-- Logo -->
+
+                <div class="group inline-block mb-7">
+
+                    <h3 class="text-3xl
+                               font-semibold
+                               tracking-[.18em]
+                               transition
+                               group-hover:text-[#c49a6c]">
+
+                        ROOPCRAFT
+
+                    </h3>
+
+                    <div class="flex items-center gap-3 mt-2">
+
+                        <span class="h-[1px]
+                                     w-12
+                                     bg-[#c49a6c]">
+                        </span>
+
+                        <span class="text-[10px]
+                                     tracking-[.35em]
+                                     text-white/40">
+
+                            LIVING PVT. LTD.
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="text-sm
+                          leading-7
+                          text-white/45
+                          max-w-sm">
+
+                    Premium doors, windows, flooring, curtains,
+                    awnings, facades, shower enclosures and
+                    architectural solutions crafted for
+                    exceptional spaces.
+
+                </p>
+
+
+                <!-- SERVICE BADGES -->
+
+                <div class="grid grid-cols-3
+                            gap-3
+                            mt-8
+                            max-w-sm">
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-ruler-combined
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            MEASURE
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-screwdriver-wrench
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            INSTALL
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-headset
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            SUPPORT
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL -->
+
+                <div class="flex gap-3 mt-8">
+
+                    <a
+                        href="https://wa.me/918003150333"
+                        target="_blank"
+                        aria-label="WhatsApp"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#25D366]
+                               hover:border-[#25D366]
+                               hover:-translate-y-1
+                               hover:rotate-6
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+
+                    <a
+                        href="tel:+918003150333"
+                        aria-label="Call"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#c49a6c]
+                               hover:text-black
+                               hover:border-[#c49a6c]
+                               hover:-translate-y-1
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </a>
+
+
+                    <a
+                        href="mailto:roopcraftliving@gmail.com"
+                        aria-label="Email"
+                        class="w-11 h-11
+                               rounded-full
+                               border border-white/10
+                               bg-white/[.04]
+                               flex items-center justify-center
+                               hover:bg-[#c49a6c]
+                               hover:text-black
+                               hover:border-[#c49a6c]
+                               hover:-translate-y-1
+                               transition-all duration-300"
+                    >
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 PRODUCTS
+            =========================== -->
+
+            <div class="lg:col-span-2">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Products
+
+                </h4>
+
+
+                <ul class="space-y-3 text-sm">
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Doors
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Windows
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Curtains & Blinds
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Flooring
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Awnings
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Boutique Facade
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Shower Enclosure
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
+                                  text-white/40
+                                  hover:text-white
+                                  transition">
+
+                            <span class="w-0 h-[1px]
+                                         bg-[#c49a6c]
+                                         group-hover:w-4
+                                         transition-all">
+                            </span>
+
+                            Fab Solutions
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 SERVICES
+            =========================== -->
+
+            <div class="lg:col-span-2">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Our Services
+
+                </h4>
+
+
+                <ul class="space-y-4 text-sm">
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-compass
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Consultation
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-ruler
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Site Measurement
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-pen-ruler
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Customization
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-gears
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Installation
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-truck-fast
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        Project Delivery
+
+                    </li>
+
+
+                    <li class="flex items-center gap-3
+                               text-white/40
+                               hover:text-white
+                               transition">
+
+                        <i class="fa-solid fa-headset
+                                  text-[#c49a6c]
+                                  text-xs">
+                        </i>
+
+                        After-Sales Service
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- ==========================
+                 CONTACT
+            =========================== -->
+
+            <div class="lg:col-span-4">
+
+                <h4 class="text-sm
+                           font-semibold
+                           tracking-wide
+                           mb-6">
+
+                    Visit Our Office
+
+                </h4>
+
+
+                <!-- ADDRESS CARD -->
+
+                <div class="group
+                            relative
+                            p-5
+                            rounded-2xl
+                            border border-white/10
+                            bg-white/[.03]
+                            overflow-hidden
+                            hover:border-[#c49a6c]/40
+                            hover:bg-white/[.05]
+                            transition-all duration-500">
+
+
+                    <!-- Glow -->
+
+                    <div class="absolute
+                                -right-10
+                                -top-10
+                                w-24 h-24
+                                rounded-full
+                                bg-[#c49a6c]/10
+                                blur-2xl
+                                group-hover:bg-[#c49a6c]/20
+                                transition">
+                    </div>
+
+
+                    <div class="relative flex gap-4">
+
+                        <div class="w-11 h-11
+                                    shrink-0
+                                    rounded-xl
+                                    bg-[#c49a6c]/10
+                                    text-[#c49a6c]
+                                    flex items-center justify-center
+                                    group-hover:scale-110
+                                    group-hover:rotate-3
+                                    transition">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-sm
+                                      font-medium
+                                      mb-2">
+
+                                Roopcraft Living Pvt Ltd
+
+                            </p>
+
+
+                            <p class="text-xs
+                                      leading-6
+                                      text-white/40">
+
+                                First Floor, No. 1,
+                                Flat / Shop No. 19,<br>
+
+                                Nemichand Market,<br>
+
+                                Alwar, Rajasthan – 301001
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+918003150333"
+                    class="group flex items-center gap-4 mt-5
+                           p-4
+                           rounded-xl
+                           border border-white/10
+                           hover:border-[#c49a6c]/40
+                           hover:bg-[#c49a6c]/5
+                           transition"
+                >
+
+                    <div class="w-10 h-10
+                                rounded-full
+                                bg-[#c49a6c]/10
+                                text-[#c49a6c]
+                                flex items-center justify-center
+                                group-hover:scale-110
+                                transition">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="text-[10px]
+                                  uppercase
+                                  tracking-widest
+                                  text-white/30">
+
+                            Call Us
+
+                        </p>
+
+                        <p class="text-sm mt-1">
+
+                            +91 8003150333
+
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-arrow-right ml-auto
+                              text-xs
+                              text-white/30
+                              group-hover:text-[#c49a6c]
+                              group-hover:translate-x-1
+                              transition">
+                    </i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================
+         BOTTOM BAR
+    ================================= -->
+
+    <div class="border-t border-white/10">
+
+        <div class="max-w-7xl mx-auto
+                    px-6 lg:px-8
+                    py-6
+                    flex flex-col
+                    md:flex-row
+                    items-center
+                    justify-between
+                    gap-4">
+
+
+            <p class="text-[11px]
+                      text-white/30
+                      text-center
+                      md:text-left">
+
+                © 2026
+                <span class="text-white/50">
+                    Roopcraft Living Pvt Ltd
+                </span>.
+                All Rights Reserved.
+
+            </p>
+
+
+            <div class="flex items-center gap-5">
+
+                <a
+                    href="#about"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    About Us
+
+                </a>
+
+
+                <span class="w-1 h-1
+                             rounded-full
+                             bg-white/20">
+                </span>
+
+
+                <a
+                    href="#products"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    Products
+
+                </a>
+
+
+                <span class="w-1 h-1
+                             rounded-full
+                             bg-white/20">
+                </span>
+
+
+                <a
+                    href="#contact"
+                    class="text-[11px]
+                           text-white/30
+                           hover:text-[#c49a6c]
+                           transition"
+                >
+
+                    Contact
+
+                </a>
+
+            </div>
+
+
+            <p class="text-[10px]
+                      uppercase
+                      tracking-[.2em]
+                      text-white/20">
+
+                Premium Architectural Solutions
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+    <a href="https://wa.me/918003150333?text=Hello%20Roopcraft%20Living,%20I%20want%20to%20discuss%20a%20project."
+        target="_blank" class="fixed bottom-6 right-6 z-40
+          w-14 h-14 rounded-full
+          bg-green-500 text-white
+          flex items-center justify-center
+          text-2xl shadow-2xl
+          hover:scale-110 transition">
+
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+
+    </a>
+
+
+    <!-- =====================================================
+     PROJECT DETAIL MODAL
+===================================================== -->
+
+    <div id="projectModal" class="modal fixed inset-0 z-[100]
+            bg-black/80 backdrop-blur-md
+            flex items-center justify-center
+            p-4">
+
+        <div class="modal-content bg-white
+                rounded-3xl
+                max-w-5xl w-full
+                max-h-[92vh]
+                overflow-y-auto">
+
+            <div class="relative">
+
+                <img id="modalImage" src="" alt="" class="w-full h-[300px]
+                        md:h-[500px]
+                        object-cover">
+
+                <button onclick="closeProject()" class="absolute top-5 right-5
+                       w-11 h-11
+                       bg-black/70 text-white
+                       rounded-full">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+
+            <div class="p-7 md:p-10">
+
+                <p id="modalCategory" class="text-xs uppercase
+                      tracking-[.25em]
+                      text-roop-gold">
+
+                </p>
+
+                <h2 id="modalTitle" class="font-display
+                       text-4xl md:text-5xl
+                       mt-3">
+
+                </h2>
+
+                <p id="modalDescription" class="text-gray-600
+                      leading-relaxed
+                      mt-6 max-w-3xl">
+
+                </p>
+
+
+                <div id="modalTags" class="flex flex-wrap
+                        gap-2 mt-7">
+
+                </div>
+
+
+                <div class="mt-9 flex flex-wrap gap-4">
+
+                    <button onclick="closeProject(); openEnquiry()" class="bg-black text-white
+                           px-7 py-4 rounded-full
+                           hover:bg-roop-gold
+                           transition">
+
+                        Enquire About Similar Project
+
+                    </button>
+
+                    <a href="tel:+918003150333" class="border border-black/10
+                          px-7 py-4 rounded-full">
+
+                        Call Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+     ENQUIRY MODAL
+===================================================== -->
+
+    <div id="enquiryModal" class="modal fixed inset-0 z-[110]
+            bg-black/75 backdrop-blur-md
+            flex items-center justify-center
+            p-4">
+
+        <div class="modal-content bg-white
+                rounded-3xl w-full
+                max-w-2xl
+                max-h-[95vh]
+                overflow-y-auto">
+
+            <div class="p-7 md:p-10">
+
+                <div class="flex items-start
+                        justify-between">
+
+                    <div>
+
+                        <p class="text-xs uppercase
+                              tracking-[.25em]
+                              text-roop-gold">
+
+                            Start Your Project
+
+                        </p>
+
+                        <h2 class="font-display
+                               text-4xl mt-2">
+
+                            Request a Quote
+
+                        </h2>
+
+                    </div>
+
+
+                    <button onclick="closeEnquiry()" class="w-10 h-10
+                           rounded-full
+                           bg-gray-100">
+
+                        ✕
+
+                    </button>
+
+                </div>
+
+
+                <p class="text-gray-500 mt-5">
+
+                    Tell us what you're looking for and
+                    our team will get back to you.
+
+                </p>
+
+
+                <form id="enquiryForm" class="mt-8 space-y-5">
+
+                    <div class="grid md:grid-cols-2 gap-5">
+
+                        <div>
+
+                            <label class="text-sm font-medium">
+                                Name *
+                            </label>
+
+                            <input required name="name" type="text" placeholder="Your Name" class="mt-2 w-full
+                                   border border-gray-200
+                                   rounded-xl px-4 py-3
+                                   outline-none
+                                   focus:border-black">
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="text-sm font-medium">
+                                Phone *
+                            </label>
+
+                            <input required name="phone" type="tel" placeholder="Phone Number" class="mt-2 w-full
+                                   border border-gray-200
+                                   rounded-xl px-4 py-3
+                                   outline-none
+                                   focus:border-black">
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <label class="text-sm font-medium">
+                            Email
+                        </label>
+
+                        <input name="email" type="email" placeholder="Email Address" class="mt-2 w-full
+                               border border-gray-200
+                               rounded-xl px-4 py-3
+                               outline-none
+                               focus:border-black">
+
+                    </div>
+
+
+                    <div>
+
+                        <label class="text-sm font-medium">
+                            Product / Service
+                        </label>
+
+                        <select name="product" class="mt-2 w-full
+                               border border-gray-200
+                               rounded-xl px-4 py-3
+                               bg-white outline-none">
+
+                            <option>
+                                Select Product
+                            </option>
+
+                            <option>Steel Doors</option>
+                            <option>Glass Doors</option>
+                            <option>Fiber Doors</option>
+
+                            <option>Steel Windows</option>
+                            <option>UPVC / Aluminium Windows</option>
+
+                            <option>Curtains / Blinds</option>
+
+                            <option>Wooden Flooring</option>
+
+                            <option>Awnings / Pergolas</option>
+
+                            <option>Boutique Facade</option>
+
+                            <option>Shower Enclosure</option>
+
+                            <option>Fab Solutions</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label class="text-sm font-medium">
+                            Message
+                        </label>
+
+                        <textarea name="message" rows="4" placeholder="Tell us about your requirement..." class="mt-2 w-full
+                               border border-gray-200
+                               rounded-xl px-4 py-3
+                               outline-none
+                               focus:border-black"></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="w-full bg-black
+                           text-white
+                           py-4 rounded-xl
+                           font-semibold
+                           hover:bg-roop-gold
+                           transition">
+
+                        Send Enquiry on WhatsApp →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+    <script>
+
+        /* ================================================
+           PROJECT DATA
+    
+           EASY TO MODIFY LATER
+        ================================================= */
+
+        const projects = [
+
+            {
+                category: "Steel Doors",
+                title: "Luxury Entrance",
+                image:
+                    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "A premium entrance solution featuring a sophisticated wood-finish steel door designed for durability, security and a luxurious architectural appearance.",
+
+                tags: [
+                    "Steel Door",
+                    "Wood Finish",
+                    "Custom Design",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "Windows",
+                title: "Panoramic Living",
+                image:
+                    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "Large-format aluminium lift and slide windows designed to maximize natural light while creating a seamless connection between indoor and outdoor spaces.",
+
+                tags: [
+                    "Aluminium",
+                    "Lift & Slide",
+                    "Premium Glass",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "Flooring",
+                title: "Warm Minimalism",
+                image:
+                    "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "Premium wooden flooring installed to create a warm, sophisticated and timeless interior environment.",
+
+                tags: [
+                    "Wooden Flooring",
+                    "Premium",
+                    "Interior",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "Curtains",
+                title: "Soft Light",
+                image:
+                    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "A layered curtain solution combining sheer and dimout fabrics for controlled daylight, privacy and an elegant interior finish.",
+
+                tags: [
+                    "Sheer",
+                    "Dimout",
+                    "Custom",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "Boutique Facade",
+                title: "Urban Facade",
+                image:
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "A contemporary commercial facade using architectural cladding solutions to create a distinctive modern exterior.",
+
+                tags: [
+                    "ACP",
+                    "Facade",
+                    "Commercial",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "Awnings",
+                title: "Open-Air Living",
+                image:
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "A custom outdoor shading solution designed to transform an open terrace into a comfortable year-round living area.",
+
+                tags: [
+                    "Pergola",
+                    "Outdoor",
+                    "Custom",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "Shower Enclosure",
+                title: "Glass Elegance",
+                image:
+                    "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "A fully customized glass shower enclosure with precision-fitted partitions and a clean contemporary aesthetic.",
+
+                tags: [
+                    "Glass",
+                    "Shower",
+                    "Custom Partition",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "UPVC Windows",
+                title: "Natural Frames",
+                image:
+                    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "Energy-efficient UPVC casement windows designed for a comfortable and visually refined residential environment.",
+
+                tags: [
+                    "UPVC",
+                    "Casement",
+                    "Energy Efficient",
+                    "Installation"
+                ]
+            },
+
+            {
+                category: "Doors",
+                title: "Modern Entry",
+                image:
+                    "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=90",
+
+                description:
+                    "A contemporary door installation combining clean architectural lines with premium materials and professional finishing.",
+
+                tags: [
+                    "Premium Door",
+                    "Modern",
+                    "Residential",
+                    "Installation"
+                ]
+            }
+
+        ];
+
+
+        /* ================================================
+           MOBILE MENU
+        ================================================= */
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("mobileMenu");
+
+            menu.classList.toggle("open");
+
+        }
+
+
+        /* ================================================
+           FILTER PROJECTS
+        ================================================= */
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+        const projectItems =
+            document.querySelectorAll(".project-item");
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                filterButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+
+                const filter =
+                    button.dataset.filter;
+
+
+                projectItems.forEach(item => {
+
+                    if (
+                        filter === "all" ||
+                        item.dataset.category === filter
+                    ) {
+
+                        item.classList.remove(
+                            "hidden-project"
+                        );
+
+                    } else {
+
+                        item.classList.add(
+                            "hidden-project"
+                        );
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+        /* ================================================
+           PROJECT MODAL
+        ================================================= */
+
+        function openProject(index) {
+
+            const project =
+                projects[index];
+
+            document.getElementById("modalImage")
+                .src = project.image;
+
+            document.getElementById("modalImage")
+                .alt = project.title;
+
+            document.getElementById("modalCategory")
+                .textContent = project.category;
+
+            document.getElementById("modalTitle")
+                .textContent = project.title;
+
+            document.getElementById("modalDescription")
+                .textContent = project.description;
+
+
+            const tags =
+                document.getElementById("modalTags");
+
+            tags.innerHTML = "";
+
+
+            project.tags.forEach(tag => {
+
+                const span =
+                    document.createElement("span");
+
+                span.className =
+                    "bg-gray-100 rounded-full px-4 py-2 text-xs";
+
+                span.textContent = tag;
+
+                tags.appendChild(span);
+
+            });
+
+
+            document.getElementById("projectModal")
+                .classList.add("active");
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function closeProject() {
+
+            document.getElementById("projectModal")
+                .classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        /* ================================================
+           ENQUIRY MODAL
+        ================================================= */
+
+        function openEnquiry() {
+
+            document.getElementById("enquiryModal")
+                .classList.add("active");
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function closeEnquiry() {
+
+            document.getElementById("enquiryModal")
+                .classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        /* ================================================
+           WHATSAPP FORM
+        ================================================= */
+
+        document.getElementById("enquiryForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+
+                const formData =
+                    new FormData(this);
+
+
+                const name =
+                    formData.get("name");
+
+                const phone =
+                    formData.get("phone");
+
+                const email =
+                    formData.get("email");
+
+                const product =
+                    formData.get("product");
+
+                const message =
+                    formData.get("message");
+
+
+                const whatsappMessage =
+
+                    `Hello Roopcraft Living,
+
+I would like to enquire about your products/services.
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+Product/Service:
+${product}
+
+Requirement:
+${message}
+
+Please contact me regarding this project.`;
+
+
+                const whatsappURL =
+                    "https://wa.me/918003150333?text="
+                    +
+                    encodeURIComponent(
+                        whatsappMessage
+                    );
+
+
+                window.open(
+                    whatsappURL,
+                    "_blank"
+                );
+
+            });
+
+
+        /* ================================================
+           CLOSE MODALS ON BACKDROP
+        ================================================= */
+
+        document
+            .getElementById("projectModal")
+            .addEventListener("click", function (e) {
+
+                if (e.target === this) {
+                    closeProject();
+                }
+
+            });
+
+
+        document
+            .getElementById("enquiryModal")
+            .addEventListener("click", function (e) {
+
+                if (e.target === this) {
+                    closeEnquiry();
+                }
+
+            });
+
+
+        /* ================================================
+           ESC KEY
+        ================================================= */
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "Escape") {
+
+                closeProject();
+                closeEnquiry();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
