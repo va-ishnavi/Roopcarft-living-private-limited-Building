@@ -1982,13 +1982,14 @@
     ===================================================== -->
 
     <button onclick="openAdmin()" title="Catalogue Manager" class="fixed
-           bottom-6 right-6
+           bottom-9 right-6
            z-[90]
            w-14 h-14
            rounded-full
            bg-[#171513]
            text-white
            shadow-2xl
+           border border-white
            flex items-center
            justify-center
            hover:bg-gold
@@ -2006,88 +2007,90 @@
     <!-- =====================================================
      FOOTER
 ===================================================== -->
+<footer class="relative overflow-hidden bg-[#11100f] text-white">
 
-    <footer class="relative overflow-hidden bg-[#11100f] text-white">
-
-        <!-- Decorative 3D Background -->
-        <div class="absolute -top-32 -right-32 w-96 h-96
+    <!-- Decorative 3D Background -->
+    <div class="absolute -top-32 -right-32 w-96 h-96
                 bg-[#b88a5a]/10 rounded-full blur-3xl">
-        </div>
+    </div>
 
-        <div class="absolute bottom-0 -left-32 w-96 h-96
+    <div class="absolute bottom-0 -left-32 w-96 h-96
                 bg-[#8b6a48]/10 rounded-full blur-3xl">
-        </div>
+    </div>
 
 
-        <!-- ================================
+    <!-- ================================
          TOP CTA SECTION
     ================================= -->
 
-        <div class="relative border-b border-white/10">
+    <div class="relative border-b border-white/10">
 
-            <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
 
-                <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
 
 
-                    <!-- LEFT -->
+                <!-- LEFT -->
 
-                    <div>
+                <div>
 
-                        <div class="flex items-center gap-3 mb-6">
+                    <div class="flex items-center gap-3 mb-6">
 
-                            <span class="w-10 h-[1px] bg-[#c49a6c]"></span>
+                        <span class="w-10 h-[1px] bg-[#c49a6c]"></span>
 
-                            <span class="text-[#c49a6c]
+                        <span class="text-[#c49a6c]
                                      text-xs
                                      tracking-[.3em]
                                      uppercase">
-                                Premium Building Solutions
-                            </span>
-
-                        </div>
-
-
-                        <h2 class="text-4xl sm:text-5xl lg:text-6xl
-                               font-light
-                               leading-tight
-                               tracking-tight">
-
-                            Let's build
-                            <span class="italic text-[#c49a6c]">
-                                something
-                            </span>
-                            extraordinary.
-
-                        </h2>
+                            Premium Building Solutions
+                        </span>
 
                     </div>
 
 
-                    <!-- RIGHT -->
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl
+                               font-light
+                               leading-tight
+                               tracking-tight">
 
-                    <div class="lg:text-right">
+                        Let's build
+                        <span class="italic text-[#c49a6c]">
+                            something
+                        </span>
+                        extraordinary.
 
-                        <p class="text-white/50
+                    </h2>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div class="lg:text-right">
+
+                    <p class="text-white/50
                               text-sm
                               leading-7
                               max-w-lg
                               lg:ml-auto
                               mb-7">
 
-                            From premium doors and windows to flooring,
-                            facades and architectural solutions —
-                            Roopcraft delivers products, installation
-                            and after-sales service under one roof.
+                        From premium doors and windows to flooring,
+                        facades and architectural solutions —
+                        Roopcraft delivers products, installation
+                        and after-sales service under one roof.
 
-                        </p>
+                    </p>
 
 
-                        <div class="flex flex-wrap lg:justify-end gap-4">
+                    <div class="flex flex-wrap lg:justify-end gap-4">
 
-                            <!-- WhatsApp -->
+                        <!-- WhatsApp -->
 
-                            <a href="https://wa.me/918003150333" target="_blank" class="group inline-flex items-center gap-3
+                        <a
+                            href="https://wa.me/918003150333"
+                            target="_blank"
+                            class="group inline-flex items-center gap-3
                                    px-6 py-3.5
                                    rounded-full
                                    bg-[#25D366]
@@ -2097,27 +2100,30 @@
                                    shadow-lg shadow-green-500/20
                                    hover:-translate-y-1
                                    hover:shadow-green-500/40
-                                   transition-all duration-300">
+                                   transition-all duration-300"
+                        >
 
-                                <i class="fa-brands fa-whatsapp text-lg
+                            <i class="fa-brands fa-whatsapp text-lg
                                       group-hover:scale-125
                                       transition">
-                                </i>
+                            </i>
 
-                                WhatsApp Us
+                            WhatsApp Us
 
-                                <i class="fa-solid fa-arrow-right
+                            <i class="fa-solid fa-arrow-right
                                       text-xs
                                       group-hover:translate-x-1
                                       transition">
-                                </i>
+                            </i>
 
-                            </a>
+                        </a>
 
 
-                            <!-- Quote -->
+                        <!-- Quote -->
 
-                            <a href="contact.html" class="group inline-flex items-center gap-3
+                        <a
+                            href="#contact"
+                            class="group inline-flex items-center gap-3
                                    px-6 py-3.5
                                    rounded-full
                                    border border-[#c49a6c]/50
@@ -2126,19 +2132,18 @@
                                    hover:bg-[#c49a6c]
                                    hover:text-black
                                    hover:-translate-y-1
-                                   transition-all duration-300">
+                                   transition-all duration-300"
+                        >
 
-                                Get a Quote
+                            Get a Quote
 
-                                <i class="fa-solid fa-arrow-right
+                            <i class="fa-solid fa-arrow-right
                                       text-xs
                                       group-hover:translate-x-1
                                       transition">
-                                </i>
+                            </i>
 
-                            </a>
-
-                        </div>
+                        </a>
 
                     </div>
 
@@ -2148,85 +2153,87 @@
 
         </div>
 
+    </div>
 
 
-        <!-- ================================
+
+    <!-- ================================
          MAIN FOOTER
     ================================= -->
 
-        <div class="relative max-w-7xl mx-auto
+    <div class="relative max-w-7xl mx-auto
                 px-6 lg:px-8
                 py-16 lg:py-20">
 
 
-            <div class="grid grid-cols-1
+        <div class="grid grid-cols-1
                     sm:grid-cols-2
                     lg:grid-cols-12
                     gap-12 lg:gap-10">
 
 
-                <!-- ==========================
+            <!-- ==========================
                  BRAND
             =========================== -->
 
-                <div class="lg:col-span-4">
+            <div class="lg:col-span-4">
 
-                    <!-- Logo -->
+                <!-- Logo -->
 
-                    <div class="group inline-block mb-7">
+                <div class="group inline-block mb-7">
 
-                        <h3 class="text-3xl
+                    <h3 class="text-3xl
                                font-semibold
                                tracking-[.18em]
                                transition
                                group-hover:text-[#c49a6c]">
 
-                            ROOPCRAFT
+                        ROOPCRAFT
 
-                        </h3>
+                    </h3>
 
-                        <div class="flex items-center gap-3 mt-2">
+                    <div class="flex items-center gap-3 mt-2">
 
-                            <span class="h-[1px]
+                        <span class="h-[1px]
                                      w-12
                                      bg-[#c49a6c]">
-                            </span>
+                        </span>
 
-                            <span class="text-[10px]
+                        <span class="text-[10px]
                                      tracking-[.35em]
                                      text-white/40">
 
-                                LIVING PVT. LTD.
+                            LIVING PVT. LTD.
 
-                            </span>
-
-                        </div>
+                        </span>
 
                     </div>
 
+                </div>
 
-                    <p class="text-sm
+
+                <p class="text-sm
                           leading-7
                           text-white/45
                           max-w-sm">
 
-                        Premium doors, windows, flooring, curtains,
-                        awnings, facades, shower enclosures and
-                        architectural solutions crafted for
-                        exceptional spaces.
+                    Premium doors, windows, flooring, curtains,
+                    awnings, facades, shower enclosures and
+                    architectural solutions crafted for
+                    exceptional spaces.
 
-                    </p>
+                </p>
 
 
-                    <!-- SERVICE BADGES -->
+                <!-- SERVICE BADGES -->
 
-                    <div class="grid grid-cols-3
+                <div class="grid grid-cols-3
                             gap-3
                             mt-8
                             max-w-sm">
 
 
-                        <div class="group
+                    <div class="group
                                 p-3
                                 rounded-xl
                                 border border-white/10
@@ -2237,89 +2244,93 @@
                                 hover:-translate-y-1
                                 transition-all duration-300">
 
-                            <i class="fa-solid fa-ruler-combined
+                        <i class="fa-solid fa-ruler-combined
                                   text-[#c49a6c]
                                   text-lg
                                   group-hover:scale-125
                                   transition">
-                            </i>
+                        </i>
 
-                            <p class="text-[10px]
+                        <p class="text-[10px]
                                   text-white/40
                                   mt-2">
 
-                                MEASURE
+                            MEASURE
 
-                            </p>
-
-                        </div>
-
-
-                        <div class="group
-                                p-3
-                                rounded-xl
-                                border border-white/10
-                                bg-white/[.03]
-                                text-center
-                                hover:border-[#c49a6c]/50
-                                hover:bg-[#c49a6c]/10
-                                hover:-translate-y-1
-                                transition-all duration-300">
-
-                            <i class="fa-solid fa-screwdriver-wrench
-                                  text-[#c49a6c]
-                                  text-lg
-                                  group-hover:scale-125
-                                  transition">
-                            </i>
-
-                            <p class="text-[10px]
-                                  text-white/40
-                                  mt-2">
-
-                                INSTALL
-
-                            </p>
-
-                        </div>
-
-
-                        <div class="group
-                                p-3
-                                rounded-xl
-                                border border-white/10
-                                bg-white/[.03]
-                                text-center
-                                hover:border-[#c49a6c]/50
-                                hover:bg-[#c49a6c]/10
-                                hover:-translate-y-1
-                                transition-all duration-300">
-
-                            <i class="fa-solid fa-headset
-                                  text-[#c49a6c]
-                                  text-lg
-                                  group-hover:scale-125
-                                  transition">
-                            </i>
-
-                            <p class="text-[10px]
-                                  text-white/40
-                                  mt-2">
-
-                                SUPPORT
-
-                            </p>
-
-                        </div>
+                        </p>
 
                     </div>
 
 
-                    <!-- SOCIAL -->
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
 
-                    <div class="flex gap-3 mt-8">
+                        <i class="fa-solid fa-screwdriver-wrench
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
 
-                        <a href="https://wa.me/918003150333" target="_blank" aria-label="WhatsApp" class="w-11 h-11
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            INSTALL
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="group
+                                p-3
+                                rounded-xl
+                                border border-white/10
+                                bg-white/[.03]
+                                text-center
+                                hover:border-[#c49a6c]/50
+                                hover:bg-[#c49a6c]/10
+                                hover:-translate-y-1
+                                transition-all duration-300">
+
+                        <i class="fa-solid fa-headset
+                                  text-[#c49a6c]
+                                  text-lg
+                                  group-hover:scale-125
+                                  transition">
+                        </i>
+
+                        <p class="text-[10px]
+                                  text-white/40
+                                  mt-2">
+
+                            SUPPORT
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL -->
+
+                <div class="flex gap-3 mt-8">
+
+                    <a
+                        href="https://wa.me/918003150333"
+                        target="_blank"
+                        aria-label="WhatsApp"
+                        class="w-11 h-11
                                rounded-full
                                border border-white/10
                                bg-white/[.04]
@@ -2328,14 +2339,18 @@
                                hover:border-[#25D366]
                                hover:-translate-y-1
                                hover:rotate-6
-                               transition-all duration-300">
+                               transition-all duration-300"
+                    >
 
-                            <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
 
-                        </a>
+                    </a>
 
 
-                        <a href="tel:+918003150333" aria-label="Call" class="w-11 h-11
+                    <a
+                        href="tel:+918003150333"
+                        aria-label="Call"
+                        class="w-11 h-11
                                rounded-full
                                border border-white/10
                                bg-white/[.04]
@@ -2344,14 +2359,18 @@
                                hover:text-black
                                hover:border-[#c49a6c]
                                hover:-translate-y-1
-                               transition-all duration-300">
+                               transition-all duration-300"
+                    >
 
-                            <i class="fa-solid fa-phone"></i>
+                        <i class="fa-solid fa-phone"></i>
 
-                        </a>
+                    </a>
 
 
-                        <a href="mailto:roopcraftliving@gmail.com" aria-label="Email" class="w-11 h-11
+                    <a
+                        href="mailto:roopcraftliving@gmail.com"
+                        aria-label="Email"
+                        class="w-11 h-11
                                rounded-full
                                border border-white/10
                                bg-white/[.04]
@@ -2360,317 +2379,326 @@
                                hover:text-black
                                hover:border-[#c49a6c]
                                hover:-translate-y-1
-                               transition-all duration-300">
+                               transition-all duration-300"
+                    >
 
-                            <i class="fa-solid fa-envelope"></i>
+                        <i class="fa-solid fa-envelope"></i>
 
-                        </a>
-
-                    </div>
+                    </a>
 
                 </div>
 
+            </div>
 
 
-                <!-- ==========================
+
+            <!-- ==========================
                  PRODUCTS
             =========================== -->
 
-                <div class="lg:col-span-2">
+            <div class="lg:col-span-2">
 
-                    <h4 class="text-sm
+                <h4 class="text-sm
                            font-semibold
                            tracking-wide
                            mb-6">
 
-                        Products
+                    Products
 
-                    </h4>
+                </h4>
 
 
-                    <ul class="space-y-3 text-sm">
+                <ul class="space-y-3 text-sm">
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Doors
+                            Doors
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Windows
+                            Windows
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Curtains & Blinds
+                            Curtains & Blinds
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Flooring
+                            Flooring
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Awnings
+                            Awnings
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Boutique Facade
+                            Boutique Facade
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Shower Enclosure
+                            Shower Enclosure
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
 
-                        <li>
-                            <a href="#products" class="group flex items-center gap-2
+                    <li>
+                        <a href="#products"
+                           class="group flex items-center gap-2
                                   text-white/40
                                   hover:text-white
                                   transition">
 
-                                <span class="w-0 h-[1px]
+                            <span class="w-0 h-[1px]
                                          bg-[#c49a6c]
                                          group-hover:w-4
                                          transition-all">
-                                </span>
+                            </span>
 
-                                Fab Solutions
+                            Fab Solutions
 
-                            </a>
-                        </li>
+                        </a>
+                    </li>
 
-                    </ul>
+                </ul>
 
-                </div>
+            </div>
 
 
 
-                <!-- ==========================
+            <!-- ==========================
                  SERVICES
             =========================== -->
 
-                <div class="lg:col-span-2">
+            <div class="lg:col-span-2">
 
-                    <h4 class="text-sm
+                <h4 class="text-sm
                            font-semibold
                            tracking-wide
                            mb-6">
 
-                        Our Services
+                    Our Services
 
-                    </h4>
+                </h4>
 
 
-                    <ul class="space-y-4 text-sm">
+                <ul class="space-y-4 text-sm">
 
-                        <li class="flex items-center gap-3
+                    <li class="flex items-center gap-3
                                text-white/40
                                hover:text-white
                                transition">
 
-                            <i class="fa-solid fa-compass
+                        <i class="fa-solid fa-compass
                                   text-[#c49a6c]
                                   text-xs">
-                            </i>
+                        </i>
 
-                            Consultation
+                        Consultation
 
-                        </li>
+                    </li>
 
 
-                        <li class="flex items-center gap-3
+                    <li class="flex items-center gap-3
                                text-white/40
                                hover:text-white
                                transition">
 
-                            <i class="fa-solid fa-ruler
+                        <i class="fa-solid fa-ruler
                                   text-[#c49a6c]
                                   text-xs">
-                            </i>
+                        </i>
 
-                            Site Measurement
+                        Site Measurement
 
-                        </li>
+                    </li>
 
 
-                        <li class="flex items-center gap-3
+                    <li class="flex items-center gap-3
                                text-white/40
                                hover:text-white
                                transition">
 
-                            <i class="fa-solid fa-pen-ruler
+                        <i class="fa-solid fa-pen-ruler
                                   text-[#c49a6c]
                                   text-xs">
-                            </i>
+                        </i>
 
-                            Customization
+                        Customization
 
-                        </li>
+                    </li>
 
 
-                        <li class="flex items-center gap-3
+                    <li class="flex items-center gap-3
                                text-white/40
                                hover:text-white
                                transition">
 
-                            <i class="fa-solid fa-gears
+                        <i class="fa-solid fa-gears
                                   text-[#c49a6c]
                                   text-xs">
-                            </i>
+                        </i>
 
-                            Installation
+                        Installation
 
-                        </li>
+                    </li>
 
 
-                        <li class="flex items-center gap-3
+                    <li class="flex items-center gap-3
                                text-white/40
                                hover:text-white
                                transition">
 
-                            <i class="fa-solid fa-truck-fast
+                        <i class="fa-solid fa-truck-fast
                                   text-[#c49a6c]
                                   text-xs">
-                            </i>
+                        </i>
 
-                            Project Delivery
+                        Project Delivery
 
-                        </li>
+                    </li>
 
 
-                        <li class="flex items-center gap-3
+                    <li class="flex items-center gap-3
                                text-white/40
                                hover:text-white
                                transition">
 
-                            <i class="fa-solid fa-headset
+                        <i class="fa-solid fa-headset
                                   text-[#c49a6c]
                                   text-xs">
-                            </i>
+                        </i>
 
-                            After-Sales Service
+                        After-Sales Service
 
-                        </li>
+                    </li>
 
-                    </ul>
+                </ul>
 
-                </div>
+            </div>
 
 
 
-                <!-- ==========================
+            <!-- ==========================
                  CONTACT
             =========================== -->
 
-                <div class="lg:col-span-4">
+            <div class="lg:col-span-4">
 
-                    <h4 class="text-sm
+                <h4 class="text-sm
                            font-semibold
                            tracking-wide
                            mb-6">
 
-                        Visit Our Office
+                    Visit Our Office
 
-                    </h4>
+                </h4>
 
 
-                    <!-- ADDRESS CARD -->
+                <!-- ADDRESS CARD -->
 
-                    <div class="group
+                <div class="group
                             relative
                             p-5
                             rounded-2xl
@@ -2682,9 +2710,9 @@
                             transition-all duration-500">
 
 
-                        <!-- Glow -->
+                    <!-- Glow -->
 
-                        <div class="absolute
+                    <div class="absolute
                                 -right-10
                                 -top-10
                                 w-24 h-24
@@ -2693,12 +2721,12 @@
                                 blur-2xl
                                 group-hover:bg-[#c49a6c]/20
                                 transition">
-                        </div>
+                    </div>
 
 
-                        <div class="relative flex gap-4">
+                    <div class="relative flex gap-4">
 
-                            <div class="w-11 h-11
+                        <div class="w-11 h-11
                                     shrink-0
                                     rounded-xl
                                     bg-[#c49a6c]/10
@@ -2708,54 +2736,57 @@
                                     group-hover:rotate-3
                                     transition">
 
-                                <i class="fa-solid fa-location-dot"></i>
+                            <i class="fa-solid fa-location-dot"></i>
 
-                            </div>
+                        </div>
 
 
-                            <div>
+                        <div>
 
-                                <p class="text-sm
+                            <p class="text-sm
                                       font-medium
                                       mb-2">
 
-                                    Roopcraft Living Pvt Ltd
+                                Roopcraft Living Pvt Ltd
 
-                                </p>
+                            </p>
 
 
-                                <p class="text-xs
+                            <p class="text-xs
                                       leading-6
                                       text-white/40">
 
-                                    First Floor, No. 1,
-                                    Flat / Shop No. 19,<br>
+                                First Floor, No. 1,
+                                Flat / Shop No. 19,<br>
 
-                                    Nemichand Market,<br>
+                                Nemichand Market,<br>
 
-                                    Alwar, Rajasthan – 301001
+                                Alwar, Rajasthan – 301001
 
-                                </p>
-
-                            </div>
+                            </p>
 
                         </div>
 
                     </div>
 
+                </div>
 
 
-                    <!-- PHONE -->
 
-                    <a href="tel:+918003150333" class="group flex items-center gap-4 mt-5
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+918003150333"
+                    class="group flex items-center gap-4 mt-5
                            p-4
                            rounded-xl
                            border border-white/10
                            hover:border-[#c49a6c]/40
                            hover:bg-[#c49a6c]/5
-                           transition">
+                           transition"
+                >
 
-                        <div class="w-10 h-10
+                    <div class="w-10 h-10
                                 rounded-full
                                 bg-[#c49a6c]/10
                                 text-[#c49a6c]
@@ -2763,56 +2794,56 @@
                                 group-hover:scale-110
                                 transition">
 
-                            <i class="fa-solid fa-phone"></i>
+                        <i class="fa-solid fa-phone"></i>
 
-                        </div>
+                    </div>
 
 
-                        <div>
+                    <div>
 
-                            <p class="text-[10px]
+                        <p class="text-[10px]
                                   uppercase
                                   tracking-widest
                                   text-white/30">
 
-                                Call Us
+                            Call Us
 
-                            </p>
+                        </p>
 
-                            <p class="text-sm mt-1">
+                        <p class="text-sm mt-1">
 
-                                +91 8003150333
+                            +91 8003150333
 
-                            </p>
+                        </p>
 
-                        </div>
+                    </div>
 
 
-                        <i class="fa-solid fa-arrow-right ml-auto
+                    <i class="fa-solid fa-arrow-right ml-auto
                               text-xs
                               text-white/30
                               group-hover:text-[#c49a6c]
                               group-hover:translate-x-1
                               transition">
-                        </i>
+                    </i>
 
-                    </a>
-
-                </div>
+                </a>
 
             </div>
 
         </div>
 
+    </div>
 
 
-        <!-- ================================
+
+    <!-- ================================
          BOTTOM BAR
     ================================= -->
 
-        <div class="border-t border-white/10">
+    <div class="border-t border-white/10">
 
-            <div class="max-w-7xl mx-auto
+        <div class="max-w-7xl mx-auto
                     px-6 lg:px-8
                     py-6
                     flex flex-col
@@ -2822,80 +2853,90 @@
                     gap-4">
 
 
-                <p class="text-[11px]
+            <p class="text-[11px]
                       text-white/30
                       text-center
                       md:text-left">
 
-                    © 2026
-                    <span class="text-white/50">
-                        Roopcraft Living Pvt Ltd
-                    </span>.
-                    All Rights Reserved.
+                © 2026
+                <span class="text-white/50">
+                    Roopcraft Living Pvt Ltd
+                </span>.
+                All Rights Reserved.
 
-                </p>
+            </p>
 
 
-                <div class="flex items-center gap-5">
+            <div class="flex items-center gap-5">
 
-                    <a href="#about" class="text-[11px]
+                <a
+                    href="about.html"
+                    class="text-[11px]
                            text-white/30
                            hover:text-[#c49a6c]
-                           transition">
+                           transition"
+                >
 
-                        About Us
+                    About Us
 
-                    </a>
+                </a>
 
 
-                    <span class="w-1 h-1
+                <span class="w-1 h-1
                              rounded-full
                              bg-white/20">
-                    </span>
+                </span>
 
 
-                    <a href="#products" class="text-[11px]
+                <a
+                    href="products.html"
+                    class="text-[11px]
                            text-white/30
                            hover:text-[#c49a6c]
-                           transition">
+                           transition"
+                >
 
-                        Products
+                    Products
 
-                    </a>
+                </a>
 
 
-                    <span class="w-1 h-1
+                <span class="w-1 h-1
                              rounded-full
                              bg-white/20">
-                    </span>
+                </span>
 
 
-                    <a href="#contact" class="text-[11px]
+                <a
+                    href="contact.html"
+                    class="text-[11px]
                            text-white/30
                            hover:text-[#c49a6c]
-                           transition">
+                           transition"
+                >
 
-                        Contact
+                    Contact
 
-                    </a>
+                </a>
 
-                </div>
+            </div>
 
 
-                <p class="text-[10px]
+            <p class="text-[10px]
                       uppercase
                       tracking-[.2em]
                       text-white/20">
 
-                    Premium Architectural Solutions
+                Premium Architectural Solutions
 
-                </p>
-
-            </div>
+            </p>
 
         </div>
 
-    </footer>
+    </div>
+
+</footer>
+
 
 
 
