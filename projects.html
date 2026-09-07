@@ -1855,6 +1855,1652 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     </section>
 
 
+<!-- =========================================================
+     ROOPCRAFT LIVING
+     PREMIUM PROJECT GALLERY
+========================================================= -->
+
+<section
+    id="gallery"
+    class="relative py-24 lg:py-32 bg-[#171717] overflow-hidden"
+>
+
+    <!-- Decorative Background -->
+    <div
+        class="absolute -top-40 -left-40
+               w-96 h-96
+               bg-[#A47551]/10
+               rounded-full
+               blur-3xl
+               pointer-events-none"
+    ></div>
+
+    <div
+        class="absolute -bottom-40 -right-40
+               w-96 h-96
+               bg-[#A47551]/10
+               rounded-full
+               blur-3xl
+               pointer-events-none"
+    ></div>
+
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+
+        <!-- ================= HEADING ================= -->
+
+        <div class="max-w-3xl mb-12">
+
+            <p
+                class="text-[#C49A6C]
+                       uppercase
+                       tracking-[0.28em]
+                       text-xs sm:text-sm
+                       font-semibold
+                       mb-4"
+            >
+                Our Work
+            </p>
+
+
+            <div
+                class="w-16 h-[2px]
+                       bg-[#A47551]
+                       mb-6"
+            ></div>
+
+
+            <h2
+                class="serif
+                       text-4xl
+                       sm:text-5xl
+                       lg:text-6xl
+                       text-white
+                       leading-tight"
+            >
+                Crafted spaces.
+
+                <span class="text-[#C49A6C]">
+                    Beautifully delivered.
+                </span>
+            </h2>
+
+
+            <p
+                class="mt-6
+                       text-gray-400
+                       text-base
+                       sm:text-lg
+                       leading-relaxed
+                       max-w-2xl"
+            >
+                Explore our completed installations and architectural
+                solutions across doors, windows, flooring, curtains,
+                awnings, facades, shower enclosures and pre-fab solutions.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= FILTER BUTTONS ================= -->
+
+        <div
+            id="galleryFilters"
+            class="flex
+                   gap-3
+                   overflow-x-auto
+                   pb-3
+                   mb-12
+                   scrollbar-hide"
+        >
+
+            <button
+                data-filter="all"
+                class="gallery-filter active-filter"
+            >
+                All Projects
+            </button>
+
+            <button
+                data-filter="doors"
+                class="gallery-filter"
+            >
+                Doors
+            </button>
+
+            <button
+                data-filter="windows"
+                class="gallery-filter"
+            >
+                Windows
+            </button>
+
+            <button
+                data-filter="curtains"
+                class="gallery-filter"
+            >
+                Curtains
+            </button>
+
+            <button
+                data-filter="flooring"
+                class="gallery-filter"
+            >
+                Flooring
+            </button>
+
+            <button
+                data-filter="awnings"
+                class="gallery-filter"
+            >
+                Awnings
+            </button>
+
+            <button
+                data-filter="facade"
+                class="gallery-filter"
+            >
+                Facade
+            </button>
+
+            <button
+                data-filter="shower"
+                class="gallery-filter"
+            >
+                Shower
+            </button>
+
+            <button
+                data-filter="prefab"
+                class="gallery-filter"
+            >
+                Pre-fab
+            </button>
+
+        </div>
+
+
+
+        <!-- ================= GALLERY GRID ================= -->
+
+        <div
+            id="galleryGrid"
+            class="grid
+                   grid-cols-1
+                   sm:grid-cols-2
+                   lg:grid-cols-3
+                   gap-6"
+        ></div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     IMAGE LIGHTBOX
+========================================================= -->
+
+<div
+    id="galleryLightbox"
+    class="fixed inset-0
+           z-[9999]
+           hidden
+           items-center
+           justify-center
+           bg-black/90
+           backdrop-blur-md
+           p-4"
+>
+
+    <!-- Close -->
+    <button
+        onclick="closeGalleryLightbox()"
+        class="absolute
+               top-5 right-5
+               z-20
+               w-12 h-12
+               rounded-full
+               bg-white/10
+               text-white
+               hover:bg-[#A47551]
+               transition
+               flex items-center justify-center"
+    >
+        <i class="fa-solid fa-xmark text-xl"></i>
+    </button>
+
+
+    <!-- Previous -->
+    <button
+        onclick="previousGalleryImage()"
+        class="absolute
+               left-3 sm:left-8
+               top-1/2
+               -translate-y-1/2
+               z-20
+               w-11 h-11
+               sm:w-14 sm:h-14
+               rounded-full
+               bg-white/10
+               text-white
+               hover:bg-[#A47551]
+               transition
+               flex items-center justify-center"
+    >
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+
+    <!-- Next -->
+    <button
+        onclick="nextGalleryImage()"
+        class="absolute
+               right-3 sm:right-8
+               top-1/2
+               -translate-y-1/2
+               z-20
+               w-11 h-11
+               sm:w-14 sm:h-14
+               rounded-full
+               bg-white/10
+               text-white
+               hover:bg-[#A47551]
+               transition
+               flex items-center justify-center"
+    >
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+
+    <!-- Image -->
+    <div
+        class="relative
+               max-w-5xl
+               w-full
+               flex
+               flex-col
+               items-center"
+    >
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt=""
+            class="max-h-[70vh]
+                   max-w-full
+                   object-contain
+                   rounded-2xl
+                   shadow-2xl
+                   select-none"
+        >
+
+
+        <div
+            class="mt-5
+                   text-center
+                   text-white"
+        >
+
+            <h3
+                id="lightboxTitle"
+                class="text-xl sm:text-2xl font-semibold"
+            ></h3>
+
+            <p
+                id="lightboxCategory"
+                class="text-[#C49A6C] text-sm mt-1"
+            ></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+
+    /* ==============================
+       GALLERY FILTER
+    ============================== */
+
+    .gallery-filter {
+
+        flex-shrink: 0;
+
+        padding: 10px 20px;
+
+        border-radius: 999px;
+
+        border: 1px solid rgba(255,255,255,0.12);
+
+        color: #aaa;
+
+        background: rgba(255,255,255,0.04);
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        transition: all 0.3s ease;
+
+        white-space: nowrap;
+    }
+
+
+    .gallery-filter:hover {
+
+        color: white;
+
+        border-color: #A47551;
+
+        background: rgba(164,117,81,0.12);
+
+        transform: translateY(-2px);
+    }
+
+
+    .gallery-filter.active-filter {
+
+        background: #A47551;
+
+        color: white;
+
+        border-color: #A47551;
+
+        box-shadow: 0 10px 30px rgba(164,117,81,0.25);
+    }
+
+
+    /* Hide scrollbar */
+
+    .scrollbar-hide::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .scrollbar-hide {
+
+        -ms-overflow-style: none;
+
+        scrollbar-width: none;
+    }
+
+
+    /* ==============================
+       GALLERY CARD
+    ============================== */
+
+    .gallery-card {
+
+        position: relative;
+
+        overflow: hidden;
+
+        border-radius: 24px;
+
+        background: #222;
+
+        min-height: 390px;
+
+        cursor: pointer;
+
+        transform-style: preserve-3d;
+
+        transition:
+            transform 0.5s ease,
+            box-shadow 0.5s ease;
+    }
+
+
+    .gallery-card:hover {
+
+        transform:
+            translateY(-10px)
+            rotateX(2deg)
+            rotateY(-2deg);
+
+        box-shadow:
+            0 25px 60px rgba(0,0,0,0.45);
+    }
+
+
+    .gallery-card img {
+
+        width: 100%;
+
+        height: 100%;
+
+        min-height: 390px;
+
+        object-fit: cover;
+
+        transition:
+            transform 0.8s ease,
+            filter 0.5s ease;
+    }
+
+
+    .gallery-card:hover img {
+
+        transform: scale(1.08);
+
+        filter: brightness(0.65);
+    }
+
+
+    /* Overlay */
+
+    .gallery-overlay {
+
+        position: absolute;
+
+        inset: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-end;
+
+        padding: 24px;
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(0,0,0,0.9),
+                rgba(0,0,0,0.2),
+                transparent
+            );
+
+        opacity: 0.95;
+
+        transition: all 0.4s ease;
+    }
+
+
+    .gallery-card:hover .gallery-overlay {
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(0,0,0,0.95),
+                rgba(0,0,0,0.35),
+                transparent
+            );
+    }
+
+
+    /* Category */
+
+    .gallery-category {
+
+        display: inline-flex;
+
+        width: fit-content;
+
+        padding: 6px 12px;
+
+        border-radius: 999px;
+
+        background: rgba(164,117,81,0.9);
+
+        color: white;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* View button */
+
+    .gallery-view {
+
+        position: absolute;
+
+        top: 20px;
+
+        right: 20px;
+
+        width: 48px;
+
+        height: 48px;
+
+        border-radius: 50%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background: rgba(255,255,255,0.9);
+
+        color: #171717;
+
+        opacity: 0;
+
+        transform: scale(0.7);
+
+        transition: all 0.4s ease;
+    }
+
+
+    .gallery-card:hover .gallery-view {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+
+    .gallery-view:hover {
+
+        background: #A47551;
+
+        color: white;
+
+    }
+
+
+    /* Mobile */
+
+    @media(max-width: 640px) {
+
+        .gallery-card {
+
+            min-height: 340px;
+        }
+
+        .gallery-card img {
+
+            min-height: 340px;
+        }
+
+        .gallery-overlay {
+
+            padding: 18px;
+        }
+
+        .gallery-view {
+
+            opacity: 1;
+
+            transform: scale(1);
+
+        }
+
+    }
+
+</style>
+
+
+<script>
+
+const galleryProjects = [
+
+    /* =========================================
+       DOORS
+    ========================================= */
+
+    {
+        category: "doors",
+
+        categoryName: "Doors",
+
+        title: "Premium Steel Door",
+
+        type: "Wood Finish Steel Door",
+
+        location: "Residential Project",
+
+        image: "grly-img/steel door 01.jfif",
+
+        description:
+            "Premium steel door installation with elegant wood finish."
+    },
+
+
+    {
+        category: "doors",
+
+        categoryName: "Doors",
+
+        title: "Modern Security Door",
+
+        type: "Security / Fire Door",
+
+        location: "Residential Project",
+
+        image: "grly-img/Modern Security Door.jpg",
+
+        description:
+            "Strong and secure steel door solution designed for modern homes."
+    },
+
+
+    {
+        category: "doors",
+
+        categoryName: "Doors",
+
+        title: "Premium Glass Door",
+
+        type: "UPVC / Aluminium Glass Door",
+
+        location: "Commercial Project",
+
+        image: "grly-img/Premium Glass Door.jfif",
+
+        description:
+            "Contemporary glass door installation for a clean architectural look."
+    },
+
+     {
+        category: "doors",
+
+        categoryName: "Doors",
+
+        title: "Fiber Door",
+
+        type: "UPVC / Fiber Door",
+
+        location: "Commercial Project",
+
+        image: "grly-img/Fiber Door.jfif",
+
+        description:
+            "Durable fiber door solution for modern applications."
+    },
+
+
+    /* =========================================
+       WINDOWS
+    ========================================= */
+{
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Fixed Windows",
+
+        type: "Fixed Windows",
+
+        location: "Residential Project",
+
+        image: "grly-img/fixed window.jfif",
+
+        description:
+            "Fixed windows with a sleek design for natural light and unobstructed views."
+    },
+
+    {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Steel Window — 2 Track",
+
+        type: "Steel Window — 2 Track",
+
+        location: "Residential Project",
+
+        image: "grly-img/Steel Window — 2 Track.jfif",
+
+        description:
+            "Durable steel windows with a 2-track sliding mechanism for modern homes."
+    },
+
+    {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Tilt & Turn Window",
+
+        type: "Tilt & Turn Window",
+
+        location: "Residential Project",
+
+        image: "grly-img/Tilt & Turn.jfif",
+
+        description:
+            "Versatile tilt and turn windows offering both ventilation and easy cleaning."
+    },
+
+
+    {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Luxury UPVC Windows",
+
+        type: "Sliding Windows",
+
+        location: "Residential Project",
+
+        image: "grly-img/Luxury UPVC Windows.jpg",
+
+        description:
+            "Energy-efficient UPVC sliding windows with a modern profile."
+    },
+
+
+    {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Aluminium French Windows",
+
+        type: "French Window",
+
+        location: "Villa Project",
+
+        image: "grly-img/French Window.jfif",
+
+        description:
+            "Elegant French-style aluminium windows for premium residences."
+    },
+
+
+    {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Arched Window",
+
+        type: "Custom Arched Window",
+
+        location: "Luxury Residence",
+
+        image: "grly-img/Arched Window.jfif",
+
+        description:
+            "Custom-shaped arched window designed to complement the architecture."
+    },
+
+     {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Combination Window",
+
+        type: "Custom Combination Window",
+
+        location: "Luxury Residence",
+
+        image: "grly-img/Combination Window.jfif",
+
+        description:
+            "Custom-shaped combination window designed to complement the architecture."
+    },
+
+    
+     {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Slide / Fold Window",
+
+        type: "Custom Slide / Fold Window",
+
+        location: "Luxury Residence",
+
+        image: "grly-img/Slide Fold Window.jfif",
+
+        description:
+            "Custom-shaped Slide / Fold window designed to complement the architecture."
+    },
+
+       
+     {
+        category: "windows",
+
+        categoryName: "Windows",
+
+        title: "Lift & Slide",
+
+        type: "Custom Lift & Slide Window",
+
+        location: "Luxury Residence",
+
+        image: "grly-img/Lift & Slide.jfif",
+
+        description:
+            "Custom-shaped Lift & Slide window designed to complement the architecture."
+    },
+
+
+
+    /* =========================================
+       CURTAINS
+    ========================================= */
+
+    {
+        category: "curtains",
+
+        categoryName: "Curtains",
+
+        title: "Luxury Roller Blinds",
+
+        type: "Roller Blinds",
+
+        location: "Interior Project",
+
+        image: "grly-img/Roller Blinds.jfif",
+
+        description:
+            "Elegant roller blinds offering privacy, light control and style."
+    },
+
+
+    {
+        category: "curtains",
+
+        categoryName: "Curtains",
+
+        title: "Roman Blinds",
+
+        type: "Roman Blinds",
+
+        location: "Residential Interior",
+
+        image: "grly-img/Roman Blinds.jfif",
+
+        description:
+            "Premium Roman blinds tailored to complement the interior."
+    },
+
+
+    {
+        category: "curtains",
+
+        categoryName: "Curtains",
+
+        title: "Vertical Blinds",
+
+        type: "Vertical Blinds",
+
+        location: "Office Project",
+
+        image: "grly-img/Vertical Blinds.jfif",
+
+        description:
+            "Professional vertical blinds designed for large window areas."
+    },
+
+      {
+        category: "curtains",
+
+        categoryName: "Curtains",
+
+        title: "S-Counter blinds",
+
+        type: "S-Counter blinds",
+
+        location: "Office Project",
+
+        image: "grly-img/S-Counter Blinds.jfif",
+
+        description:
+            "Professional S-Counter blinds designed for large window areas."
+    },
+
+      {
+        category: "curtains",
+
+        categoryName: "Curtains",
+
+        title: "Sheer / Dimout blinds",
+
+        type: "Sheer / Dimout blinds",
+
+        location: "Office Project",
+
+        image: "grly-img/Sheer-Dimout blinds.jfif",
+
+        description:
+            "Elegant sheer and dimout blinds offering privacy and light control."
+    },
+
+      {
+        category: "curtains",
+
+        categoryName: "Curtains",
+
+        title: "Aluminium Venetian Blinds",
+
+        type: "Aluminium Venetian Blinds",
+
+        location: "Office Project",
+
+        image: "grly-img/Aluminium Venetian Blinds.jfif",
+
+        description:
+            "Professional aluminium venetian blinds designed for large window areas."
+    },
+
+
+
+    /* =========================================
+       FLOORING
+    ========================================= */
+
+    {
+        category: "flooring",
+
+        categoryName: "Flooring",
+
+        title: "Premium Wooden Flooring",
+
+        type: "Wooden Flooring",
+
+        location: "Luxury Residence",
+
+        image: "grly-img/Wooden Flooring.jfif",
+
+        description:
+            "Warm and sophisticated wooden flooring for premium interiors."
+    },
+
+
+    {
+        category: "flooring",
+
+        categoryName: "Flooring",
+
+        title: "Chevron Flooring",
+
+        type: "Chevron Flooring",
+
+        location: "Luxury Interior",
+
+        image: "grly-img/Chevron Flooring.jfif",
+
+        description:
+            "Classic chevron flooring pattern creating a distinctive interior."
+    },
+
+
+    {
+        category: "flooring",
+
+        categoryName: "Flooring",
+
+        title: "Premium Flooring",
+
+        type: "Premium Flooring Collection",
+
+        location: "Premium Residence",
+
+        image: "grly-img/Premium Flooring.jfif",
+
+        description:
+            "Premium flooring with superior quality and elegant design."
+    },
+
+      {
+        category: "flooring",
+
+        categoryName: "Flooring",
+
+        title: "Classic Flooring",
+
+        type: "Classic Flooring Collection",
+
+        location: "Classic Residence",
+
+        image: "grly-img/Classic Flooring.jfif",
+
+        description:
+            "Classic flooring with timeless appeal and durability."
+    },
+
+      {
+        category: "flooring",
+
+        categoryName: "Flooring",
+
+        title: "Vintage Flooring",
+
+        type: "Vintage Flooring Collection",
+
+        location: "Vintage Residence",
+
+        image: "grly-img/Vintage Flooring.jfif",
+
+        description:
+            "Vintage-inspired flooring with timeless character and texture."
+    },
+
+
+
+    /* =========================================
+       AWNINGS
+    ========================================= */
+
+    {
+        category: "awnings",
+
+        categoryName: "Awnings",
+
+        title: "Modern Pergola",
+
+        type: "Pergola",
+
+        location: "Villa Project",
+
+        image: "grly-img/Pergola.jfif",
+
+        description:
+            "Stylish outdoor pergola solution designed for comfortable outdoor living."
+    },
+
+
+    {
+        category: "awnings",
+
+        categoryName: "Awnings",
+
+        title: "Garden Gazebo",
+
+        type: "Gazebo",
+
+        location: "Garden Project",
+
+        image: "grly-img/Gazebo.jfif",
+
+        description:
+            "Elegant gazebo installation for outdoor entertainment and relaxation."
+    },
+
+
+    {
+        category: "awnings",
+
+        categoryName: "Awnings",
+
+        title: "Dutch Awning",
+
+        type: "Dutch Awning",
+
+        location: "Residential Project",
+
+        image: "grly-img/Dutch Awning.jfif",
+
+        description:
+            "Practical and stylish Dutch awning for enhanced outdoor comfort."
+    },
+
+
+    /* =========================================
+       FACADE
+    ========================================= */
+
+    {
+        category: "facade",
+
+        categoryName: "Boutique Facade",
+
+        title: "Modern Glass Facade",
+
+        type: "Glass Facade",
+
+        location: "Commercial Building",
+
+        image: "grly-img/Glass Facade.jfif",
+
+        description:
+            "Contemporary glass facade creating a sophisticated architectural identity."
+    },
+
+
+    {
+        category: "facade",
+
+        categoryName: "Boutique Facade",
+
+        title: "Metal Facade",
+
+        type: "Metal Facade",
+
+        location: "Commercial Project",
+
+        image: "grly-img/Metal Facade.jfif",
+
+        description:
+            "Modern metal facade solution with a bold architectural appearance."
+    },
+
+
+    {
+        category: "facade",
+
+        categoryName: "Boutique Facade",
+
+        title: "ACP Facade",
+
+        type: "Aluminium Composite Panel",
+
+        location: "Commercial Project",
+
+        image: "grly-img/ACP Facade.jfif",
+
+        description:
+            "Clean and durable aluminium composite panel facade installation."
+    },
+
+
+    /* =========================================
+       SHOWER ENCLOSURE
+    ========================================= */
+
+    {
+        category: "shower",
+
+        categoryName: "Shower Enclosure",
+
+        title: "Luxury Glass Shower",
+
+        type: "Custom Glass Partition",
+
+        location: "Luxury Residence",
+
+        image: "grly-img/Shower.jfif",
+
+        description:
+            "Custom glass shower enclosure designed according to the bathroom layout."
+    },
+
+
+    {
+        category: "shower",
+
+        categoryName: "Shower Enclosure",
+
+        title: "Frameless Shower Partition",
+
+        type: "Custom Glass Partition",
+
+        location: "Premium Residence",
+
+        image: "grly-img/Frameless Shower Partition.jpg",
+
+        description:
+            "Minimal frameless glass partition for a modern luxury bathroom."
+    },
+
+
+    /* =========================================
+       PRE-FAB
+    ========================================= */
+
+    {
+        category: "prefab",
+
+        categoryName: "Pre-fab Solutions",
+
+        title: "Insulated PUF Panel",
+
+        type: "PUF Panel",
+
+        location: "Industrial Project",
+
+        image: "grly-img/Insulated PUF Panel.jfif",
+
+        description:
+            "Insulated PUF panel solution for efficient and durable construction."
+    },
+
+
+    {
+        category: "prefab",
+
+        categoryName: "Pre-fab Solutions",
+
+        title: "MS Structure",
+
+        type: "MS Structure",
+
+        location: "Commercial Project",
+
+        image: "grly-img/MS Structure.jfif",
+
+        description:
+            "Strong MS structural solution engineered for commercial applications."
+    },
+
+
+    {
+        category: "prefab",
+
+        categoryName: "Pre-fab Solutions",
+
+        title: "Roofing Sheet Installation",
+
+        type: "150 GSM Roofing Sheet",
+
+        location: "Industrial Project",
+
+        image: "grly-img/Roofing Sheet.jfif",
+
+        description:
+            "Durable roofing sheet installation for long-term protection."
+    },
+    
+    {
+        category: "prefab",
+
+        categoryName: "Pre-fab Solutions",
+
+        title: "Glasswool",
+
+        type: "Glasswool Insulation",
+
+        location: "Industrial Project",
+
+        image: "grly-img/Glasswool.jfif",
+
+        description:
+            "Glasswool insulation solution for thermal and acoustic efficiency."
+    }
+
+];
+
+</script>
+
+<script>
+
+const galleryGrid =
+    document.getElementById("galleryGrid");
+
+
+function renderGallery(filter = "all") {
+
+    const projects =
+        filter === "all"
+
+        ? galleryProjects
+
+        : galleryProjects.filter(
+            project => project.category === filter
+        );
+
+
+    galleryGrid.innerHTML = projects.map(
+        (project, index) => {
+
+        const realIndex =
+            galleryProjects.indexOf(project);
+
+
+        return `
+
+        <article
+            class="gallery-card"
+            onclick="openGalleryLightbox(${realIndex})"
+        >
+
+            <!-- Image -->
+
+            <img
+                src="${project.image}"
+                alt="${project.title}"
+                loading="lazy"
+            >
+
+
+            <!-- View Icon -->
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+
+            <!-- Overlay -->
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+
+                    ${project.categoryName}
+
+                </span>
+
+
+                <h3
+                    class="text-white
+                           text-2xl
+                           font-semibold
+                           mb-2"
+                >
+
+                    ${project.title}
+
+                </h3>
+
+
+                <p
+                    class="text-gray-300
+                           text-sm
+                           mb-3"
+                >
+
+                    ${project.description}
+
+                </p>
+
+
+                <div
+                    class="flex
+                           flex-wrap
+                           items-center
+                           gap-3
+                           text-xs
+                           text-gray-400"
+                >
+
+                    <span>
+
+                        <i
+                            class="fa-solid
+                                   fa-layer-group
+                                   text-[#C49A6C]
+                                   mr-1"
+                        ></i>
+
+                        ${project.type}
+
+                    </span>
+
+
+                    <span>
+
+                        <i
+                            class="fa-solid
+                                   fa-location-dot
+                                   text-[#C49A6C]
+                                   mr-1"
+                        ></i>
+
+                        ${project.location}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        `;
+
+    }).join("");
+
+}
+
+
+renderGallery("all");
+
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+document
+    .querySelectorAll(".gallery-filter")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                document
+                    .querySelectorAll(".gallery-filter")
+                    .forEach(btn => {
+
+                        btn.classList.remove(
+                            "active-filter"
+                        );
+
+                    });
+
+
+                this.classList.add(
+                    "active-filter"
+                );
+
+
+                renderGallery(
+                    this.dataset.filter
+                );
+
+            }
+        );
+
+    });
+
+</script>
+
+<script>
+
+let currentGalleryIndex = 0;
+
+
+function openGalleryLightbox(index) {
+
+    currentGalleryIndex = index;
+
+    const project =
+        galleryProjects[index];
+
+
+    document
+        .getElementById("lightboxImage")
+        .src = project.image;
+
+
+    document
+        .getElementById("lightboxImage")
+        .alt = project.title;
+
+
+    document
+        .getElementById("lightboxTitle")
+        .textContent = project.title;
+
+
+    document
+        .getElementById("lightboxCategory")
+        .textContent =
+            project.categoryName +
+            " • " +
+            project.type;
+
+
+    const lightbox =
+        document.getElementById(
+            "galleryLightbox"
+        );
+
+
+    lightbox.classList.remove("hidden");
+
+    lightbox.classList.add("flex");
+
+    document.body.classList.add(
+        "overflow-hidden"
+    );
+
+}
+
+
+function closeGalleryLightbox() {
+
+    const lightbox =
+        document.getElementById(
+            "galleryLightbox"
+        );
+
+
+    lightbox.classList.add("hidden");
+
+    lightbox.classList.remove("flex");
+
+    document.body.classList.remove(
+        "overflow-hidden"
+    );
+
+}
+
+
+function nextGalleryImage() {
+
+    currentGalleryIndex++;
+
+    if (
+        currentGalleryIndex >=
+        galleryProjects.length
+    ) {
+
+        currentGalleryIndex = 0;
+
+    }
+
+
+    updateLightbox();
+
+}
+
+
+function previousGalleryImage() {
+
+    currentGalleryIndex--;
+
+    if (
+        currentGalleryIndex < 0
+    ) {
+
+        currentGalleryIndex =
+            galleryProjects.length - 1;
+
+    }
+
+
+    updateLightbox();
+
+}
+
+
+function updateLightbox() {
+
+    const project =
+        galleryProjects[
+            currentGalleryIndex
+        ];
+
+
+    document
+        .getElementById("lightboxImage")
+        .src = project.image;
+
+
+    document
+        .getElementById("lightboxImage")
+        .alt = project.title;
+
+
+    document
+        .getElementById("lightboxTitle")
+        .textContent =
+            project.title;
+
+
+    document
+        .getElementById("lightboxCategory")
+        .textContent =
+            project.categoryName +
+            " • " +
+            project.type;
+
+}
+
+
+
+// ESC key
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeGalleryLightbox();
+
+        }
+
+
+        if (event.key === "ArrowRight") {
+
+            nextGalleryImage();
+
+        }
+
+
+        if (event.key === "ArrowLeft") {
+
+            previousGalleryImage();
+
+        }
+
+    }
+);
+
+
+
+// Click background to close
+
+document
+    .getElementById("galleryLightbox")
+    .addEventListener(
+        "click",
+        function(event) {
+
+            if (
+                event.target === this
+            ) {
+
+                closeGalleryLightbox();
+
+            }
+
+        }
+    );
+
+</script>
+
+
+
+
     <!-- =====================================================
      CTA
 ===================================================== -->

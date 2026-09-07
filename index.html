@@ -1717,7 +1717,7 @@ body{
 
 
 <a
-    href="#contact"
+    href="projects.html"
     class="inline-flex
            items-center
            gap-3
@@ -1913,7 +1913,7 @@ body{
 
 
 <a
-    href="services.html"
+    href="index.html#brands"
     class="btn-premium
            inline-flex
            items-center
@@ -1926,7 +1926,7 @@ body{
            font-semibold"
 >
 
-    Discuss Your Project
+    Discuss Your Project With Brands
 
     <i class="fa-solid fa-arrow-right"></i>
 
@@ -2361,68 +2361,657 @@ body{
 
 <section
     id="brands"
-    class="py-24 lg:py-28
-           bg-[#F8F4EE]"
+    class="py-24 lg:py-28 bg-[#F8F4EE]"
 >
 
-<div
-    class="max-w-7xl
-           mx-auto
-           px-6 lg:px-8"
->
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
-<div
-    class="text-center"
->
+        <!-- Heading -->
+        <div class="text-center">
 
-<p
-    class="text-[#A47551]
-           uppercase
-           tracking-[.25em]
-           text-sm
-           font-semibold"
->
+            <p
+                class="text-[#A47551]
+                       uppercase
+                       tracking-[.25em]
+                       text-sm
+                       font-semibold"
+            >
+                Brand Partners
+            </p>
 
-    Brand Partners
+            <div
+                class="w-16 h-[2px]
+                       bg-[#A47551]
+                       mx-auto
+                       mt-4 mb-6"
+            ></div>
 
-</p>
+            <h2
+                class="serif text-4xl md:text-5xl font-medium"
+            >
+                Trusted names.
 
-<div
-    class="gold-line
-           mx-auto
-           mt-4 mb-6"
-></div>
+                <span class="text-[#A47551]">
+                    Better solutions.
+                </span>
+            </h2>
 
-<h2
-    class="serif
-           text-4xl md:text-5xl"
->
+            <p
+                class="max-w-2xl
+                       mx-auto
+                       mt-5
+                       text-gray-600
+                       leading-relaxed"
+            >
+                We work with trusted brands and quality manufacturers
+                to deliver premium products with professional
+                installation and after-sales service.
+            </p>
 
-    Trusted names.
-
-    <span class="text-[#A47551]">
-
-        Better solutions.
-
-    </span>
-
-</h2>
-
-</div>
+        </div>
 
 
-<div
-    id="brandGrid"
-    class="grid grid-cols-2
-           md:grid-cols-3
-           lg:grid-cols-4
-           gap-5
-           mt-14"
-></div>
+        <!-- Brand Grid -->
+        <div
+            id="brandGrid"
+            class="grid grid-cols-2
+                   md:grid-cols-3
+                   lg:grid-cols-4
+                   gap-5
+                   mt-14"
+        ></div>
 
-</div>
+    </div>
 
 </section>
+
+
+<!-- ================= BRAND PDF POPUP ================= -->
+<div
+    id="brandModal"
+    class="fixed inset-0 z-[9999]
+           hidden
+           items-center
+           justify-center
+           p-4"
+>
+
+    <!-- Background -->
+    <div
+        id="brandOverlay"
+        class="absolute inset-0
+               bg-black/70
+               backdrop-blur-sm"
+    ></div>
+
+
+    <!-- Popup -->
+    <div
+        class="relative
+               w-full
+               max-w-lg
+               bg-white
+               rounded-3xl
+               shadow-2xl
+               overflow-hidden
+               transform
+               scale-95
+               opacity-0
+               transition-all
+               duration-300"
+        id="brandPopup"
+    >
+
+        <!-- Top -->
+        <div
+            class="relative
+                   bg-[#171717]
+                   px-6 py-7
+                   text-white"
+        >
+
+            <!-- Close -->
+            <button
+                onclick="closeBrandModal()"
+                class="absolute
+                       top-4 right-4
+                       w-10 h-10
+                       rounded-full
+                       bg-white/10
+                       hover:bg-[#A47551]
+                       transition
+                       flex items-center justify-center"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+
+            <!-- Icon -->
+            <div
+                class="w-16 h-16
+                       rounded-2xl
+                       bg-[#A47551]
+                       flex items-center justify-center
+                       mb-5
+                       shadow-lg"
+            >
+                <i
+                    class="fa-solid fa-file-pdf
+                           text-2xl"
+                ></i>
+            </div>
+
+
+            <p
+                class="text-xs
+                       uppercase
+                       tracking-[.25em]
+                       text-[#C9A77C]"
+            >
+                Brand Catalogue
+            </p>
+
+            <h3
+                id="modalBrandName"
+                class="text-2xl md:text-3xl
+                       font-semibold
+                       mt-2"
+            >
+                Brand Name
+            </h3>
+
+        </div>
+
+
+        <!-- Content -->
+        <div class="p-6">
+
+            <p
+                id="modalBrandDescription"
+                class="text-gray-600
+                       leading-relaxed
+                       mb-6"
+            >
+                View the product catalogue and
+                download the PDF for complete details.
+            </p>
+
+
+            <!-- PDF Info -->
+            <div
+                class="flex items-center gap-4
+                       p-4
+                       rounded-2xl
+                       bg-[#F8F4EE]
+                       border border-[#E7DDD1]"
+            >
+
+                <div
+                    class="w-12 h-12
+                           rounded-xl
+                           bg-white
+                           flex items-center justify-center
+                           shadow-sm"
+                >
+                    <i
+                        class="fa-solid fa-file-pdf
+                               text-red-500
+                               text-xl"
+                    ></i>
+                </div>
+
+
+                <div class="flex-1 min-w-0">
+
+                    <p
+                        id="modalPdfName"
+                        class="font-semibold
+                               text-gray-900
+                               truncate"
+                    >
+                        Brand Catalogue.pdf
+                    </p>
+
+                    <p
+                        class="text-xs
+                               text-gray-500
+                               mt-1"
+                    >
+                        PDF Catalogue
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div
+                class="grid grid-cols-1
+                       sm:grid-cols-2
+                       gap-3
+                       mt-6"
+            >
+
+                <!-- View -->
+                <button
+                    id="viewPdfBtn"
+                    class="group
+                           flex items-center
+                           justify-center
+                           gap-2
+                           px-5 py-3.5
+                           rounded-xl
+                           bg-[#171717]
+                           text-white
+                           font-semibold
+                           hover:bg-[#A47551]
+                           hover:-translate-y-1
+                           transition-all
+                           duration-300"
+                >
+
+                    <i
+                        class="fa-solid fa-eye
+                               group-hover:scale-110
+                               transition"
+                    ></i>
+
+                    View PDF
+
+                </button>
+
+
+                <!-- Download -->
+                <a
+                    id="downloadPdfBtn"
+                    href="#"
+                    download
+                    class="group
+                           flex items-center
+                           justify-center
+                           gap-2
+                           px-5 py-3.5
+                           rounded-xl
+                           bg-[#A47551]
+                           text-white
+                           font-semibold
+                           hover:bg-[#8d6243]
+                           hover:-translate-y-1
+                           transition-all
+                           duration-300"
+                >
+
+                    <i
+                        class="fa-solid fa-download
+                               group-hover:translate-y-1
+                               transition"
+                    ></i>
+
+                    Download PDF
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const brands = [
+
+    {
+        name: "AIS Asahi",
+        category: "Glass & UPVC",
+        pdf: "pdfs/AIS Glass & UPVC.pdf",
+        description:
+            "Premium glass and UPVC solutions for modern residential and commercial spaces."
+    },
+
+    {
+        name: "AIS Guide",
+        category: "Aluminium & UPVC",
+        pdf: "pdfs/AIS Buying Guide.pdf",
+        description:
+            "A comprehensive guide to selecting the right aluminium and UPVC solutions for your project."
+    },
+   
+    {
+        name: "AIS Regal Neo",
+        category: "Window",
+        pdf: "pdfs/AIS Regal Neo.pdf",
+        description:
+            "AIS Regal Neo is a high-performance aluminium window solution designed for contemporary architecture, offering superior insulation, durability, and aesthetic appeal."
+    },
+
+    {
+        name: "AIS Regal Select",
+        category: "AIS Aluminium Windows",
+        pdf: "pdfs/AIS Regal Select.pdf",
+        description:
+            "AIS Regal Select is a premium aluminium window solution designed for modern residential and commercial spaces, offering durability, aesthetics, and energy efficiency."
+    },
+   
+    {
+        name: "JSW Avante",
+        category: "Steel Doors & Windows",
+        
+        pdf: "pdfs/JSW Avante Steel Doors & Windows.pdf",
+        description:
+            "Premium steel doors and window solutions designed for strength, security and modern aesthetics."
+    },
+
+    {
+        name: "Hawaii",
+        category: "Steel Doors",
+        pdf: "pdfs/Hawai Steel Doors.pdf",
+        description:
+            "Reliable steel door and window solutions for residential and commercial projects."
+    },
+
+    {
+        name: "Hawaii",
+        category: "Fiber Doors",
+        pdf: "pdfs/Hawaii Fiber doors.pdf",
+        description:
+            "Durable fiber door solutions for residential and commercial applications."
+    },
+
+
+    {
+        name: "Vista",
+        category: "Flooring,Blinds & Awnings",
+        pdf: "pdfs/Vista Furnishing_Corporate Presentation.pdf",
+        description:
+            "Premium flooring, blinds and awning solutions for residential and commercial spaces."
+    },
+
+    {
+        name: "TATA",
+        category: "Structure & Roofing",
+        pdf: "pdfs/TATA.pdf",
+        description:
+            "Trusted steel, structure, roofing and building solutions for demanding projects."
+    },
+
+  
+];
+
+
+// ================= BRAND GRID =================
+
+const brandGrid = document.getElementById("brandGrid");
+
+brandGrid.innerHTML = brands.map((brand, index) => {
+
+    return `
+
+        <button
+            onclick="openBrandModal(${index})"
+            class="group
+                   relative
+                   text-left
+                   bg-white
+                   rounded-2xl
+                   p-6
+                   min-h-[180px]
+                   border
+                   border-[#E8DED2]
+                   shadow-sm
+                   hover:shadow-2xl
+                   hover:-translate-y-2
+                   transition-all
+                   duration-500
+                   overflow-hidden"
+        >
+
+            <!-- Decorative circle -->
+
+            <div
+                class="absolute
+                       -right-10
+                       -top-10
+                       w-28 h-28
+                       rounded-full
+                       bg-[#A47551]/5
+                       group-hover:bg-[#A47551]/15
+                       group-hover:scale-150
+                       transition-all
+                       duration-700"
+            ></div>
+
+
+            <!-- Logo -->
+
+            <div
+                class="relative
+                       w-full
+                       h-20
+                       flex
+                       items-center
+                       justify-center
+                       mb-5"
+            >
+
+                <img
+                    src="${brand.logo}"
+                    alt="${brand.name} logo"
+                    class="max-h-16
+                           max-w-[150px]
+                           object-contain
+                           grayscale
+                           group-hover:grayscale-0
+                           group-hover:scale-110
+                           transition-all
+                           duration-500"
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    "
+                >
+
+
+                <!-- Fallback if logo unavailable -->
+
+                <div
+                    style="display:none"
+                    class="w-16 h-16
+                           rounded-2xl
+                           bg-[#F8F4EE]
+                           items-center
+                           justify-center"
+                >
+
+                    <i
+                        class="fa-solid fa-building
+                               text-[#A47551]
+                               text-xl"
+                    ></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- Brand -->
+
+            <div class="relative">
+
+                <h3
+                    class="font-semibold
+                           text-lg
+                           text-gray-900
+                           group-hover:text-[#A47551]
+                           transition"
+                >
+                    ${brand.name}
+                </h3>
+
+                <p
+                    class="text-sm
+                           text-gray-500
+                           mt-1"
+                >
+                    ${brand.category}
+                </p>
+
+            </div>
+
+
+            <!-- PDF indicator -->
+
+            <div
+                class="absolute
+                       bottom-5
+                       right-5
+                       w-9 h-9
+                       rounded-full
+                       bg-[#F8F4EE]
+                       text-[#A47551]
+                       flex
+                       items-center
+                       justify-center
+                       group-hover:bg-[#A47551]
+                       group-hover:text-white
+                       group-hover:rotate-12
+                       transition-all
+                       duration-300"
+            >
+
+                <i class="fa-solid fa-file-pdf text-sm"></i>
+
+            </div>
+
+        </button>
+
+    `;
+
+}).join("");
+
+
+
+// ================= OPEN MODAL =================
+
+function openBrandModal(index) {
+
+    const brand = brands[index];
+
+    const modal = document.getElementById("brandModal");
+    const popup = document.getElementById("brandPopup");
+
+    document.getElementById("modalBrandName").textContent =
+        brand.name;
+
+    document.getElementById("modalBrandDescription").textContent =
+        brand.description;
+
+    document.getElementById("modalPdfName").textContent =
+        brand.name + " Catalogue.pdf";
+
+
+    // View PDF
+
+    document.getElementById("viewPdfBtn").onclick = function () {
+
+        window.open(
+            brand.pdf,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    };
+
+
+    // Download PDF
+
+    document.getElementById("downloadPdfBtn").href =
+        brand.pdf;
+
+
+    // Show modal
+
+    modal.classList.remove("hidden");
+
+    modal.classList.add("flex");
+
+    document.body.classList.add("overflow-hidden");
+
+
+    // Animation
+
+    setTimeout(() => {
+
+        popup.classList.remove(
+            "scale-95",
+            "opacity-0"
+        );
+
+        popup.classList.add(
+            "scale-100",
+            "opacity-100"
+        );
+
+    }, 20);
+
+}
+
+
+
+// ================= CLOSE MODAL =================
+
+function closeBrandModal() {
+
+    const modal = document.getElementById("brandModal");
+    const popup = document.getElementById("brandPopup");
+
+    popup.classList.remove(
+        "scale-100",
+        "opacity-100"
+    );
+
+    popup.classList.add(
+        "scale-95",
+        "opacity-0"
+    );
+
+    setTimeout(() => {
+
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+
+        document.body.classList.remove("overflow-hidden");
+
+    }, 250);
+
+}
+
+
+
+// ================= CLICK OUTSIDE =================
+
+document
+    .getElementById("brandOverlay")
+    .addEventListener("click", closeBrandModal);
+
+
+
+// ================= ESC KEY =================
+
+document.addEventListener("keydown", function(e) {
+
+    if (e.key === "Escape") {
+
+        closeBrandModal();
+
+    }
+
+});
+
+</script>
 
 
 
@@ -4997,122 +5586,6 @@ document
 );
 
 
-
-/* =====================================================
-   BRANDS
-===================================================== */
-
-const brands = [
-
-{
-name:"AIS Asahi",
-category:"Glass & UPVC",
-icon:"fa-certificate"
-},
-
-{
-name:"JSW",
-category:"Steel Solutions",
-icon:"fa-industry"
-},
-
-{
-name:"Jindal",
-category:"Steel Products",
-icon:"fa-building"
-},
-
-{
-name:"Arcelor",
-category:"Steel Windows",
-icon:"fa-border-all"
-},
-
-{
-name:"Vista",
-category:"Flooring",
-icon:"fa-layer-group"
-},
-
-{
-name:"TATA",
-category:"Steel Structure",
-icon:"fa-cubes"
-},
-
-{
-name:"Apollo",
-category:"Roofing",
-icon:"fa-house"
-},
-
-{
-name:"Imported",
-category:"Selected Products",
-icon:"fa-star"
-}
-
-];
-
-
-document.getElementById("brandGrid").innerHTML =
-
-brands.map(brand=>`
-
-<div
-    class="card-3d
-           bg-white
-           rounded-2xl
-           p-7
-           text-center
-           border border-gray-100
-           shadow-sm"
->
-
-<div class="depth-2">
-
-<div
-    class="icon-3d
-           w-14 h-14
-           mx-auto
-           rounded-2xl
-           bg-[#F8F4EE]
-           text-[#A47551]
-           flex items-center
-           justify-center
-           text-xl"
->
-
-<i class="fa-solid ${brand.icon}"></i>
-
-</div>
-
-
-<h3
-    class="font-bold
-           mt-5"
->
-
-${brand.name}
-
-</h3>
-
-
-<p
-    class="text-xs
-           text-gray-400
-           mt-2"
->
-
-${brand.category}
-
-</p>
-
-</div>
-
-</div>
-
-`).join("");
 
 
 
