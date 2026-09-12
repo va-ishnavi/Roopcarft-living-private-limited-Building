@@ -265,15 +265,6 @@
       transform: translateY(0) scale(1);
     }
 
-    /* =========================
-       MOBILE BAR
-    ========================= */
-
-    @media (max-width: 767px) {
-      body {
-        padding-bottom: 70px;
-      }
-    }
 
     /* =========================
        CUSTOM SCROLLBAR
@@ -2126,7 +2117,7 @@
                         <!-- Quote -->
 
                         <a
-                            href="#contact"
+                            href="contact.html"
                             class="group inline-flex items-center gap-3
                                    px-6 py-3.5
                                    rounded-full
@@ -3247,83 +3238,53 @@
 ============================================================ -->
 
 <div
-  class="hidden md:flex fixed right-5 bottom-9 z-40 flex-col gap-3"
+    class="fixed
+           right-5
+           bottom-8
+           z-[90]
+           flex flex-col
+           gap-3"
 >
 
-  <!-- WhatsApp -->
-
-  <a
-    href="https://wa.me/918003150333?text=Hello%20Roopcraft%20Living%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-    target="_blank"
-    title="WhatsApp"
-    class="w-14 h-14 rounded-full bg-green-600 text-white shadow-xl flex items-center justify-center hover:scale-110 transition"
-  >
-
-   <i class="fa-brands fa-whatsapp text-2xl"></i>
-
-  </a>
-
-
-  <!-- Call -->
-
-  <a
+<a
     href="tel:+918003150333"
-    title="Call"
-    class="w-14 h-14 rounded-full border border-white/20 bg-black text-white shadow-xl flex items-center justify-center hover:scale-110 transition"
-  >
-
-    <i data-lucide="phone"></i>
-
-  </a>
-
-</div>
-
-
-<!-- ============================================================
-     MOBILE BOTTOM BAR
-============================================================ -->
-
-<div
-  class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 grid grid-cols-3 shadow-2xl"
+    class="w-14 h-14 
+    border border-white/20
+           rounded-full
+           bg-[#171513]
+           text-white
+           shadow-2xl
+           flex items-center
+           justify-center
+           hover:scale-110
+           transition"
 >
 
-  <a
-    href="tel:+918003150333"
-    class="flex flex-col items-center justify-center py-3 text-xs font-semibold"
-  >
+<i class="fa-solid fa-phone"></i>
 
-    <i data-lucide="phone" class="w-5 h-5 mb-1"></i>
-
-    Call
-
-  </a>
+</a>
 
 
-  <a
+<a
     href="https://wa.me/918003150333"
     target="_blank"
-    class="flex flex-col items-center justify-center py-3 text-xs font-semibold text-green-600 border-x border-gray-200"
-  >
+    class="w-14 h-14
+           rounded-full
+           bg-[#25D366]
+           text-white
+           shadow-2xl
+           flex items-center
+           justify-center
+           hover:scale-110
+           transition"
+>
 
-    <i data-lucide="message-circle" class="w-5 h-5 mb-1"></i>
+<i class="fa-brands fa-whatsapp text-2xl"></i>
 
-    WhatsApp
-
-  </a>
-
-
-  <button
-    onclick="openEnquiry()"
-    class="flex flex-col items-center justify-center py-3 text-xs font-semibold bg-roop-gold text-white"
-  >
-
-    <i data-lucide="file-text" class="w-5 h-5 mb-1"></i>
-
-    Enquiry
-
-  </button>
+</a>
 
 </div>
+
 
 
 <!-- ============================================================
@@ -3338,48 +3299,6 @@
 
   lucide.createIcons();
 
-
-  /* ============================
-     MOBILE MENU
-  ============================ */
-
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn.addEventListener("click", () => {
-
-    mobileMenu.classList.toggle("hidden");
-
-  });
-
-
-  /* ============================
-     NAVBAR SCROLL
-  ============================ */
-
-  const navbar = document.getElementById("navbar");
-
-  window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 50) {
-
-      navbar.classList.add(
-        "bg-white/90",
-        "backdrop-blur-xl",
-        "shadow-lg"
-      );
-
-    } else {
-
-      navbar.classList.remove(
-        "bg-white/90",
-        "backdrop-blur-xl",
-        "shadow-lg"
-      );
-
-    }
-
-  });
 
 
   /* ============================
@@ -3602,6 +3521,116 @@ ${message || "I would like to know more about your products and services."}`;
       });
 
   }
+
+</script>
+
+<script>
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+  
+    const menuBtn =
+document.getElementById("menuBtn");
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+const menuIcon =
+document.getElementById("menuIcon");
+
+
+menuBtn.addEventListener(
+    "click",
+    ()=>{
+
+        const open =
+            mobileMenu.style.maxHeight === "600px";
+
+
+        if(open){
+
+            mobileMenu.style.maxHeight="0";
+
+            mobileMenu.style.opacity="0";
+
+            menuIcon.className =
+                "fa-solid fa-bars";
+
+        }else{
+
+            mobileMenu.style.maxHeight="600px";
+
+            mobileMenu.style.opacity="1";
+
+            menuIcon.className =
+                "fa-solid fa-xmark";
+
+        }
+
+    }
+);
+
+
+
+/* CLOSE MOBILE MENU */
+
+document
+.querySelectorAll(".mobile-link")
+.forEach(link=>{
+
+link.addEventListener(
+    "click",
+    ()=>{
+
+        mobileMenu.style.maxHeight="0";
+
+        mobileMenu.style.opacity="0";
+
+        menuIcon.className =
+            "fa-solid fa-bars";
+
+    }
+);
+
+});
+
+
+
+/* =====================================================
+   NAVBAR SCROLL
+===================================================== */
+
+const navbar =
+document.getElementById("navbar");
+
+
+window.addEventListener(
+    "scroll",
+    ()=>{
+
+        if(window.scrollY > 50){
+
+            navbar.classList.add(
+                "nav-scrolled"
+            );
+
+        }else{
+
+            navbar.classList.remove(
+                "nav-scrolled"
+            );
+
+        }
+
+    }
+);
+
+
+
+
+
 
 </script>
 
