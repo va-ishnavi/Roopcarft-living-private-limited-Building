@@ -611,12 +611,13 @@ body{
 <!-- =====================================================
      NAVBAR
 ===================================================== -->
-<header
-    id="navbar"
-    class="fixed top-0 left-0 w-full z-[100]
+<header id="navbar" class="fixed top-0 left-0 w-full z-[100]
            bg-white/95 border-b border-black/5
            transition-all duration-500"
 >
+
+
+
 
 <nav
     class="max-w-[1600px] mx-auto
@@ -5280,25 +5281,39 @@ ${product.description}
 
 </p>
 
+<div class="flex flex-nowrap items-center gap-4 mt-6">
 
-<a
-    href="#contact"
-    class="inline-flex
-           items-center
-           gap-2
-           mt-5
-           text-sm
-           font-semibold
-           text-[#A47551]
-           group-hover:gap-4
-           transition-all"
->
+    <a
+        href="contact.html"
+        class="inline-flex items-center justify-center
+               px-7 py-3 rounded-full
+               bg-[#A47551] text-white
+               text-sm font-semibold
+               hover:bg-[#8d6042]
+               hover:-translate-y-1
+               transition-all duration-300"
+    >
+        Enquire
+    </a>
 
-    Explore / Enquire
+    <a
+        href="products.html"
+        class="inline-flex items-center justify-center
+               px-7 py-3 rounded-full
+               border border-[#A47551]
+               text-[#A47551]
+               text-sm font-semibold
+               hover:bg-[#A47551]
+               hover:text-white
+               hover:-translate-y-1
+               transition-all duration-300"
+    >
+        Explore 
+    </a>
 
-    <i class="fa-solid fa-arrow-right"></i>
+</div>
 
-</a>
+
 
 </div>
 
