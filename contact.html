@@ -453,7 +453,7 @@
                 <label class="block text-sm font-semibold mb-2">Your Name</label>
                 <div class="relative">
                   <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                  <input id="mainName" type="text" required autocomplete="name" placeholder="Enter your name"
+                  <input id="mainName" type="text" name="name" required autocomplete="name" placeholder="Enter your name"
                          class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
                 </div>
               </div>
@@ -461,7 +461,7 @@
                 <label class="block text-sm font-semibold mb-2">Phone Number</label>
                 <div class="relative">
                   <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                  <input id="mainPhone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="Enter phone number"
+                  <input id="mainPhone" type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="Enter phone number"
                          class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
                 </div>
               </div>
@@ -471,7 +471,7 @@
               <label class="block text-sm font-semibold mb-2">Email Address</label>
               <div class="relative">
                 <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                <input id="mainEmail" type="email" autocomplete="email" placeholder="your@email.com"
+                <input id="mainEmail" type="email" name="email" autocomplete="email" placeholder="your@email.com"
                        class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
               </div>
             </div>
@@ -480,7 +480,7 @@
               <label class="block text-sm font-semibold mb-2">Product / Service</label>
               <div class="relative">
                 <i class="fa-solid fa-layer-group absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
-                <select id="mainProduct" required class="premium-input appearance-none pl-11 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+                <select id="mainProduct" name="product" required class="premium-input appearance-none pl-11 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
                   <option value="">Select product</option>
                   <option>Steel Doors</option>
                   <option>Glass Doors</option>
@@ -503,7 +503,7 @@
               <label class="block text-sm font-semibold mb-2">Project Details</label>
               <div class="relative">
                 <i class="fa-solid fa-message absolute left-4 top-4 text-gray-400"></i>
-                <textarea id="mainMessage" rows="4" placeholder="Tell us about your requirement..."
+                <textarea id="mainMessage" name="message" rows="4" placeholder="Tell us about your requirement..."
                           class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 resize-none"></textarea>
               </div>
             </div>
@@ -790,25 +790,25 @@
       <form id="modalForm" class="space-y-4">
         <div class="relative">
           <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-          <input id="modalName" type="text" required placeholder="Your Name"
+          <input id="modalName" type="text" name="name" required placeholder="Your Name"
                  class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
         </div>
 
         <div class="relative">
           <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-          <input id="modalPhone" type="tel" required placeholder="Phone Number"
+          <input id="modalPhone" type="tel" name="phone" required placeholder="Phone Number"
                  class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
         </div>
 
         <div class="relative">
           <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-          <input id="modalEmail" type="email" placeholder="Email Address"
+          <input id="modalEmail" type="email" name="email" placeholder="Email Address"
                  class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
         </div>
 
         <div class="relative">
           <i class="fa-solid fa-layer-group absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
-          <select id="modalProduct" required class="premium-input appearance-none pl-11 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
+          <select id="modalProduct" name="product" required class="premium-input appearance-none pl-11 pr-10 py-3.5 rounded-xl border border-gray-200 bg-gray-50">
             <option value="">Select Product</option>
             <option>Doors</option>
             <option>Windows</option>
@@ -825,7 +825,7 @@
 
         <div class="relative">
           <i class="fa-solid fa-message absolute left-4 top-4 text-gray-400"></i>
-          <textarea id="modalMessage" rows="4" placeholder="Tell us about your requirement..."
+          <textarea id="modalMessage" name="message" rows="4" placeholder="Tell us about your requirement..."
                     class="premium-input pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 resize-none"></textarea>
         </div>
 
